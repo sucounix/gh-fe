@@ -26,19 +26,19 @@ jobs:
 
       - name: Build and Test
         run: |
-            buildtimestamp=$(date +"%T")
-            echo $buildtimestamp
-            npm install
-            npm run test:groupOne
-            npm run test:groupTwo
-            npm run test:groupThree
-            npm run test:groupFour
-            npm run test:groupFive
-            npm run test:groupSix
-            npm run test:groupSeven
-            npm run test:groupEight
-            buildtimestamp=$(date +"%T")
-            echo $buildtimestamp
+          buildtimestamp=$(date +"%T")
+          echo $buildtimestamp
+          npm install
+          npm run test:groupOne
+          npm run test:groupTwo
+          npm run test:groupThree
+          npm run test:groupFour
+          npm run test:groupFive
+          npm run test:groupSix
+          npm run test:groupSeven
+          npm run test:groupEight
+          buildtimestamp=$(date +"%T")
+          echo $buildtimestamp
 
   code_lint:
     name: Code Lint
