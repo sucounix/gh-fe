@@ -1,0 +1,26 @@
+@import "../../../../GlobalStyle.scss";
+
+.StillProcessingModal__div {
+  padding: 38px 60px;
+  @include for_phone_only {
+    zoom: 0.7;
+  }
+  @include for_phone_only {
+    zoom: 0.4;
+  }
+  .title {
+    color: #f28c28;
+    @extend .Headline_4;
+  }
+  .desc {
+    @extend .Body_4;
+  }
+  .btn__div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    .done__btn {
+      padding: 1.5rem 3rem;
+    }
+  }
+}

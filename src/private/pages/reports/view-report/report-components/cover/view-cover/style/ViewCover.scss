@@ -1,0 +1,74 @@
+@import "../../../../../../../../GlobalStyle.scss";
+
+.view_cover {
+  .cover_section {
+    height: 90vh;
+    padding-top: 35vh;
+    position: relative;
+    .logo_div {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      margin: 0 auto;
+      img {
+        max-width: 450px;
+        max-height: 126px;
+      }
+    }
+    .report_name {
+      text-align: center;
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 40px;
+      font-family: DM Sans;
+    }
+    .period_info {
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 24px;
+      text-align: center;
+      .seperator {
+        margin: 0 2px;
+      }
+    }
+    .edit_chip {
+      position: absolute;
+      bottom: 20px;
+      right: 50px;
+      padding: 8px;
+      border-radius: 6px;
+      cursor: pointer;
+      color: $primary_color;
+      background-color: rgba(240, 247, 248, 1);
+      @extend .Body_4;
+      .icon {
+        margin-right: 8px;
+      }
+    }
+  }
+  .text_container {
+    margin-top: 20px;
+    padding: 0 90px;
+    .index_section {
+      padding: 100px 0px 70px 0px;
+    }
+  }
+  .footer_section {
+    margin: 10px 90px 70px 90px;
+    width: max-content;
+    border-top: 1px solid rgba(222, 226, 230, 1);
+    p {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+  }
+}
+
+.report__edit_form {
+  .mantine-Drawer-inner {
+    .mantine-Drawer-content {
+      background-color: white !important;
+    }
+  }
+}

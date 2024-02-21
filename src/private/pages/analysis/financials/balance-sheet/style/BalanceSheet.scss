@@ -1,0 +1,45 @@
+@import "../../../../../../GlobalStyle.scss";
+
+.financial_BS {
+  @include for_phone_only {
+    zoom: 0.4;
+  }
+  .BS__filter__div {
+    margin-bottom: 15px;
+    @media all and (-webkit-device-pixel-ratio: 1.5) {
+      zoom: 0.8;
+    }
+    @include for_tablet_only {
+      zoom: 0.7;
+    }
+    @include for_phone_only {
+      zoom: 0.4;
+    }
+    .select__view__div {
+      margin-right: 20px;
+      .mantine-InputWrapper-root {
+        width: 260px;
+      }
+    }
+
+    .show__toggle {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      @include for_tablet_only {
+        justify-content: flex-start;
+      }
+      .toggle__label {
+        margin-right: 10px;
+        @include for_phone_only {
+          font-size: var(--font-13);
+        }
+      }
+    }
+  }
+  .alert_wrong_numbers {
+    color: orange;
+    font-size: var(--font-16);
+    line-height: var(--line-height-150-percentage);
+  }
+}

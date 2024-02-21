@@ -1,0 +1,198 @@
+.Headline_1 {
+  font-size: 24px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_2 {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_3 {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_4 {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+}
+
+.Subtitle_1,
+.create__report__div .header .title {
+  font-size: 20px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_2 {
+  font-size: 18px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_3,
+.mantine-Tabs-tabLabel {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_4,
+.create__report__div .steps .list .title {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.Body_1 {
+  font-size: 20px !important;
+  font-weight: 400 !important;
+}
+
+.Body_2 {
+  font-size: 18px !important;
+  font-weight: 400 !important;
+}
+
+.Body_3,
+.create__report__div .steps .second__step__form .btns_div .mantine-Button-label,
+.create__report__div .steps .cancel__btn .mantine-Button-label {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+.Body_4,
+.view_template_image .modal__header .template_name {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+}
+
+.Caption,
+.create__report__div .steps .list .list__item .icon,
+.create__report__div .steps .list .list__item {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+}
+
+.mantine-Tabs-tab:not(:first-child) {
+  margin-inline-start: 3.75rem;
+}
+
+@media (max-width: 1200px) {
+  .create__report__div {
+    zoom: 0.7;
+  }
+}
+@media (max-width: 810px) {
+  .create__report__div {
+    zoom: 0.5;
+  }
+}
+.create__report__div .header {
+  border-bottom: 1px solid #e5e5e5;
+  display: flex;
+  align-items: center;
+  padding: 7px 50px;
+}
+.create__report__div .header .title {
+  margin: 0;
+}
+.create__report__div .steps {
+  padding: 13px 50px 30px 50px;
+}
+.create__report__div .steps .stepper__div {
+  width: 90%;
+  margin: 0 auto;
+}
+@media (max-width: 1200px) {
+  .create__report__div .steps .stepper__div {
+    width: 100%;
+    zoom: 0.7;
+  }
+}
+.create__report__div .steps .list {
+  height: 315px;
+  overflow-y: scroll;
+  margin-top: 20px;
+}
+.create__report__div .steps .list::-webkit-scrollbar-track {
+  background-color: white;
+}
+.create__report__div .steps .list .title {
+  padding: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.17);
+}
+.create__report__div .steps .list .list__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.17);
+  cursor: pointer;
+}
+.create__report__div .steps .list .list__item .icon {
+  color: #086972;
+  opacity: 0;
+  z-index: 99;
+  cursor: pointer;
+}
+.create__report__div .steps .list .list__item:hover {
+  background-color: #f0f5f5;
+}
+.create__report__div .steps .list .list__item:hover .icon {
+  opacity: 1;
+}
+.create__report__div .steps .cancel__btn {
+  margin-top: 20px;
+  outline: none;
+}
+.create__report__div .steps .second__step__form .input {
+  margin: 10px 0;
+}
+.create__report__div .steps .second__step__form .template__name {
+  margin: 15px 0;
+}
+.create__report__div
+  .steps
+  .second__step__form
+  .btns_div
+  .mantine-Button-label {
+  line-height: 28px;
+}
+
+.view_template_image {
+  overflow: hidden;
+  border-radius: 13px;
+}
+.view_template_image .modal__header {
+  background-color: #086972;
+  height: 100px;
+  padding: 25px;
+  position: relative;
+}
+.view_template_image .modal__header .back_arrow {
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  left: 30px;
+}
+.view_template_image .modal__header .image__div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.view_template_image .modal__header .image__div img {
+  width: 100px;
+  height: 24px;
+  margin: 0 auto;
+}
+.view_template_image .modal__header .template_name {
+  text-align: center;
+  color: white;
+  line-height: 24px;
+}
+.view_template_image .img_container {
+  height: 70vh;
+  overflow-y: scroll;
+}
+.view_template_image .img_container img {
+  width: 100%;
+} /*# sourceMappingURL=CreateReport.css.map */

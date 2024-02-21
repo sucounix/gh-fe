@@ -1,0 +1,12 @@
+.loading__wrapper {
+  display: flex;
+  justify-content: center;
+  width: var(--width-100-percentage);
+  height: var(--height-70-vh);
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.loading__spinner {
+  width: var(--width-200-px);
+}

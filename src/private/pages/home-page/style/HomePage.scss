@@ -1,0 +1,215 @@
+@import "../../../../GlobalStyle.scss";
+
+.home__page__screen {
+  width: 100%;
+
+  .home__page__view {
+    height: var(--height-100-percentage);
+    width: 100%;
+    padding: 14px 70px 70px 70px;
+    @include for_tablet_only {
+      zoom: 0.7;
+    }
+    @include for_phone_only {
+      zoom: 0.4;
+      margin-top: 112px;
+      padding: 20px;
+    }
+    .welcome__container {
+      display: flex;
+      align-items: center;
+
+      .content_div {
+        width: 50%;
+        .mainTitle {
+          font-style: normal;
+          line-height: var(--line-height-40-px);
+          display: flex;
+          align-items: center;
+          letter-spacing: 0.01em;
+          color: #086972;
+          @extend .Headline_1;
+          .user__name {
+            font-weight: var(--font-weight-600);
+          }
+        }
+        .text1 {
+          width: var(--width-73-percentage);
+          font-family: "DM Sans";
+          font-style: normal;
+          line-height: var(--line-height-160-percentage);
+          letter-spacing: -0.01em;
+          color: #2c2e33;
+          @extend .Body_3;
+        }
+        .company__text {
+          .home_title2 {
+            font-style: normal;
+            line-height: var(--line-height-120-percentage);
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.01em;
+            color: #086972;
+            margin-bottom: 8px;
+            @extend .Subtitle_1;
+          }
+          .text2 {
+            @extend .Body_4;
+          }
+        }
+        .btn__group {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+
+          .upload__btn {
+            font-family: "DM Sans";
+            font-style: normal;
+            font-weight: var(--font-weight-400);
+            font-size: var(--font-16);
+            line-height: var(--line-height-24-px);
+            letter-spacing: -0.01em;
+            color: #f8f9fa;
+            align-items: center;
+            justify-content: center !important;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            a {
+              text-decoration: none;
+              color: #f8f9fa;
+              margin: 0;
+            }
+            @include for_phone_only {
+              width: var(--width-66-percentage);
+              .mantine-Button-inner {
+                justify-content: center;
+              }
+            }
+          }
+          .mt__18 {
+            margin-top: 18px;
+            @include for_tablet_only {
+              margin: 15px 0 0 15px;
+            }
+          }
+          .ml__18 {
+            margin-top: 18px;
+            margin-left: 18px;
+            @include for_tablet_only {
+              margin: 15px 0 0 15px;
+            }
+          }
+        }
+      }
+      .img_div {
+        width: 50%;
+        .home__img {
+          padding-top: 30px;
+          @include for_phone_only {
+            width: 300px;
+          }
+        }
+      }
+    }
+    .company_list_div {
+      width: 50%;
+      .companies {
+        .mantine-14uk6up {
+          border-top-width: 2px;
+        }
+        .title3 {
+          font-style: normal;
+          line-height: var(--line-height-120-percentage);
+          display: flex;
+          align-items: center;
+          letter-spacing: 0.01em;
+          color: #086972;
+          margin: 23px 0 4px 0;
+          @extend .Headline_1;
+        }
+        .desc {
+          font-style: normal;
+          line-height: var(--line-height-150-percentage);
+          letter-spacing: -0.01em;
+          font-feature-settings: "calt" off;
+          color: #272727;
+          margin: 0px 0 23px 0;
+          @extend .Body_4;
+        }
+        .allCompanies {
+          max-height: var(--height-321-px);
+          overflow: scroll;
+          -ms-overflow-style: none; /* IE and Edge */
+          scrollbar-width: none; /* Firefox */
+          &::-webkit-scrollbar {
+            display: none;
+          }
+          .company__row {
+            border-bottom: 0.5px solid #086972;
+            margin-bottom: 20px;
+            .disabled {
+              opacity: 0.5;
+            }
+            .company__name__link {
+              text-decoration: none !important;
+              .company__name {
+                font-style: normal;
+                line-height: var(--line-height-21-px);
+                letter-spacing: -0.01em;
+                font-feature-settings: "calt" off;
+                margin: 0 0px 10px 10px;
+                cursor: pointer;
+                color: #272727;
+                @extend .Body_3;
+                &:hover {
+                  text-decoration-line: underline;
+                }
+              }
+            }
+            .lastUpdate {
+              font-style: normal;
+              line-height: var(--line-height-17-px);
+              letter-spacing: -0.01em;
+              font-feature-settings: "calt" off;
+              margin: 0 0px 10px 10px;
+              @extend .Caption;
+            }
+            .module {
+              padding: 8px 14px;
+              width: 100%;
+              height: 100%;
+              text-decoration: none;
+              gap: 4px;
+              border-radius: 5px;
+              color: $primary_color;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              cursor: pointer;
+              &:hover {
+                color: #fff;
+                background-color: $primary_color;
+              }
+            }
+            .menu_item {
+              color: $primary_color;
+              cursor: pointer;
+              .mantine-Menu-itemLabel {
+                a {
+                  text-decoration: none;
+                }
+              }
+            }
+            .option__dot {
+              color: #086972;
+              cursor: pointer;
+              padding: 8px 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

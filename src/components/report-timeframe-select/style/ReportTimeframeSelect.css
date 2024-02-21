@@ -1,0 +1,243 @@
+.Headline_1 {
+  font-size: 24px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_2 {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_3 {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_4 {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+}
+
+.Subtitle_1 {
+  font-size: 20px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_2 {
+  font-size: 18px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_3,
+.mantine-Tabs-tabLabel {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_4 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.Body_1 {
+  font-size: 20px !important;
+  font-weight: 400 !important;
+}
+
+.Body_2 {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+.Body_3 {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+.report_time_frame_select
+  .TimeFrame__input__div_report
+  .TimeFrame__input
+  .content::-moz-placeholder {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+}
+
+.Body_4,
+.report_time_frame_select
+  .popover__dropdown
+  .select_period_div
+  .year_part
+  .year_item,
+.report_time_frame_select
+  .TimeFrame__input__div_report
+  .TimeFrame__input
+  .content::placeholder,
+.report_time_frame_select .TimeFrame__input__div_report .label {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+}
+
+.Caption,
+.report_time_frame_select .TimeFrame__input__div_report .timefrmae_error {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+}
+
+.mantine-Tabs-tab:not(:first-child) {
+  margin-inline-start: 3.75rem;
+}
+
+.report_time_frame_select .TimeFrame__input__div_report {
+  margin-top: 10px;
+}
+.report_time_frame_select .TimeFrame__input__div_report .label {
+  margin: 0;
+}
+.report_time_frame_select .TimeFrame__input__div_report .TimeFrame__input {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 16px;
+  gap: 10px;
+  width: 100%;
+  height: var(--height-49-px);
+  border: 2px solid #e3e3e3;
+  border-radius: 8px;
+  position: relative;
+  cursor: pointer;
+}
+.report_time_frame_select
+  .TimeFrame__input__div_report
+  .TimeFrame__input
+  .div_overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.report_time_frame_select
+  .TimeFrame__input__div_report
+  .TimeFrame__input
+  .content {
+  font-style: normal;
+  font-weight: var(--font-weight-500);
+  font-size: var(--font-14);
+  background-color: inherit;
+  line-height: var(--line-height-121-5-px);
+  color: #002229;
+  border: none;
+  width: 80% !important;
+}
+.report_time_frame_select
+  .TimeFrame__input__div_report
+  .TimeFrame__input
+  .content::-moz-placeholder {
+  color: #adb5bd;
+  line-height: 24px;
+  font-family: DM Sans;
+}
+.report_time_frame_select
+  .TimeFrame__input__div_report
+  .TimeFrame__input
+  .content::placeholder {
+  color: #adb5bd;
+  line-height: 24px;
+  font-family: DM Sans;
+}
+.report_time_frame_select .TimeFrame__input__div_report .disabled_input {
+  background-color: #f1f3f5 !important;
+  cursor: not-allowed;
+}
+.report_time_frame_select
+  .TimeFrame__input__div_report
+  .disabled_input
+  .content::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.662745098);
+}
+.report_time_frame_select
+  .TimeFrame__input__div_report
+  .disabled_input
+  .content::placeholder {
+  color: rgba(0, 0, 0, 0.662745098);
+}
+.report_time_frame_select .TimeFrame__input__div_report .timefrmae_error {
+  color: #f03e3e;
+}
+.report_time_frame_select .popover__dropdown {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  overflow-x: hidden;
+}
+.report_time_frame_select .popover__dropdown .select_period_div {
+  z-index: 99;
+}
+.report_time_frame_select .popover__dropdown .select_period_div .year_part {
+  width: 25%;
+  border-radius: 1px solid gray;
+}
+.report_time_frame_select
+  .popover__dropdown
+  .select_period_div
+  .year_part
+  .selected_year_item {
+  background: rgba(8, 105, 114, 0.1);
+  border-left: 2px solid #086972;
+}
+.report_time_frame_select
+  .popover__dropdown
+  .select_period_div
+  .year_part
+  .year_item {
+  line-height: var(--line-height-100-percentage);
+  display: flex;
+  align-items: center;
+  color: #373a40;
+  padding: 1rem;
+}
+.report_time_frame_select
+  .popover__dropdown
+  .select_period_div
+  .year_part
+  .year_item:hover {
+  background: rgba(8, 105, 114, 0.1);
+  cursor: pointer;
+}
+.report_time_frame_select .popover__dropdown .select_period_div .w_100 {
+  width: 100%;
+}
+.report_time_frame_select .popover__dropdown .select_period_div .w_75 {
+  width: 75%;
+}
+.report_time_frame_select
+  .popover__dropdown
+  .select_period_div
+  .period_part
+  .disabled_option {
+  padding: 8px;
+  color: gray;
+  cursor: not-allowed;
+  height: 100%;
+  padding: 5px;
+}
+.report_time_frame_select
+  .popover__dropdown
+  .select_period_div
+  .period_part
+  .enabled_option {
+  padding: 8px;
+  cursor: pointer;
+  height: 100%;
+  padding: 5px;
+}
+.report_time_frame_select
+  .popover__dropdown
+  .select_period_div
+  .period_part
+  .selected_option {
+  background: #c9dedc;
+  border-radius: 8px;
+  height: 100%;
+  padding: 5px;
+} /*# sourceMappingURL=ReportTimeframeSelect.css.map */

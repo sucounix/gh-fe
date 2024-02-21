@@ -1,0 +1,181 @@
+@import "../../../../../GlobalStyle.scss";
+
+.user__profile {
+  padding: 30px;
+  overflow-y: auto;
+  @include for_tablet_only {
+    zoom: 0.7;
+    padding-top: 10px;
+  }
+  @include for_phone_only {
+    zoom: 0.4;
+  }
+  .div__start {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    margin-bottom: 35px;
+    .title1 {
+      font-style: normal;
+      line-height: var(--line-height-150-percentage);
+      letter-spacing: -0.06em;
+      @extend .Subtitle_1;
+    }
+    .title2 {
+      font-style: normal;
+      line-height: var(--line-height-150-percentage);
+      letter-spacing: -0.06em;
+      @extend .Body_3;
+    }
+  }
+  .user__form {
+    position: relative;
+    height: var(--height-60-vh);
+    .mantine-TextInput-label {
+      font-style: normal;
+      font-weight: var(--font-weight-400);
+      font-size: var(--font-16);
+      line-height: var(--line-height-21-px);
+      color: #373a40;
+      @extend .Body_3;
+    }
+    .form__container {
+      width: 80%;
+      .single__col {
+        width: 50%;
+        margin-bottom: 10px;
+        .col__content {
+          width: var(--width-85-percentage);
+          .form__input {
+            @extend .Body_3;
+            .mantine-InputWrapper-label {
+              @extend .Body_3;
+            }
+          }
+          .phone__div {
+            margin-top: 18px;
+            .phone__input {
+              border: 2px solid #cbd2e0;
+              border-radius: 8px;
+              padding: 10px !important;
+
+              .PhoneInputInput {
+                border: none;
+                outline: none;
+                &:focus,
+                &:active,
+                &:target {
+                  border: none;
+                  outline: none;
+                }
+              }
+            }
+            .label__style {
+              font-style: normal;
+              font-weight: var(--font-weight-400);
+              font-size: var(--font-16);
+              line-height: var(--line-height-21-px);
+              color: #373a40;
+            }
+          }
+          .span__err {
+            height: var(--height-5-px);
+            width: var(--width-100-percentage);
+            color: #fa5252;
+            font-size: calc(0.875rem - 0.125rem);
+          }
+        }
+        .change__password__div {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          p {
+            margin: 0;
+          }
+          .change__pass {
+            font-style: normal;
+            font-weight: var(--font-weight-400);
+            font-size: var(--font-16);
+            line-height: var(--line-height-21-px);
+            text-decoration-line: underline;
+            color: #086972;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .submit__btn {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      font-style: normal;
+      font-weight: var(--font-weight-400);
+      font-size: var(--font-16);
+      line-height: var(--line-height-24-px);
+      letter-spacing: -0.01em;
+      color: #f8f9fa;
+      padding: 0px 51px;
+    }
+  }
+}
+
+.change__pass__div {
+  padding: 30px;
+  @include for_tablet_only {
+    zoom: 0.7;
+  }
+  @include for_phone_only {
+    zoom: 0.4;
+  }
+  .title__modal {
+    font-style: normal;
+    line-height: var(--line-height-21-px);
+    letter-spacing: -0.01em;
+    color: #2c2e33;
+    display: inline-block;
+    margin-bottom: 0;
+    @extend .Headline_4;
+  }
+  .text {
+    font-style: normal;
+    line-height: var(--line-height-150-percentage);
+    letter-spacing: -0.01em;
+    color: rgba(44, 46, 51, 0.7);
+    display: inline-block;
+    @extend .Body_4;
+  }
+  .change__pass__form {
+    .mantine-PasswordInput-label {
+      font-style: normal;
+      line-height: var(--line-height-155-percentage);
+      color: #212529;
+      @extend .Body_3;
+    }
+    .btn__group {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .cancel__btn {
+        font-style: normal;
+        font-weight: var(--font-weight-400);
+        font-size: var(--font-16);
+        line-height: var(--line-height-24-px);
+        letter-spacing: -0.01em;
+        color: #086972;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+      }
+      .save__btn {
+        font-style: normal;
+        font-weight: var(--font-weight-400);
+        font-size: var(--font-16);
+        line-height: var(--line-height-24-px);
+        letter-spacing: -0.01em;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,103 @@
+@import "../../../../../../../GlobalStyle.scss";
+
+.top__cards {
+  display: flex;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+.top__card {
+  background: #ffffff;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.07);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 18px;
+  width: 100%;
+  text-align: start;
+  gap: 8px;
+}
+.empty__waterfall__section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 2rem;
+
+  .empty__waterfall__text {
+    display: flex;
+    flex-direction: column;
+
+    span:first-child {
+      @extend .Subtitle_1;
+    }
+
+    span:last-child {
+      @extend .Body_3;
+    }
+  }
+}
+
+.top__card__title {
+  @extend .Body_3;
+  color: #086972;
+}
+.top__card__value {
+  @extend .Headline_1;
+  line-height: var(--line-height-150-percentage);
+}
+
+g {
+  .cash__title {
+    @extend .Subtitle_3;
+    font-size: 12px !important;
+    line-height: 24px;
+    letter-spacing: -0.96px;
+  }
+
+  .table__header {
+    @extend .Subtitle_3;
+    color: #373a40;
+    line-height: 24px;
+    letter-spacing: -0.96px;
+  }
+
+  .table__entry__name {
+    @extend .Body_4;
+    line-height: 24px;
+    letter-spacing: -0.84px;
+  }
+
+  .table__entry__value {
+    @extend .Body_3;
+    line-height: 24px;
+    letter-spacing: -0.96px;
+  }
+}
+
+.interval__label {
+  @extend .Subtitle_3;
+  line-height: 24px;
+  letter-spacing: -0.96px;
+}
+
+.opened + .financials {
+  .svg_waterfall {
+    zoom: 0.8;
+  }
+}
+
+@media all and (max-width: 1098px) {
+  .empty__waterfall__section {
+    zoom: 1.2;
+  }
+}
+@include for_phone_only {
+  .empty__waterfall__section {
+    zoom: 1.6;
+  }
+}
+@media all and (max-width: 600px) {
+  .waterfall__content {
+    zoom: 0.25;
+  }
+}

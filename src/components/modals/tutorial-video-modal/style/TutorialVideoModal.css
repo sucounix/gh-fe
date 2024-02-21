@@ -1,0 +1,121 @@
+.Headline_1 {
+  font-size: 24px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_2,
+.tutorial_video_modal .mantine-Modal-body .title {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_3 {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_4 {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+}
+
+.Subtitle_1 {
+  font-size: 20px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_2 {
+  font-size: 18px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_3,
+.mantine-Tabs-tabLabel {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_4 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.Body_1 {
+  font-size: 20px !important;
+  font-weight: 400 !important;
+}
+
+.Body_2 {
+  font-size: 18px !important;
+  font-weight: 400 !important;
+}
+
+.Body_3,
+.tutorial_video_modal .mantine-Modal-body .close__btn {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+.Body_4 {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+}
+
+.Caption {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+}
+
+.mantine-Tabs-tab:not(:first-child) {
+  margin-inline-start: 3.75rem;
+}
+
+.tutorial_video_modal .mantine-Modal-body {
+  padding: 42px;
+  width: 641px;
+  min-height: 552px;
+}
+@media (max-width: 1200px) {
+  .tutorial_video_modal .mantine-Modal-body {
+    zoom: 0.8;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 810px) {
+  .tutorial_video_modal .mantine-Modal-body {
+    zoom: 0.5;
+  }
+}
+.tutorial_video_modal .mantine-Modal-body .title {
+  font-family: DM Sans;
+  font-style: normal;
+  line-height: 24px;
+  letter-spacing: -1.2px;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.tutorial_video_modal .mantine-Modal-body .desc {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.84px;
+}
+.tutorial_video_modal .mantine-Modal-body .video {
+  width: 516px;
+  height: 284px;
+}
+@media (max-width: 1200px) {
+  .tutorial_video_modal .mantine-Modal-body .video {
+    zoom: 0.6;
+    width: 80% !important;
+  }
+}
+.tutorial_video_modal .mantine-Modal-body .close__btn {
+  width: 201px;
+  font-style: normal;
+  margin-top: 32px;
+  line-height: 24px;
+  letter-spacing: -0.16px;
+  outline: none;
+} /*# sourceMappingURL=TutorialVideoModal.css.map */

@@ -1,0 +1,252 @@
+@import "../../../GlobalStyle.scss";
+
+.table__wrapper {
+  overflow-x: scroll;
+  width: 100%;
+  position: relative;
+  padding-bottom: 20px;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .table__style {
+    width: 100%;
+    display: inline-table;
+    overflow-x: scroll;
+    border: none !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4) !important;
+    border-collapse: collapse;
+    margin: 0 !important;
+    padding: 0 !important;
+    @include for_tablet_only {
+      zoom: $table_tablet_zoom;
+    }
+    @include for_phone_only {
+      zoom: $table_phone_zoom;
+    }
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    th {
+      border-top: 1px solid rgba(0, 0, 0, 0.4) !important;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.4) !important;
+      border-collapse: collapse;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    td {
+      border-top: 1px solid rgba(0, 0, 0, 0.4) !important;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.4) !important;
+      border-collapse: collapse;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    thead {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+    .header__td {
+      border-top: none !important;
+      background-color: white;
+      z-index: 220;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+      .header_style {
+        min-height: $cell_min_height;
+        width: $content_cell_width;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        text-align: right;
+        padding: 0 20px;
+        font-style: normal;
+        line-height: 24px;
+        letter-spacing: -0.96px;
+        @extend .Subtitle_3;
+      }
+    }
+    .stickyHeader {
+      position: sticky;
+      left: 0;
+      top: 0;
+      z-index: 50;
+      border-top: none !important;
+      background: white;
+      width: $sticky_cell_width !important;
+      .header_style {
+        width: 100%;
+        min-height: $cell_min_height;
+        padding: 0 20px;
+        box-shadow: 3.5px 0 4px 0 hsla(260, 9%, 69%, 0.2);
+        background: white;
+        font-style: normal;
+        line-height: 24px;
+        letter-spacing: -1.2px;
+        @extend .Subtitle_1;
+        padding: 14px 18px;
+        .currency__div {
+          background-color: #f1f3f5;
+          border-radius: 5px;
+          padding: 10px 8px 10px 8px;
+          @extend .Body_4;
+          line-height: 21px;
+          color: #000;
+          .currency__unit {
+            padding-left: 8px;
+          }
+        }
+      }
+    }
+
+    .background_normal {
+      background-color: $normal_row_background;
+    }
+    .background_total {
+      background-color: $total_row_background;
+      font-weight: $table_bold_weight;
+    }
+    .background_sub_total {
+      background-color: $sub_total_row_background;
+    }
+    .row__cells {
+      .cell_style_background_normal {
+        min-height: $cell_min_height;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        text-align: right;
+        background-color: $normal_row_background;
+        font-style: normal;
+        line-height: 24px;
+        letter-spacing: -0.84px;
+        width: $content_cell_width;
+        word-break: break-all;
+        @extend .Body_4;
+      }
+
+      .cell_style_background_total {
+        min-height: $cell_min_height;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        text-align: right;
+        font-weight: $table_bold_weight;
+        background-color: $total_row_background;
+        width: $content_cell_width;
+        word-break: break-all;
+        @extend .Subtitle_3;
+      }
+      .cell_style_background_sub_total {
+        min-height: $cell_min_height;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        text-align: right;
+        width: $content_cell_width;
+        word-break: break-all;
+        background-color: $sub_total_row_background;
+        @extend .Body_4;
+      }
+    }
+    .sticky__row__cell {
+      position: sticky;
+      left: 0;
+      top: 0;
+      z-index: 22;
+      .cell_style_background_normal {
+        min-height: $cell_min_height;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0 20px;
+        box-shadow: 3.5px 0 4px 0 hsla(260, 9%, 69%, 0.2);
+        background-color: $normal_row_background;
+        @extend .Body_4;
+
+        .content {
+          width: 90%;
+        }
+        .alert_span {
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          background-color: #e03131;
+        }
+      }
+      .cell_style_background_total {
+        min-height: $cell_min_height;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0 20px;
+        box-shadow: 3.5px 0 4px 0 hsla(260, 9%, 69%, 0.2);
+        background-color: $total_row_background;
+        word-break: break-word;
+        @extend .Subtitle_3;
+        .content {
+          width: 90%;
+        }
+        .alert_span {
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          background-color: #e03131;
+        }
+      }
+      .cell_style_background_sub_total {
+        min-height: $cell_min_height;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: 20px;
+        box-shadow: 3.5px 0 4px 0 hsla(260, 9%, 69%, 0.2);
+        background-color: $sub_total_row_background;
+        @extend .Body_4;
+        .content {
+          width: 90%;
+        }
+        .alert_span {
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          background-color: #e03131;
+        }
+      }
+
+      .padding__space {
+        padding-left: 30px;
+      }
+    }
+
+    .sticky__title__cell {
+      position: sticky;
+      left: 0;
+      top: 0;
+      z-index: 22;
+      .cell_style {
+        min-height: $cell_min_height;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0 20px;
+        font-style: normal;
+        line-height: 24px;
+        letter-spacing: -0.96px;
+        @extend .Subtitle_3;
+        .background_normal {
+          background-color: $normal_row_background;
+        }
+        .background_total {
+          background-color: $total_row_background;
+        }
+        .background_sub_total {
+          background-color: $sub_total_row_background;
+        }
+      }
+    }
+    .group_seperator {
+      border-bottom: 8px solid $table_group_seperator_background;
+    }
+  }
+}

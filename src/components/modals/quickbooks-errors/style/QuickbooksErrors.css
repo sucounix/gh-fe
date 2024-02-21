@@ -1,0 +1,128 @@
+.Headline_1 {
+  font-size: 24px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_2 {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_3 {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_4,
+.Q_error .title1 {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+}
+
+.Subtitle_1 {
+  font-size: 20px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_2 {
+  font-size: 18px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_3,
+.mantine-Tabs-tabLabel {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_4 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.Body_1 {
+  font-size: 20px !important;
+  font-weight: 400 !important;
+}
+
+.Body_2 {
+  font-size: 18px !important;
+  font-weight: 400 !important;
+}
+
+.Body_3 {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+.Body_4,
+.Q_error .title2 {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+}
+
+.Caption {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+}
+
+.mantine-Tabs-tab:not(:first-child) {
+  margin-inline-start: 3.75rem;
+}
+
+.Q_error {
+  padding: 30px;
+}
+@media (max-width: 1200px) {
+  .Q_error {
+    zoom: 0.7;
+  }
+}
+@media (max-width: 810px) {
+  .Q_error {
+    zoom: 0.4;
+  }
+}
+.Q_error .title1 {
+  font-family: "DM Sans";
+  font-style: normal;
+  line-height: var(--line-height-21-px);
+  letter-spacing: -0.01em;
+  color: #f28c28;
+  display: flex;
+}
+.Q_error .title1 .icon {
+  margin-right: 10px;
+}
+.Q_error .title2 {
+  font-family: "DM Sans";
+  font-style: normal;
+  line-height: var(--line-height-150-percentage);
+  letter-spacing: -0.01em;
+  color: rgba(44, 46, 51, 0.7);
+}
+.Q_error .confirm_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: var(--font-weight-400);
+  font-size: var(--font-16);
+  line-height: var(--line-height-24-px);
+  letter-spacing: -0.01em;
+  color: #ffffff;
+}
+.Q_error .confirm_btn {
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: var(--font-weight-400);
+  font-size: var(--font-16);
+  line-height: var(--line-height-24-px);
+  letter-spacing: -0.01em;
+  color: #ffffff;
+} /*# sourceMappingURL=QuickbooksErrors.css.map */

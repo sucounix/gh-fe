@@ -1,0 +1,22 @@
+@import "../../../../../../GlobalStyle.scss";
+
+.pl__wrapper {
+  @include for_phone_only {
+    width: var(--width-100-percentage);
+    zoom: 0.4;
+  }
+  @media all and (-webkit-device-pixel-ratio: 1.5) {
+    zoom: 0.8;
+  }
+  .pl__header {
+    @media all and (-webkit-device-pixel-ratio: 1.5) {
+      zoom: 0.8;
+    }
+    @include for_tablet_only {
+      zoom: 0.7;
+    }
+    @include for_phone_only {
+      zoom: 0.4;
+    }
+  }
+}

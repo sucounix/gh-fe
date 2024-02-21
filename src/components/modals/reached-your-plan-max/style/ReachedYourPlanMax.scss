@@ -1,0 +1,63 @@
+@import "../../../../GlobalStyle.scss";
+
+.reach_max {
+  padding: 30px;
+  @include for_tablet_only {
+    zoom: 0.7;
+  }
+  @include for_phone_only {
+    zoom: 0.4;
+  }
+  .title1 {
+    font-style: normal;
+    line-height: var(--line-height-24-px);
+    letter-spacing: -0.02em;
+    color: #f28c28;
+    @extend .Headline_4;
+    span {
+      margin-right: 10px;
+    }
+  }
+  .title2 {
+    font-style: normal;
+    line-height: var(--line-height-21-px);
+    letter-spacing: -0.02em;
+    color: rgba(44, 46, 51, 0.7);
+    @extend .Body_4;
+  }
+  .title3 {
+    font-style: normal;
+    line-height: var(--line-height-150-percentage);
+    letter-spacing: -0.01em;
+    font-feature-settings: "calt" off;
+    color: #2c2e33;
+    @extend .Body_3;
+  }
+  .confirm_btn {
+    font-style: normal;
+    font-weight: var(--font-weight-400);
+    font-size: var(--font-16);
+    line-height: var(--line-height-24-px);
+    letter-spacing: -0.01em;
+    font-feature-settings: "calt" off;
+    margin-top: 15px;
+    width: var(--width-200-px) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    margin-right: 15px;
+  }
+  .cancel_btn {
+    font-style: normal;
+    font-weight: var(--font-weight-400);
+    font-size: var(--font-16);
+    line-height: var(--line-height-24-px);
+    letter-spacing: -0.01em;
+    margin-top: 15px;
+    width: var(--width-200-px) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

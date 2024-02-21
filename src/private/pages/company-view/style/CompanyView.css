@@ -1,0 +1,127 @@
+.Headline_1 {
+  font-size: 24px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_2 {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_3 {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_4 {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+}
+
+.Subtitle_1 {
+  font-size: 20px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_2 {
+  font-size: 18px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_3,
+.mantine-Tabs-tabLabel {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_4 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.Body_1 {
+  font-size: 20px !important;
+  font-weight: 400 !important;
+}
+
+.Body_2 {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+.Body_3 {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+.Body_4 {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+}
+
+.Caption {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+}
+
+.mantine-Tabs-tab:not(:first-child) {
+  margin-inline-start: 3.75rem;
+}
+
+.CompanyView {
+  display: flex;
+  position: relative;
+  height: calc(100vh - 69px);
+  overflow-y: auto;
+  max-height: calc(100vh - 69px);
+  width: var(--width-100-percentage);
+}
+@media (max-width: 1200px) {
+  .CompanyView {
+    height: var(--height-100vh-minus-75px);
+    margin-top: 0;
+  }
+}
+@media (max-width: 810px) {
+  .CompanyView {
+    height: var(--height-100vh-minus-75px);
+  }
+}
+.CompanyView .company_content {
+  position: relative;
+  height: -moz-max-content;
+  height: max-content;
+  transition: all 0.5s ease;
+}
+.CompanyView .sidemenu_open {
+  left: 15%;
+  width: 85%;
+}
+@media (max-width: 1200px) {
+  .CompanyView .sidemenu_open {
+    left: 22%;
+    width: 78%;
+  }
+}
+@media (max-width: 810px) {
+  .CompanyView .sidemenu_open {
+    left: 0 !important;
+    width: 100% !important;
+  }
+}
+.CompanyView .sidemenu_close {
+  left: 5%;
+  width: 95%;
+}
+@media (max-width: 1200px) {
+  .CompanyView .sidemenu_close {
+    left: 7%;
+    width: 93%;
+  }
+}
+@media (max-width: 810px) {
+  .CompanyView .sidemenu_close {
+    left: 0 !important;
+    width: 100% !important;
+  }
+} /*# sourceMappingURL=CompanyView.css.map */

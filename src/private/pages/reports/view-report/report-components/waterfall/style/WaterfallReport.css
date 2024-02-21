@@ -1,0 +1,261 @@
+.Headline_1 {
+  font-size: 24px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_2,
+.waterfall__chart__report .waterfall__header .waterfall__header__title {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_3 {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_4 {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+}
+
+.Subtitle_1 {
+  font-size: 20px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_2 {
+  font-size: 18px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_3,
+.edit__waterfall__drawer .chart__time__wrapper .chart__time__title,
+.edit__waterfall__drawer .chart__view__wrapper .chart__view__title,
+.edit__waterfall__drawer .edit__waterfall__title,
+.waterfall__chart__report .waterfall__header .waterfall__header__subtitle,
+.mantine-Tabs-tabLabel {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_4 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.Body_1,
+.waterfall__empty__view span {
+  font-size: 20px !important;
+  font-weight: 400 !important;
+}
+
+.Body_2 {
+  font-size: 18px !important;
+  font-weight: 400 !important;
+}
+
+.Body_3,
+.edit__waterfall__drawer .edit__waterfall__buttons .cancel__btn {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+.Body_4 {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+}
+
+.Caption {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+}
+
+/* 
+  Buttons
+*/
+.btn_md,
+.edit__waterfall__drawer
+  .edit__waterfall__buttons
+  .save__button
+  .save__changes__button {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.mantine-Tabs-tab:not(:first-child) {
+  margin-inline-start: 3.75rem;
+}
+
+.waterfall__chart__report {
+  padding: 1rem;
+  position: relative;
+  background-position: 0 0, 0 0, 100% 0, 0 100%;
+  background-size: 1px 100%, 100% 1px, 1px 100%, 100% 1px;
+  background-repeat: no-repeat;
+  margin-bottom: 5rem;
+  overflow: hidden;
+}
+.waterfall__chart__report:hover {
+  background-image: repeating-linear-gradient(
+      0deg,
+      #086972,
+      #086972 10px,
+      transparent 10px,
+      transparent 20px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      #086972,
+      #086972 10px,
+      transparent 10px,
+      transparent 20px
+    ),
+    repeating-linear-gradient(
+      180deg,
+      #086972,
+      #086972 10px,
+      transparent 10px,
+      transparent 20px
+    ),
+    repeating-linear-gradient(
+      270deg,
+      #086972,
+      #086972 10px,
+      transparent 10px,
+      transparent 20px
+    );
+  -o-border-image: repeating-linear-gradient(
+    0deg,
+    #086972,
+    #086972 10px,
+    transparent 10px,
+    transparent 20px
+  );
+  border-image: repeating-linear-gradient(
+    0deg,
+    #086972,
+    #086972 10px,
+    transparent 10px,
+    transparent 20px
+  );
+}
+.waterfall__chart__report:hover .edit__pop {
+  display: flex;
+  gap: 1rem;
+  border: 0.5px solid #086972;
+  background: #fff;
+  box-shadow: 0px 11px 10px 0px rgba(0, 0, 0, 0.09);
+}
+.waterfall__chart__report .edit__pop {
+  position: absolute;
+  right: 0.8rem;
+  top: 0.6rem;
+  display: none;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+}
+.waterfall__chart__report .edit__pop i {
+  color: #086972;
+  cursor: pointer;
+}
+.waterfall__chart__report .waterfall__header {
+  display: flex;
+  flex-direction: column;
+}
+.waterfall__chart__report .waterfall__header .waterfall__header__title {
+  color: #000;
+}
+.waterfall__chart__report .waterfall__header .waterfall__header__subtitle {
+  color: #000;
+}
+
+.waterfall__empty__view {
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 4.12rem 0;
+  margin: 0.62 0 5rem 0;
+}
+.waterfall__empty__view span {
+  color: #373a40;
+  opacity: 0.5;
+}
+
+.mantine-Drawer-content {
+  background-color: white !important;
+}
+.mantine-Drawer-content .mantine-Drawer-body {
+  padding: 0;
+}
+
+.edit__waterfall__drawer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  padding-bottom: 12px;
+  overflow: hidden;
+}
+.edit__waterfall__drawer .edit__waterfall__title {
+  color: #000 !important;
+  padding: 24px 32px;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.05);
+}
+.edit__waterfall__drawer .chart__view__wrapper {
+  padding: 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.edit__waterfall__drawer .chart__view__wrapper .chart__view__title {
+  color: #000;
+}
+.edit__waterfall__drawer .mantine-Divider-root {
+  border: 0.5px solid #000;
+  opacity: 0.3;
+}
+.edit__waterfall__drawer .chart__time__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 22px 24px;
+}
+.edit__waterfall__drawer .chart__time__wrapper .chart__time__title {
+  color: #000;
+}
+.edit__waterfall__drawer .edit__waterfall__buttons {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 16px;
+  padding: 2rem;
+}
+.edit__waterfall__drawer .edit__waterfall__buttons .save__button {
+  text-align: center;
+  justify-content: center;
+}
+.edit__waterfall__drawer
+  .edit__waterfall__buttons
+  .save__button
+  .save__changes__button {
+  line-height: 28px;
+  letter-spacing: -0.96px;
+}
+.edit__waterfall__drawer .edit__waterfall__buttons .cancel__btn {
+  line-height: 24px;
+  letter-spacing: -0.96px;
+}
+@media (max-width: 810px) {
+  .edit__waterfall__drawer .edit__waterfall__buttons {
+    padding: 0.1rem;
+  }
+  .edit__waterfall__drawer .edit__waterfall__buttons .save__button {
+    zoom: 0.9;
+  }
+  .edit__waterfall__drawer .edit__waterfall__buttons .cancel__btn {
+    zoom: 0.9;
+  }
+} /*# sourceMappingURL=WaterfallReport.css.map */

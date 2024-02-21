@@ -1,0 +1,94 @@
+@import "../../../../../../GlobalStyle.scss";
+
+.kpis__settings__wrapper {
+  margin-left: 1rem;
+  margin-top: 1rem;
+  width: var(--width-95-percentage);
+}
+.kpis__settings__header {
+  width: var(--width-100-percentage);
+}
+.kpis__settings__title {
+  @extend .Subtitle_1;
+  line-height: var(--line-height-150-percentage);
+  color: #373a40;
+}
+.kpis__settings__desc {
+  @extend .Body_3;
+  line-height: var(--line-height-150-percentage);
+  color: #373a40;
+}
+.kpis__selected__value__desc {
+  @extend .Body_4;
+  line-height: 24px;
+  letter-spacing: -0.96px;
+}
+
+.kpis__selected__value {
+  position: relative;
+  color: white;
+  @extend .Body_4;
+}
+.kpis__selected__value__wrapper {
+  gap: 0.5rem;
+}
+.kpis_settings_tables {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.kpis_settings__table {
+  width: var(--width-100-percentage);
+  border-bottom: 1px solid #e5e5e5;
+  border-radius: 5px;
+}
+.kpis__table__border {
+  background: rgba(8, 105, 114, 0.2);
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.4);
+  height: var(--height-24-px);
+}
+.kpis__settings__row {
+  display: flex;
+  justify-content: space-between;
+  width: var(--width-100-percentage);
+  align-items: center;
+  padding: 0.5rem 1.5rem;
+  gap: 1rem;
+}
+.kpis__settings__row__meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.kpis__settings__row__icon {
+  cursor: pointer;
+}
+
+.create__kpi__button {
+  font-weight: var(--font-weight-400);
+  font-size: var(--font-16);
+  line-height: var(--line-height-24-px);
+  letter-spacing: -0.01em;
+  font-feature-settings: "calt" off;
+}
+.kpis__list__title {
+  @extend .Subtitle_1;
+  line-height: var(--line-height-150-percentage);
+  padding: 0 1rem;
+  letter-spacing: -0.06em;
+  color: #373a40;
+}
+.kpi__table__name {
+  @extend .Subtitle_3;
+  line-height: var(--line-height-150-percentage);
+  padding: 0 1rem;
+  letter-spacing: -0.06em;
+  color: #373a40;
+}
+
+@include for_phone_only {
+  .mantine-UnstyledButton-root {
+    padding: 0.5rem;
+    height: fit-content;
+  }
+}

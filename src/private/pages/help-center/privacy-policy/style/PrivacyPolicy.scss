@@ -1,0 +1,32 @@
+@import "../.././../../../GlobalStyle.scss";
+
+.privacy__wrapper {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  @include for_tablet_only {
+    height: var(--height-100-percentage);
+  }
+  .div__start {
+    .help__title {
+      font-family: "DM Sans";
+      font-style: normal;
+      line-height: var(--line-height-150-percentage);
+      letter-spacing: -0.06em;
+      color: #373a40;
+      margin-top: 0;
+      @extend .Subtitle_1;
+    }
+    .help__subtitle {
+      font-style: normal;
+      line-height: var(--line-height-150-percentage);
+      letter-spacing: -0.06em;
+      color: #373a40;
+      @extend .Body_3;
+    }
+  }
+  .tos__title {
+    font-weight: var(--font-weight-700);
+  }
+}

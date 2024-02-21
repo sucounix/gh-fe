@@ -1,0 +1,30 @@
+@import "../../../../GlobalStyle.scss";
+
+.already__exist__modal {
+  padding: 20px;
+  @extend .Body_4;
+
+  .text1 {
+    letter-spacing: -0.01em;
+    color: #f03e3e;
+  }
+  .text2 {
+    line-height: var(--line-height-150-percentage);
+    letter-spacing: -0.01em;
+  }
+  .text3 {
+    line-height: var(--line-height-150-percentage);
+    letter-spacing: -0.01em;
+  }
+  .btn__div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+
+@include for_tablet_only {
+  .already__exist__modal {
+    zoom: 0.5;
+  }
+}

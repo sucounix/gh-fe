@@ -1,0 +1,14 @@
+@import "../../../../GlobalStyle.scss";
+
+.google-btn {
+  margin: 0 !important;
+  height: 52px;
+  border: 2px solid #dee2e6;
+  border-radius: 6px;
+
+  .social__login {
+    color: #373a40;
+    @extend .Body_3;
+    margin-inline-start: 0.5rem;
+  }
+}

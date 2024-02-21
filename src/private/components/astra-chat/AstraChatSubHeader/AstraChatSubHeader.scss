@@ -1,0 +1,61 @@
+@import "../../../../GlobalStyle.scss";
+
+.astra__chat__subheader {
+  .recharge__view {
+    background-color: #fff5f5;
+    padding: 0.44rem 0.8rem;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    .recharge__text {
+      color: #8e43fd;
+      font-family: "DM Sans";
+      font-style: normal;
+      line-height: 20px;
+      letter-spacing: -0.72px;
+      @extend .Caption;
+    }
+    .recharge__btn {
+      border-radius: 5px;
+      background: #771efb;
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.08);
+      font-style: normal;
+      line-height: 24px;
+      letter-spacing: -0.84px;
+      @extend .Body_4;
+    }
+  }
+  .create__new__session {
+    background: rgba(244, 236, 255, 0.4);
+    padding: 0.44rem 0.8rem;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+    .new__session__button {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      cursor: pointer;
+      color: $astra;
+    }
+  }
+  .initial__tokens__div {
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1) inset;
+
+    background: rgba(244, 236, 255, 0.4);
+    padding: 7px 61px 7px 24px;
+
+    .initial__tokens {
+      color: #373a40;
+      margin: 0;
+      font-family: "DM Sans";
+      font-style: normal;
+      line-height: 20px;
+      @extend .Caption;
+      .initial__tokens__span {
+        padding: 0 3px;
+      }
+    }
+  }
+}

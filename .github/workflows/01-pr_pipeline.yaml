@@ -1,0 +1,77 @@
+name: Pull_Request_Pipeline
+
+on:
+  pull_request:
+    branches:
+      - "**"
+
+defaults:
+  run:
+    shell: bash
+
+permissions:
+  contents: read
+  actions: read
+  security-events: write
+
+jobs:
+  build_and_test:
+    name: Build and Test
+    runs-on: ubuntu-latest
+    container:
+      image: node:20
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build and Test
+        run: |
+            buildtimestamp=$(date +"%T")
+            echo $buildtimestamp
+            npm install
+            npm run test:groupOne
+            npm run test:groupTwo
+            npm run test:groupThree
+            npm run test:groupFour
+            npm run test:groupFive
+            npm run test:groupSix
+            npm run test:groupSeven
+            npm run test:groupEight
+            buildtimestamp=$(date +"%T")
+            echo $buildtimestamp
+
+  code_lint:
+    name: Code Lint
+    runs-on: ubuntu-latest
+    container:
+      image: node:20
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Code Lint
+        run: |
+          buildtimestamp=$(date +"%T")
+          echo $buildtimestamp
+          npm install eslint@8.25.0
+          npx eslint .
+          buildtimestamp=$(date +"%T")
+          echo $buildtimestamp
+
+  formatter:
+    name: Formatter
+    runs-on: ubuntu-latest
+    container:
+      image: node:20
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Lint and Format
+        run: |
+          buildtimestamp=$(date +"%T")
+          echo $buildtimestamp
+          npm install prettier@2.7.1
+          npx prettier . --check
+          buildtimestamp=$(date +"%T")
+          echo $buildtimestamp

@@ -1,0 +1,50 @@
+@import "../../../../GlobalStyle.scss";
+
+.edit__report__period__modal {
+  @include for_tablet_only {
+    zoom: 0.8;
+  }
+  .modal__header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #e5e5e5;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-inline-start: 63px;
+
+    @include for_phone_only {
+      padding-inline-start: 20px;
+    }
+
+    .title {
+      @extend .Subtitle_1;
+    }
+  }
+
+  .modal__body {
+    padding: 24px 60px;
+    margin: 1rem 0;
+
+    @include for_phone_only {
+      padding: 24px 16px;
+    }
+
+    .modal__body__content {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .modal__footer {
+      display: flex;
+      width: 100%;
+      gap: 18px;
+      margin-top: 52px;
+      button {
+        @extend .Body_3;
+        line-height: 28px;
+        letter-spacing: -0.96px;
+      }
+    }
+  }
+}

@@ -1,0 +1,89 @@
+.carousel-container {
+  width: var(--width-100-percentage);
+  display: flex;
+  flex-direction: column;
+}
+
+.carousel-wrapper {
+  display: flex;
+  width: var(--width-100-percentage);
+  position: relative;
+}
+
+.carousel-content-wrapper {
+  overflow: hidden;
+  width: var(--width-100-percentage);
+  height: var(--height-100-percentage);
+}
+
+.carousel-content {
+  display: flex;
+  transition: all 250ms linear;
+  -ms-overflow-style: none; /* hide scrollbar in IE and Edge */
+  scrollbar-width: none; /* hide scrollbar in Firefox */
+}
+
+/* hide scrollbar in webkit browser */
+.carousel-content::-webkit-scrollbar,
+.carousel-content::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-content > * {
+  width: var(--width-100-percentage);
+  flex-shrink: 0;
+  flex-grow: 1;
+}
+
+.left-arrow,
+.right-arrow {
+  width: var(--width-30-px);
+  height: var(--height-30-px);
+  background: #086972;
+  border-radius: 5px;
+  color: white;
+  border: none;
+  margin-right: 15px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.buttons__div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: var(--width-95-percentage);
+}
+.buttons__div__open_sidemenu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: var(--width-75-vw);
+}
+.left-arrow {
+  left: -24px;
+}
+
+.right-arrow {
+  right: 24px;
+}
+
+@media all and (max-width: 1199px) {
+  .buttons__div {
+    width: var(--width-90-percentage);
+  }
+  .buttons__div__open_sidemenu {
+    width: var(--width-100-percentage);
+  }
+  .carousel-container {
+    zoom: 0.7;
+  }
+}
+@media all and (max-width: 810px) {
+  .buttons__div .left-arrow,
+  .buttons__div .right-arrow {
+    zoom: 0.4;
+  }
+  .carousel-content {
+    zoom: 0.9;
+  }
+}

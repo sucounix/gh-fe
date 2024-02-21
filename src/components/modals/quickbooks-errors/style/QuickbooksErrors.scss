@@ -1,0 +1,55 @@
+@import "../../../../GlobalStyle.scss";
+.Q_error {
+  padding: 30px;
+  @include for_tablet_only {
+    zoom: 0.7;
+  }
+  @include for_phone_only {
+    zoom: 0.4;
+  }
+  .title1 {
+    font-family: "DM Sans";
+    font-style: normal;
+    line-height: var(--line-height-21-px);
+    letter-spacing: -0.01em;
+    color: #f28c28;
+    display: flex;
+    @extend .Headline_4;
+    .icon {
+      margin-right: 10px;
+    }
+  }
+  .title2 {
+    font-family: "DM Sans";
+    font-style: normal;
+    line-height: var(--line-height-150-percentage);
+    letter-spacing: -0.01em;
+    color: rgba(44, 46, 51, 0.7);
+    @extend .Body_4;
+  }
+  .confirm_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: var(--font-weight-400);
+    font-size: var(--font-16);
+    line-height: var(--line-height-24-px);
+    letter-spacing: -0.01em;
+    color: #ffffff;
+  }
+  .confirm_btn {
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: var(--font-weight-400);
+    font-size: var(--font-16);
+    line-height: var(--line-height-24-px);
+    letter-spacing: -0.01em;
+    color: #ffffff;
+  }
+}

@@ -1,0 +1,116 @@
+.Headline_1 {
+  font-size: 24px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_2 {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_3 {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_4 {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+}
+
+.Subtitle_1 {
+  font-size: 20px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_2 {
+  font-size: 18px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_3,
+.mantine-Tabs-tabLabel {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_4 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.Body_1 {
+  font-size: 20px !important;
+  font-weight: 400 !important;
+}
+
+.Body_2 {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+.Body_3 {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+.Body_4 {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+}
+
+.Caption {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+}
+
+.mantine-Tabs-tab:not(:first-child) {
+  margin-inline-start: 3.75rem;
+}
+
+.adjust__value__modal {
+  padding: 30px;
+}
+@media (max-width: 1200px) {
+  .adjust__value__modal {
+    zoom: 0.6;
+  }
+}
+.adjust__value__modal .flex__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.adjust__value__modal .btn__div {
+  width: 80%;
+  margin: 30px auto auto auto;
+}
+.adjust__value__modal .btn__div .confirm__Btn_change {
+  font-style: normal;
+  font-weight: var(--font-weight-400);
+  font-size: var(--font-16);
+  line-height: var(--line-height-24-px);
+  letter-spacing: -0.01em;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+.adjust__value__modal .btn__div .cancel__Btn_change {
+  font-style: normal;
+  font-weight: var(--font-weight-400);
+  font-size: var(--font-16);
+  line-height: var(--line-height-24-px);
+  letter-spacing: -0.01em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+@media (max-width: 1200px) {
+  .adjust__value__modal {
+    zoom: 0.5;
+  }
+} /*# sourceMappingURL=AdjustByModal.css.map */

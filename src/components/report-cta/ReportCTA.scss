@@ -1,0 +1,46 @@
+@import "../../GlobalStyle.scss";
+
+.report__cta__wrapper {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: var(--main-colors-white, #fff);
+  box-shadow: 0px -8px 10px 0px rgba(0, 0, 0, 0.08);
+  padding-left: 143px;
+  padding-right: 70px;
+  z-index: 100;
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+  @extend .Body_3;
+  @include for-tablet-only {
+    padding-left: 80px;
+    zoom: 0.6;
+  }
+  div {
+    display: flex;
+    gap: 20px;
+    padding: 0 25px;
+    @include for-tablet-only {
+      zoom: 0.5;
+    }
+  }
+  .cta__button {
+    @extend .Body_3;
+  }
+}
+.cta__modal__wrapper {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.207);
+  z-index: 10000;
+}

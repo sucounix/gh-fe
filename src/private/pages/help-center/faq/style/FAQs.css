@@ -1,0 +1,147 @@
+.Headline_1 {
+  font-size: 24px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_2 {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_3 {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_4 {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+}
+
+.Subtitle_1,
+.faq__div .div__start .title1 {
+  font-size: 20px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_2 {
+  font-size: 18px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_3,
+.mantine-Accordion-item .question,
+.mantine-Tabs-tabLabel {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_4 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.Body_1 {
+  font-size: 20px !important;
+  font-weight: 400 !important;
+}
+
+.Body_2 {
+  font-size: 18px !important;
+  font-weight: 400 !important;
+}
+
+.Body_3,
+.mantine-Accordion-item .answer .text,
+.faq__div .div__start .title2 {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+.Body_4 {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+}
+
+.Caption {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+}
+
+.mantine-Tabs-tab:not(:first-child) {
+  margin-inline-start: 3.75rem;
+}
+
+.faq__div {
+  padding: 30px;
+  height: var(--height-100vh-minus-75px);
+}
+.faq__div .div__start .title1 {
+  font-style: normal;
+  line-height: 24px;
+  letter-spacing: -1.2px;
+}
+@media (max-width: 1200px) {
+  .faq__div .div__start .title1 {
+    margin-top: 0;
+  }
+}
+.faq__div .div__start .title2 {
+  font-style: normal;
+  line-height: 24px;
+  letter-spacing: -0.96px;
+}
+.faq__div .single__item__faq {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.09);
+  margin: 24px 0;
+  border: none;
+  border-radius: 10px;
+}
+
+.mantine-Accordion-item .question {
+  font-style: normal;
+  line-height: var(--line-height-21-px);
+  color: #000000;
+  padding: 0;
+  margin: 0;
+}
+.mantine-Accordion-item .answer {
+  padding: 0 15px;
+}
+.mantine-Accordion-item .answer ul,
+.mantine-Accordion-item .answer ol {
+  margin: 0;
+}
+.mantine-Accordion-item .answer .email__style {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+.mantine-Accordion-item .answer .link__faq {
+  text-decoration: underline;
+}
+.mantine-Accordion-item .answer .text {
+  font-style: normal;
+  line-height: var(--line-height-21-px);
+  text-align: justify;
+  color: #000000;
+  margin: 0;
+  margin-bottom: 10px;
+  font-weight: 600 !important;
+}
+.mantine-Accordion-item .answer .list__div {
+  margin-top: 0;
+  padding-left: 10px;
+}
+.mantine-Accordion-item .answer .list__div .list__item {
+  margin: 5px 0;
+}
+.mantine-Accordion-item .answer .list__div .list__item_dot {
+  margin: 10px 0;
+}
+.mantine-Accordion-item .answer .list__div .email__style {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+.mantine-Accordion-item .answer .list__div .link__faq {
+  text-decoration: underline;
+} /*# sourceMappingURL=FAQs.css.map */

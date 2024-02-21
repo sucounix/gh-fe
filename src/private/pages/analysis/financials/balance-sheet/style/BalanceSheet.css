@@ -1,0 +1,122 @@
+.Headline_1 {
+  font-size: 24px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_2 {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_3 {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_4 {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+}
+
+.Subtitle_1 {
+  font-size: 20px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_2 {
+  font-size: 18px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_3,
+.mantine-Tabs-tabLabel {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_4 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.Body_1 {
+  font-size: 20px !important;
+  font-weight: 400 !important;
+}
+
+.Body_2 {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+.Body_3 {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+.Body_4 {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+}
+
+.Caption {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+}
+
+.mantine-Tabs-tab:not(:first-child) {
+  margin-inline-start: 3.75rem;
+}
+
+@media (max-width: 810px) {
+  .financial_BS {
+    zoom: 0.4;
+  }
+}
+.financial_BS .BS__filter__div {
+  margin-bottom: 15px;
+}
+@media all and (-webkit-device-pixel-ratio: 1.5) {
+  .financial_BS .BS__filter__div {
+    zoom: 0.8;
+  }
+}
+@media (max-width: 1200px) {
+  .financial_BS .BS__filter__div {
+    zoom: 0.7;
+  }
+}
+@media (max-width: 810px) {
+  .financial_BS .BS__filter__div {
+    zoom: 0.4;
+  }
+}
+.financial_BS .BS__filter__div .select__view__div {
+  margin-right: 20px;
+}
+.financial_BS .BS__filter__div .select__view__div .mantine-InputWrapper-root {
+  width: 260px;
+}
+.financial_BS .BS__filter__div .show__toggle {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+@media (max-width: 1200px) {
+  .financial_BS .BS__filter__div .show__toggle {
+    justify-content: flex-start;
+  }
+}
+.financial_BS .BS__filter__div .show__toggle .toggle__label {
+  margin-right: 10px;
+}
+@media (max-width: 810px) {
+  .financial_BS .BS__filter__div .show__toggle .toggle__label {
+    font-size: var(--font-13);
+  }
+}
+.financial_BS .alert_wrong_numbers {
+  color: orange;
+  font-size: var(--font-16);
+  line-height: var(--line-height-150-percentage);
+} /*# sourceMappingURL=BalanceSheet.css.map */

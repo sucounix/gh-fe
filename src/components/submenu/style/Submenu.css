@@ -1,0 +1,143 @@
+.Headline_1 {
+  font-size: 24px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_2 {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_3 {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_4 {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+}
+
+.Subtitle_1 {
+  font-size: 20px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_2 {
+  font-size: 18px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_3,
+.mantine-Tabs-tabLabel {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_4 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.Body_1 {
+  font-size: 20px !important;
+  font-weight: 400 !important;
+}
+
+.Body_2 {
+  font-size: 18px !important;
+  font-weight: 400 !important;
+}
+
+.Body_3,
+.submenu__routes .single__tab__active {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+.Body_4 {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+}
+
+.Caption {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+}
+
+.mantine-Tabs-tab:not(:first-child) {
+  margin-inline-start: 3.75rem;
+}
+
+.submenu__routes {
+  width: 16%;
+  padding: 30px 0px 30px 60px;
+  border-right: 1px solid #cccccc;
+}
+@media (max-width: 1200px) {
+  .submenu__routes {
+    padding: 30px 0px 30px 20px;
+  }
+}
+@media (max-width: 810px) {
+  .submenu__routes {
+    padding: 30px 0px 30px 10px;
+  }
+}
+.submenu__routes a {
+  display: block;
+  text-decoration: none;
+}
+.submenu__routes .routes__title {
+  font-style: normal;
+  font-weight: var(--font-weight-500);
+  font-size: var(--font-16);
+  line-height: var(--line-height-150-percentage);
+  letter-spacing: -0.06em;
+  color: #373a40;
+}
+@media (max-width: 1200px) {
+  .submenu__routes .routes__title {
+    font-size: 12px;
+    margin-top: 0;
+  }
+}
+.submenu__routes .single__tab {
+  font-style: normal;
+  font-weight: var(--font-weight-400);
+  font-size: var(--font-16);
+  line-height: var(--line-height-150-percentage);
+  letter-spacing: -0.06em;
+  color: #373a40;
+  opacity: 0.7;
+  padding: 12px 30px;
+  margin-bottom: 10px;
+}
+@media (max-width: 1200px) {
+  .submenu__routes .single__tab {
+    padding: 12px 10px;
+    font-size: 12px !important;
+  }
+}
+.submenu__routes .single__tab__active {
+  font-style: normal;
+  line-height: var(--line-height-150-percentage);
+  letter-spacing: -0.06em;
+  color: #373a40;
+  opacity: 0.7;
+  background-color: white;
+  padding: 12px 30px;
+  margin-bottom: 10px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 5px 0px 0px 5px;
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #cccccc;
+  width: var(--width-101-percentage);
+}
+@media (max-width: 1200px) {
+  .submenu__routes .single__tab__active {
+    padding: 12px 10px;
+    font-size: 12px !important;
+  }
+} /*# sourceMappingURL=Submenu.css.map */

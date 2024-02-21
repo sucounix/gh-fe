@@ -1,0 +1,476 @@
+@import "../../../GlobalStyle.scss";
+.subscription__plan {
+  width: 100%;
+  background-image: url("../../../assets/images/blue-abstract-layered-stripes-background.png");
+  padding: 18px 64px 82px 64px;
+  height: 100%;
+  @include for_tablet_only {
+    zoom: 0.7;
+    margin-top: 140px;
+  }
+  @include for_phone_only {
+    zoom: 0.4;
+    margin-top: 140px;
+  }
+  .logo {
+    width: 159px;
+    height: 30px;
+  }
+  .main__title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: normal;
+    text-align: center;
+    letter-spacing: 0.005em;
+    color: #086972;
+    margin-top: 14px;
+  }
+  .sub__title {
+    font-style: normal;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #a7a7a7;
+    @extend .Body_2;
+  }
+  .subscription_toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .content {
+      border-radius: 8px;
+      background-color: hwb(210 87% 9%);
+      width: 248px;
+      height: 42px;
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .active_option {
+        background-color: $primary_color;
+        color: #fff;
+        padding: 5px 7px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        width: 50%;
+        cursor: pointer;
+        @extend .Body_4;
+        .tag {
+          background: rgba(218, 222, 222, 0.53);
+          border-radius: 6px;
+          margin-left: 5px;
+          width: 56px;
+          height: 26px;
+          text-align: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 99;
+        }
+      }
+      .option {
+        border-radius: 8px;
+        color: $primary_color;
+        width: 50%;
+        cursor: pointer;
+        @extend .Body_4;
+        padding: 5px 7px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .tag {
+          background: rgba(8, 105, 114, 0.2);
+          border-radius: 6px;
+          margin-left: 5px;
+          width: 56px;
+          height: 26px;
+          text-align: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+  .cards__div {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 70px;
+    gap: 30px;
+    @include for_tablet_only {
+      zoom: 0.7;
+    }
+    @include for_phone_only {
+      zoom: 0.6;
+    }
+    .card_icon {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    .subtitle {
+      color: $primary_color;
+      @extend .Body_3;
+      line-height: 26px;
+      margin: 0;
+      letter-spacing: -0.96px;
+    }
+    .seperator {
+      width: 100%;
+      height: 0.5px;
+      background-color: #086972;
+      margin: 12px 0 8px 0;
+    }
+    .features_title {
+      color: #373a40;
+      @extend .Subtitle_3;
+      line-height: 24px;
+      margin: 0 0 10px 0;
+    }
+    .features_list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      li {
+        display: flex;
+        align-items: baseline;
+      }
+      .check_icon {
+        margin-right: 14px;
+        color: #37b24d;
+        font-size: 12px;
+      }
+      .item {
+        color: $primary_color;
+        @extend .Caption;
+        line-height: 20px;
+      }
+    }
+    .free_card {
+      width: 323px;
+      height: 532px;
+      background: white;
+      box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+      padding: 24px 20px;
+      position: relative;
+      @extend .card_icon;
+      .plan_name_div {
+        display: flex;
+        align-items: center;
+        margin-bottom: 9px;
+        .plan_name {
+          margin-left: 8px;
+          color: $primary_color;
+          @extend .Subtitle_1;
+        }
+      }
+      .label {
+        color: $primary_color;
+        font-size: 48px;
+        font-weight: 500;
+        line-height: normal;
+        margin: 0;
+      }
+      .subtitle {
+        color: $primary_color;
+        @extend .Body_3;
+        line-height: 26px;
+        margin: 0;
+        letter-spacing: -0.96px;
+      }
+      .seperator {
+        width: 100%;
+        height: 0.5px;
+        background-color: #086972;
+        margin: 12px 0 8px 0;
+      }
+      .features_title {
+        color: #373a40;
+        @extend .Subtitle_3;
+        line-height: 24px;
+        margin: 0 0 10px 0;
+      }
+      .features_list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        .check_icon {
+          margin-right: 14px;
+          color: #37b24d;
+          font-size: 12px;
+        }
+        .item {
+          color: $primary_color;
+          @extend .Caption;
+          line-height: 20px;
+        }
+      }
+      .btn_div {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        .mantine-Button-inner {
+          @extend .Body_3;
+        }
+      }
+    }
+    .report_kit_card {
+      width: 323px;
+      height: 532px;
+      position: relative;
+      transform: scale(1.04);
+      background-color: $primary_color;
+      border-radius: 0px 10px 10px 10px;
+
+      .most_popular_tag {
+        position: absolute;
+        top: -24px;
+        left: 0;
+        right: 0;
+        z-index: 9999;
+        background-color: $primary_color;
+        border-radius: 10px 10px 0px 0px;
+        text-align: center;
+        padding: 5px 0;
+        color: #fff;
+      }
+      .card_content {
+        height: 100%;
+        background: white;
+        box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        overflow: hidden;
+        padding: 24px 20px;
+        z-index: 99;
+        border: 0.8px solid rgba(8, 105, 114, 0.74);
+        .card_icon {
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+        .plan_name_div {
+          display: flex;
+          align-items: center;
+          margin-bottom: 9px;
+          .plan_name {
+            margin-left: 8px;
+            color: #9f9f9f;
+            @extend .Subtitle_1;
+          }
+        }
+        .label {
+          color: $primary_color;
+          font-size: 48px;
+          font-weight: 500;
+          line-height: normal;
+          margin: 0;
+          .currency {
+            color: $primary_color;
+            @extend .Subtitle_1;
+            line-height: 24px;
+          }
+        }
+        .subtitle {
+          color: $primary_color;
+          @extend .Body_3;
+          line-height: 26px;
+          margin: 0;
+          letter-spacing: -0.96px;
+        }
+        .seperator {
+          width: 100%;
+          height: 0.5px;
+          background-color: #086972;
+          margin: 12px 0 8px 0;
+        }
+        .features_title {
+          color: #373a40;
+          @extend .Subtitle_3;
+          line-height: 24px;
+          margin: 0 0 10px 0;
+        }
+        .features_list {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          .check_icon {
+            margin-right: 14px;
+            color: #37b24d;
+            font-size: 12px;
+          }
+          .item {
+            color: $primary_color;
+            @extend .Caption;
+            line-height: 20px;
+          }
+        }
+        .btn_div {
+          position: absolute;
+          bottom: 70px;
+          left: 20px;
+          right: 20px;
+          .report_btns_plan {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            .report_plan_btn {
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              .mantine-Button-inner {
+                @extend .Body_3;
+              }
+            }
+          }
+        }
+      }
+    }
+    .astra_Card {
+      width: 323px;
+      height: 532px;
+      background: white;
+      box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+      padding: 24px 20px;
+      position: relative;
+      border: 0.8px solid rgba(8, 105, 114, 0.74);
+      @extend .card_icon;
+      .plan_name_div {
+        display: flex;
+        align-items: center;
+        margin-bottom: 9px;
+        .plan_name {
+          margin-left: 8px;
+          color: $astra;
+          @extend .Subtitle_1;
+        }
+      }
+      .label {
+        color: $primary_color;
+        font-size: 48px;
+        font-weight: 500;
+        line-height: normal;
+        margin: 0;
+        .currency {
+          color: $primary_color;
+          @extend .Subtitle_1;
+          line-height: 24px;
+        }
+      }
+      @extend .subtitle;
+      @extend .seperator;
+      @extend .features_title;
+      @extend .features_list;
+      .btn_div {
+        position: absolute;
+        bottom: 70px;
+        left: 20px;
+        right: 20px;
+        .report_btns_plan {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          .report_plan_btn {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            .mantine-Button-inner {
+              @extend .Body_3;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.loading_div {
+  height: 100vh;
+  .loading_text {
+    text-align: center;
+    @extend .Subtitle_1;
+    line-height: 24px;
+  }
+}
+.subscription_redirect_page {
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  background-image: url("../../../assets/images/blue-abstract-layered-stripes-background.png");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  .overlay {
+    mix-blend-mode: multiply;
+
+    opacity: 0.29;
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+  .center_box {
+    height: 100%;
+    border-radius: 6px;
+    -webkit-box-shadow: 0px 0px 10px 0px #00000014;
+    -moz-box-shadow: 0px 0px 10px 0px #00000014;
+    box-shadow: 0px 0px 10px 0px #00000014;
+    background-color: #fbfbfb;
+
+    z-index: 99;
+    .box_header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .box_info {
+      width: 100%;
+      border-radius: 15px 15px 6px 6px;
+      background-color: white;
+      padding: 32px 0;
+
+      .box_title {
+        text-align: center;
+        @extend .Subtitle_1;
+        color: $primary_color;
+        line-height: 24px;
+      }
+      .box_desc {
+        text-align: center;
+        @extend .Body_3;
+        color: #868e96;
+        line-height: 24px;
+        width: 60%;
+        margin: 0 auto;
+      }
+      .box_btn {
+        margin-top: 32px;
+        width: 30%;
+        box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+        .mantine-Button-inner {
+          .mantine-Button-label {
+            @extend .Body_3;
+          }
+        }
+      }
+    }
+  }
+}

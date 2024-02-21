@@ -1,0 +1,112 @@
+.Headline_1 {
+  font-size: 24px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_2 {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_3 {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_4 {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+}
+
+.Subtitle_1,
+.q_redirect_Url .main__title {
+  font-size: 20px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_2 {
+  font-size: 18px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_3,
+.mantine-Tabs-tabLabel {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_4 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.Body_1 {
+  font-size: 20px !important;
+  font-weight: 400 !important;
+}
+
+.Body_2 {
+  font-size: 18px !important;
+  font-weight: 400 !important;
+}
+
+.Body_3,
+.q_redirect_Url .sub__title2,
+.q_redirect_Url .sub__title {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+.Body_4 {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+}
+
+.Caption {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+}
+
+.mantine-Tabs-tab:not(:first-child) {
+  margin-inline-start: 3.75rem;
+}
+
+.q_redirect_Url {
+  height: var(--height-60-vh);
+}
+@media (max-width: 1200px) {
+  .q_redirect_Url {
+    zoom: 0.7;
+  }
+}
+@media (max-width: 810px) {
+  .q_redirect_Url {
+    zoom: 0.4;
+  }
+}
+.q_redirect_Url .main__title {
+  font-family: "DM Sans";
+  font-style: normal;
+  line-height: var(--line-height-24-px);
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: #373a40;
+}
+.q_redirect_Url .sub__title {
+  font-style: normal;
+  line-height: var(--line-height-29-px);
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: #909296;
+  margin-bottom: 5px;
+  margin-top: 0;
+}
+.q_redirect_Url .sub__title2 {
+  font-style: normal;
+  line-height: var(--line-height-29-px);
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: #909296;
+  margin-bottom: 5px;
+  margin-top: 0;
+} /*# sourceMappingURL=QRedirectURL.css.map */

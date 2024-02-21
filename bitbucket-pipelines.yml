@@ -1,0 +1,228 @@
+image: node:20
+definitions:
+  services:
+    docker-with-large-memory:
+      memory: 5120
+      type: docker
+options:
+  docker: true
+  size: 2x
+  max-time: 20
+
+pipelines:
+  pull-requests:
+    "**":
+      - parallel:
+          - step:
+              name: Security Scan
+              script:
+                # Run a security scan for sensitive data.
+                # See more security tools at https://bitbucket.org/product/features/pipelines/integrations?&category=security
+                - pipe: atlassian/git-secrets-scan:1.2.1
+          - step:
+              name: Build and Test
+              script:
+                - buildtimestamp=$(date +"%T")
+                - echo $buildtimestamp
+                - npm install
+                - npm run test:groupOne
+                - npm run test:groupTwo
+                - npm run test:groupThree
+                - npm run test:groupFour
+                - npm run test:groupFive
+                - npm run test:groupSix
+                - npm run test:groupSeven
+                - npm run test:groupEight
+                - buildtimestamp=$(date +"%T")
+                - echo $buildtimestamp
+          - step:
+              name: Code linting
+              script:
+                - buildtimestamp=$(date +"%T")
+                - echo $buildtimestamp
+                - npm install eslint@8.25.0
+                - npx eslint .
+                - buildtimestamp=$(date +"%T")
+                - echo $buildtimestamp
+          - step:
+              name: Formatter
+              script:
+                - buildtimestamp=$(date +"%T")
+                - echo $buildtimestamp
+                - npm install prettier@2.7.1
+                - npx prettier . --check
+                - buildtimestamp=$(date +"%T")
+                - echo $buildtimestamp
+
+  branches:
+    dev:
+      - step:
+          name: Security Scan
+          script:
+            # Run a security scan for sensitive data.
+            # See more security tools at https://bitbucket.org/product/features/pipelines/integrations?&category=security
+            - pipe: atlassian/git-secrets-scan:1.2.1
+
+      - step:
+          name: Bulid&Push ECR
+          image: atlassian/pipelines-awscli
+          caches:
+            - docker
+          services:
+            - docker-with-large-memory
+          script:
+            # - eval $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
+            # - REACT_APP_API_URL="$(aws elbv2 describe-load-balancers | jq -r '.LoadBalancers[] | select(.LoadBalancerName | startswith("dev-be")) |.DNSName')"
+            # - echo $REACT_APP_API_URL
+            # build the image
+            - docker build --target dev -t $BITBUCKET_BRANCH-femto-fe-repo . -f Dockerfile  --build-arg API_URL=${REACT_APP_API_URL_DEV} --build-arg GOOGLE_CLIENT_ID=${REACT_APP_GOOGLE_CLIENT_ID} --build-arg MICROSOFT_CLIENT_ID=${REACT_APP_MICROSOFT_CLIENT_ID} --build-arg QUICKBOOKS_CLIENT_ID=${REACT_APP_QUICKBOOKS_CLIENT_ID_DEV} --build-arg QUICKBOOKS_REDIRECT_URI=${REACT_APP_QUICKBOOKS_REDIRECT_URI_DEV} --build-arg TAG_MANAGER_ID=${REACT_APP_TAG_MANAGER_ID_DEV} --build-arg REACT_APP_NEW_RELIC_APPLICATION_ID=${REACT_APP_NEW_RELIC_APPLICATION_ID_DEV} --build-arg REACT_APP_NEW_RELIC_LICENSE_KEY=${REACT_APP_NEW_RELIC_LICENSE_KEY_DEV} --build-arg REACT_APP_NEW_RELIC_AGENT_ID=${REACT_APP_NEW_RELIC_AGENT_ID_DEV} --build-arg SUBSBASE_REDIRECT_URI=${REACT_APP_SUBSBASE_REDIRECT_URI_DEV} --build-arg REACT_APP_AWS_USER_POOL_ID=${REACT_APP_AWS_USER_POOL_ID_DEV}  --build-arg REACT_APP_AWS_USER_POOLS_CLIENT_ID=${REACT_APP_AWS_USER_POOLS_CLIENT_ID_DEV}   --build-arg REACT_APP_AWS_DOMAIN=${REACT_APP_AWS_DOMAIN_DEV}   --build-arg  REACT_APP_AWS_REDIRECT=${REACT_APP_AWS_REDIRECT_DEV} --build-arg REACT_APP_AWS_REGION=${AWS_DEFAULT_REGION} --build-arg REACT_APP_SUBSBASE_CUSTOM_PORTAL_URL=$REACT_APP_SUBSBASE_CUSTOM_PORTAL_URL_DEV --build-arg REACT_APP_SUBSBASE_SITE_ID=$REACT_APP_SUBSBASE_SITE_ID_DEV
+            # use the pipe to push the image to AWS ECR
+            - pipe: atlassian/aws-ecr-push-image:2.0.0
+              variables:
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+                AWS_DEFAULT_REGION: "$AWS_DEFAULT_REGION"
+                IMAGE_NAME: $BITBUCKET_BRANCH-femto-fe-repo
+                TAGS: "latest"
+
+      - step:
+          name: Deploy to ECS
+          script:
+            # update ECS Task Definition
+            - pipe: atlassian/aws-ecs-deploy:1.7.0
+              variables:
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+                AWS_DEFAULT_REGION: "$AWS_DEFAULT_REGION"
+                CLUSTER_NAME: "${BITBUCKET_BRANCH}-fe"
+                SERVICE_NAME: "${BITBUCKET_BRANCH}-femto-fe"
+                #TASK_DEFINITION: 'task-definition.json' # uncomment to update task definitions
+                # ECS_TASK_FAMILY_NAME: 'Femto' # Optional
+                FORCE_NEW_DEPLOYMENT: "true"
+                WAIT: "true"
+
+    stg:
+      - step:
+          name: Run Play tests
+          image: mcr.microsoft.com/playwright:v1.40.0-focal
+          clone:
+            enabled: false # do not perform a git clone into the build folder by default
+          script:
+            - git clone --depth=1 git@bitbucket.org:femtofpa/e2e.git
+            - cd e2e
+            - npm ci
+            - npx playwright test
+          artifacts:
+            - e2e/my-report-html/index.html
+            - e2e/test-results/report.html
+      - step:
+          name: Bulid&Push ECR
+          image: atlassian/pipelines-awscli
+          caches:
+            - docker
+          services:
+            - docker-with-large-memory
+          script:
+            # build the image
+            - docker build --target dev -t $BITBUCKET_BRANCH-femto-fe-repo . -f Dockerfile  --build-arg API_URL=${REACT_APP_API_URL_STG} --build-arg GOOGLE_CLIENT_ID=${REACT_APP_GOOGLE_CLIENT_ID} --build-arg MICROSOFT_CLIENT_ID=${REACT_APP_MICROSOFT_CLIENT_ID} --build-arg QUICKBOOKS_CLIENT_ID=${REACT_APP_QUICKBOOKS_CLIENT_ID} --build-arg QUICKBOOKS_REDIRECT_URI=${REACT_APP_QUICKBOOKS_REDIRECT_URI_STG}  --build-arg TAG_MANAGER_ID=${REACT_APP_TAG_MANAGER_ID_STG} --build-arg REACT_APP_NEW_RELIC_APPLICATION_ID=${REACT_APP_NEW_RELIC_APPLICATION_ID_STG} --build-arg REACT_APP_NEW_RELIC_LICENSE_KEY=${REACT_APP_NEW_RELIC_LICENSE_KEY_STG} --build-arg REACT_APP_NEW_RELIC_AGENT_ID=${REACT_APP_NEW_RELIC_AGENT_ID_STG} --build-arg SUBSBASE_REDIRECT_URI=${REACT_APP_SUBSBASE_REDIRECT_URI_STG} --build-arg REACT_APP_AWS_USER_POOL_ID=${REACT_APP_AWS_USER_POOL_ID_STG}  --build-arg REACT_APP_AWS_USER_POOLS_CLIENT_ID=${REACT_APP_AWS_USER_POOLS_CLIENT_ID_STG}   --build-arg REACT_APP_AWS_DOMAIN=${REACT_APP_AWS_DOMAIN_STG}   --build-arg  REACT_APP_AWS_REDIRECT=${REACT_APP_AWS_REDIRECT_STG} --build-arg REACT_APP_AWS_REGION=${AWS_DEFAULT_REGION} --build-arg REACT_APP_SUBSBASE_CUSTOM_PORTAL_URL=$REACT_APP_SUBSBASE_CUSTOM_PORTAL_URL_STG --build-arg REACT_APP_SUBSBASE_SITE_ID=$REACT_APP_SUBSBASE_SITE_ID_STG
+            # use the pipe to push the image to AWS ECR
+            - pipe: atlassian/aws-ecr-push-image:2.0.0
+              variables:
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+                AWS_DEFAULT_REGION: "$AWS_DEFAULT_REGION"
+                IMAGE_NAME: $BITBUCKET_BRANCH-femto-fe-repo
+                TAGS: "latest"
+
+      - step:
+          name: Deploy to ECS
+          script:
+            # update ECS Task Definition
+            - pipe: atlassian/aws-ecs-deploy:1.7.0
+              variables:
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+                AWS_DEFAULT_REGION: "$AWS_DEFAULT_REGION"
+                CLUSTER_NAME: "${BITBUCKET_BRANCH}-fe"
+                SERVICE_NAME: "${BITBUCKET_BRANCH}-femto-fe" #TASK_DEFINITION: 'task-definition.json' # uncomment to update task definitions
+                ECS_TASK_FAMILY_NAME: "dev-femto-fe" # Optional
+                FORCE_NEW_DEPLOYMENT: "true"
+                WAIT: "true"
+
+    master:
+      - step:
+          name: Bulid&Push ECR
+          image: atlassian/pipelines-awscli
+          caches:
+            - docker
+          services:
+            - docker-with-large-memory
+          script:
+            - export BITBUCKET_BRANCH="prod"
+            # build the image
+            - docker build --target prod  -t $BITBUCKET_BRANCH-femto-fe-repo . -f Dockerfile  --build-arg API_URL=${REACT_APP_API_URL_PROD} --build-arg GOOGLE_CLIENT_ID=${REACT_APP_GOOGLE_CLIENT_ID} --build-arg MICROSOFT_CLIENT_ID=${REACT_APP_MICROSOFT_CLIENT_ID} --build-arg QUICKBOOKS_CLIENT_ID=${REACT_APP_QUICKBOOKS_CLIENT_ID} --build-arg QUICKBOOKS_REDIRECT_URI=${REACT_APP_QUICKBOOKS_REDIRECT_URI_PROD} --build-arg TAG_MANAGER_ID=${REACT_APP_TAG_MANAGER_ID_PROD} --build-arg REACT_APP_NEW_RELIC_APPLICATION_ID=${REACT_APP_NEW_RELIC_APPLICATION_ID_PROD} --build-arg REACT_APP_NEW_RELIC_LICENSE_KEY=${REACT_APP_NEW_RELIC_LICENSE_KEY_PROD} --build-arg REACT_APP_NEW_RELIC_AGENT_ID=${REACT_APP_NEW_RELIC_AGENT_ID_PROD} --build-arg SUBSBASE_REDIRECT_URI=${REACT_APP_SUBSBASE_REDIRECT_URI_PROD} --build-arg REACT_APP_AWS_USER_POOL_ID=${REACT_APP_AWS_USER_POOL_ID_PROD}  --build-arg REACT_APP_AWS_USER_POOLS_CLIENT_ID=${REACT_APP_AWS_USER_POOLS_CLIENT_ID_PROD}   --build-arg REACT_APP_AWS_DOMAIN=${REACT_APP_AWS_DOMAIN_PROD}   --build-arg  REACT_APP_AWS_REDIRECT=${REACT_APP_AWS_REDIRECT_PROD} --build-arg REACT_APP_AWS_REGION=${AWS_DEFAULT_REGION} --build-arg REACT_APP_SUBSBASE_CUSTOM_PORTAL_URL=$REACT_APP_SUBSBASE_CUSTOM_PORTAL_URL_PROD --build-arg REACT_APP_SUBSBASE_SITE_ID=$REACT_APP_SUBSBASE_SITE_ID_PROD
+            # use the pipe to push the image to AWS ECR
+            - pipe: atlassian/aws-ecr-push-image:2.0.0
+              variables:
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+                AWS_DEFAULT_REGION: "$AWS_DEFAULT_REGION"
+                IMAGE_NAME: $BITBUCKET_BRANCH-femto-fe-repo
+                TAGS: "latest"
+
+      - step:
+          name: Deploy to ECS
+          # trigger: manual
+          script:
+            - export BITBUCKET_BRANCH="prod"
+            # update ECS Task Definition
+            - pipe: atlassian/aws-ecs-deploy:1.7.0
+              variables:
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+                AWS_DEFAULT_REGION: "$AWS_DEFAULT_REGION"
+                CLUSTER_NAME: "${BITBUCKET_BRANCH}-fe"
+                SERVICE_NAME: "${BITBUCKET_BRANCH}-femto-fe"
+                #TASK_DEFINITION: 'task-definition.json' # uncomment to update task definitions
+                # ECS_TASK_FAMILY_NAME: 'Femto' # Optional
+                FORCE_NEW_DEPLOYMENT: "true"
+                WAIT: "true"
+
+    hotfix:
+      - step:
+          name: Bulid&Push ECR
+          image: atlassian/pipelines-awscli
+          caches:
+            - docker
+          services:
+            - docker-with-large-memory
+          script:
+            - export BITBUCKET_BRANCH="prod"
+            # build the image
+            - docker build --target prod  -t $BITBUCKET_BRANCH-femto-fe-repo . -f Dockerfile  --build-arg API_URL=${REACT_APP_API_URL_PROD} --build-arg GOOGLE_CLIENT_ID=${REACT_APP_GOOGLE_CLIENT_ID} --build-arg MICROSOFT_CLIENT_ID=${REACT_APP_MICROSOFT_CLIENT_ID} --build-arg QUICKBOOKS_CLIENT_ID=${REACT_APP_QUICKBOOKS_CLIENT_ID} --build-arg QUICKBOOKS_REDIRECT_URI=${REACT_APP_QUICKBOOKS_REDIRECT_URI_PROD} --build-arg TAG_MANAGER_ID=${REACT_APP_TAG_MANAGER_ID_PROD} --build-arg REACT_APP_NEW_RELIC_APPLICATION_ID=${REACT_APP_NEW_RELIC_APPLICATION_ID_PROD} --build-arg REACT_APP_NEW_RELIC_LICENSE_KEY=${REACT_APP_NEW_RELIC_LICENSE_KEY_PROD} --build-arg REACT_APP_NEW_RELIC_AGENT_ID=${REACT_APP_NEW_RELIC_AGENT_ID_PROD} --build-arg SUBSBASE_REDIRECT_URI=${REACT_APP_SUBSBASE_REDIRECT_URI_PROD} --build-arg REACT_APP_AWS_USER_POOL_ID=${REACT_APP_AWS_USER_POOL_ID_PROD}  --build-arg REACT_APP_AWS_USER_POOLS_CLIENT_ID=${REACT_APP_AWS_USER_POOLS_CLIENT_ID_PROD}   --build-arg REACT_APP_AWS_DOMAIN=${REACT_APP_AWS_DOMAIN_PROD}   --build-arg  REACT_APP_AWS_REDIRECT=${REACT_APP_AWS_REDIRECT_PROD} --build-arg REACT_APP_AWS_REGION=${AWS_DEFAULT_REGION} --build-arg REACT_APP_SUBSBASE_CUSTOM_PORTAL_URL=$REACT_APP_SUBSBASE_CUSTOM_PORTAL_URL_PROD --build-arg REACT_APP_SUBSBASE_SITE_ID=$REACT_APP_SUBSBASE_SITE_ID_PROD
+            # use the pipe to push the image to AWS ECR
+            - pipe: atlassian/aws-ecr-push-image:2.0.0
+              variables:
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+                AWS_DEFAULT_REGION: "$AWS_DEFAULT_REGION"
+                IMAGE_NAME: $BITBUCKET_BRANCH-femto-fe-repo
+                TAGS: "latest"
+
+      - step:
+          name: Deploy to ECS
+          # trigger: manual
+          script:
+            - export BITBUCKET_BRANCH="prod"
+            # update ECS Task Definition
+            - pipe: atlassian/aws-ecs-deploy:1.7.0
+              variables:
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+                AWS_DEFAULT_REGION: "$AWS_DEFAULT_REGION"
+                CLUSTER_NAME: "${BITBUCKET_BRANCH}-fe"
+                SERVICE_NAME: "${BITBUCKET_BRANCH}-femto-fe"
+                #TASK_DEFINITION: 'task-definition.json' # uncomment to update task definitions
+                # ECS_TASK_FAMILY_NAME: 'Femto' # Optional
+                FORCE_NEW_DEPLOYMENT: "true"
+                WAIT: "true"

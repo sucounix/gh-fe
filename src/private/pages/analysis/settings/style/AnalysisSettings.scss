@@ -1,0 +1,16 @@
+@import "../../../../../GlobalStyle.scss";
+
+.analysis__settings__wrapper {
+  display: flex;
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+  height: 100%;
+  @include for_tablet_only {
+    margin: 0 0 0 50px;
+  }
+  @include for_phone_only {
+    margin: 0 0 0 0;
+    zoom: 0.6;
+  }
+}

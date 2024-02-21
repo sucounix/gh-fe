@@ -1,0 +1,301 @@
+.Headline_1 {
+  font-size: 24px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_2 {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_3 {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_4 {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+}
+
+.Subtitle_1 {
+  font-size: 20px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_2 {
+  font-size: 18px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_3,
+.edit_trend_analysis .form_container .form_content .section .sub__title,
+.edit_trend_analysis .page__title,
+.mantine-Tabs-tabLabel {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_4 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.Body_1 {
+  font-size: 20px !important;
+  font-weight: 400 !important;
+}
+
+.Body_2 {
+  font-size: 18px !important;
+  font-weight: 400 !important;
+}
+
+.Body_3,
+.edit_trend_analysis .form_container .btns__div .btns__content .cancel_btn,
+.edit_trend_analysis .form_container .btns__div .btns__content .save_btn,
+.edit_trend_analysis .form_container .form_content .section .add_metric_div,
+.edit_trend_analysis
+  .form_container
+  .form_content
+  .section
+  .single_metric
+  .metric_name,
+.edit_trend_analysis .form_container .form_content .section .select__label,
+.edit_trend_analysis .form_container .form_content .section .checkbox__label {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+.Body_4,
+.edit_trend_analysis
+  .form_container
+  .form_content
+  .section
+  .moving__avg__div
+  .mantine-Checkbox-label,
+.edit_trend_analysis .form_container .form_content .section .option,
+.edit_trend_analysis .form_container .form_content .section .active_option,
+.edit_trend_analysis
+  .form_container
+  .form_content
+  .section
+  .options_dropdown_title {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+}
+
+.Caption,
+.edit_trend_analysis .form_container .form_content .section .error_msg {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+}
+
+/* 
+  Buttons
+*/
+.btn_md {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.mantine-Tabs-tab:not(:first-child) {
+  margin-inline-start: 3.75rem;
+}
+
+.edit_trend_analysis {
+  height: 85%;
+  overflow-y: scroll;
+}
+.edit_trend_analysis .page__title {
+  line-height: 24px;
+  padding: 24px 32px;
+  margin: 0;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.05);
+}
+.edit_trend_analysis .form_container .form_content {
+  padding-bottom: 20px;
+}
+.edit_trend_analysis .form_container .form_content .m_b_24 {
+  margin-bottom: 24px;
+}
+.edit_trend_analysis .form_container .form_content .p_t_24 {
+  padding-top: 24px !important;
+}
+.edit_trend_analysis .form_container .form_content .section {
+  padding: 0 65px 0 27px;
+}
+.edit_trend_analysis .form_container .form_content .section .error_msg {
+  color: #fa5252;
+  line-height: 24px;
+}
+.edit_trend_analysis .form_container .form_content .section .sub__title {
+  line-height: 24px;
+  margin: 0;
+}
+.edit_trend_analysis .form_container .form_content .section .m_b_16 {
+  margin-bottom: 16px;
+}
+.edit_trend_analysis
+  .form_container
+  .form_content
+  .section
+  .chart__view__input {
+  padding-bottom: 12px;
+}
+.edit_trend_analysis .form_container .form_content .section .checkbox__label {
+  line-height: 24px;
+  color: #373a40;
+}
+.edit_trend_analysis .form_container .form_content .section .select__label {
+  line-height: 24px;
+}
+.edit_trend_analysis .form_container .form_content .section .single_metric {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: 10px;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.5);
+}
+.edit_trend_analysis
+  .form_container
+  .form_content
+  .section
+  .single_metric
+  .metric_name {
+  width: 80%;
+  color: #373a40;
+  line-height: 24px;
+}
+.edit_trend_analysis
+  .form_container
+  .form_content
+  .section
+  .single_metric
+  .metric_options {
+  width: 20%;
+}
+.edit_trend_analysis
+  .form_container
+  .form_content
+  .section
+  .single_metric
+  .metric_options
+  .cancel_icon {
+  margin-left: 15px;
+  width: -moz-max-content;
+  width: max-content;
+  cursor: pointer;
+  color: rgb(224, 49, 49);
+}
+.edit_trend_analysis
+  .form_container
+  .form_content
+  .section
+  .single_metric
+  .metric_options
+  .options_icon {
+  cursor: pointer;
+  padding: 0 10px;
+  color: rgb(8, 105, 114);
+}
+.edit_trend_analysis .form_container .form_content .section .add_metric_div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: -moz-max-content;
+  width: max-content;
+  color: #086972;
+  margin-top: 8px;
+  cursor: pointer;
+  line-height: 24px;
+}
+.edit_trend_analysis
+  .form_container
+  .form_content
+  .section
+  .mantine-Popover-dropdown {
+  padding: 0;
+  border-radius: 10px;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.09);
+}
+.edit_trend_analysis
+  .form_container
+  .form_content
+  .section
+  .options_dropdown_title {
+  color: #909296;
+  padding: 14px 18px;
+  margin: 0;
+  margin-bottom: 8px;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
+}
+.edit_trend_analysis .form_container .form_content .section .active_option {
+  padding: 10px 10px;
+  background: rgba(8, 105, 114, 0.1);
+  border-left: 2px solid #086972;
+  line-height: 24px;
+  cursor: pointer;
+}
+.edit_trend_analysis
+  .form_container
+  .form_content
+  .section
+  .active_option
+  .icon {
+  margin-right: 8px;
+}
+.edit_trend_analysis .form_container .form_content .section .option {
+  padding: 10px 10px;
+  background: #fff;
+  border-left: 2px solid #fff;
+  line-height: 24px;
+  cursor: pointer;
+}
+.edit_trend_analysis .form_container .form_content .section .option .icon {
+  margin-right: 8px;
+}
+.edit_trend_analysis .form_container .form_content .section .seperator__div {
+  width: 100%;
+  height: 0.5px;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 0.3;
+}
+.edit_trend_analysis .form_container .form_content .section .moving__avg__div {
+  padding: 14px 18px;
+}
+.edit_trend_analysis
+  .form_container
+  .form_content
+  .section
+  .moving__avg__div
+  .mantine-Checkbox-label {
+  line-height: 24px;
+}
+.edit_trend_analysis .form_container .form_content .seperator {
+  width: 100%;
+  height: 0.5px;
+  background-color: #000;
+  opacity: 0.3;
+  margin-bottom: 24px;
+}
+.edit_trend_analysis .form_container .btns__div {
+  position: fixed;
+  width: 30%;
+  bottom: 20px;
+  height: 60px;
+  right: 0;
+}
+.edit_trend_analysis .form_container .btns__div .btns__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.edit_trend_analysis .form_container .btns__div .btns__content .save_btn {
+  line-height: 28px;
+}
+.edit_trend_analysis .form_container .btns__div .btns__content .cancel_btn {
+  line-height: 28px;
+  background-color: #fff;
+} /*# sourceMappingURL=EditTrendReport.css.map */

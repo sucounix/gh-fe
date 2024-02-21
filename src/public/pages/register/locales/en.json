@@ -1,0 +1,4 @@
+{
+  "accountAlreadyExist": "An account with the given email already exists.",
+  "alreadyExistMessage": "PreSignUp failed with error An external provider account alreadys exists for that email address."
+}

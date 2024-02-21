@@ -1,0 +1,50 @@
+@import "../../../GlobalStyle.scss";
+
+.popover__dropdown_single_level {
+  padding: 0 !important;
+  max-height: var(--height-20-rem);
+  overflow-y: auto;
+
+  .single__dropdown__menu {
+    display: flex;
+    width: var(--width-100-percentage);
+    flex-direction: column;
+    overflow: hidden;
+    .single__dropdown__menu__header {
+      @extend .Body_4;
+      display: flex;
+      line-height: var(--line-height-100-percentage);
+      color: #909296;
+      padding: 1rem 2rem;
+    }
+    .disabled_item {
+      color: gray;
+      background-color: rgb(238, 238, 238);
+      cursor: not-allowed !important;
+      &:hover {
+        background-color: rgb(238, 238, 238) !important;
+      }
+    }
+    .single__dropdown__menu__item__option {
+      @extend .Body_4;
+      line-height: var(--line-height-100-percentage);
+      display: flex;
+      align-items: center;
+      color: #373a40;
+      padding: 1rem;
+      &:hover {
+        background: rgba(8, 105, 114, 0.1);
+        cursor: pointer;
+      }
+    }
+
+    .single__dropdown__menu__item__option__active {
+      background: rgba(8, 105, 114, 0.1);
+      border-left: 2px solid #086972;
+    }
+  }
+}
+
+.dropdown_label {
+  @extend .Body_3;
+}

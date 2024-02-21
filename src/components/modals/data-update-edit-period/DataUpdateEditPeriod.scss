@@ -1,0 +1,81 @@
+@import "../../../GlobalStyle.scss";
+
+.data__update__page__modal {
+  padding: 16px;
+  @include for_tablet_only {
+    zoom: 0.6;
+  }
+  @include for_phone_only {
+    width: 90%;
+  }
+
+  .mantine-Radio-label {
+    font-style: normal;
+    line-height: 150%;
+    letter-spacing: -0.01em;
+    font-feature-settings: "calt" off;
+    color: rgba(44, 46, 51, 0.7);
+    @extend .Body_4;
+  }
+  .modal__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .butn1 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 10px;
+      font-style: normal;
+      line-height: 24px;
+      letter-spacing: -0.01em;
+      font-feature-settings: "calt" off;
+      color: #e03131;
+      box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.1);
+      border-radius: 6px;
+      @extend .Body_3;
+    }
+    .butn2 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-style: normal;
+      line-height: 24px;
+      letter-spacing: -0.01em;
+      font-feature-settings: "calt" off;
+      color: #ffffff;
+      box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.1);
+      border-radius: 6px;
+      @extend .Body_3;
+    }
+  }
+  .title__modal__1 {
+    font-style: normal;
+    line-height: 21px;
+    letter-spacing: -0.01em;
+    font-feature-settings: "calt" off;
+    color: #2c2e33;
+    @extend .Headline_4;
+  }
+  .radio__option__div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 3px;
+    .mantine-Radio-inner {
+      margin-top: 3px;
+    }
+  }
+  .mantine-Select-itemsWrapper {
+    height: 100px;
+  }
+  .title__modal {
+    font-style: normal;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    font-feature-settings: "calt" off;
+    color: #2c2e33;
+    @extend .Body_3;
+  }
+}

@@ -1,0 +1,122 @@
+@import "../../../GlobalStyle.scss";
+
+.report_time_frame_select {
+  .TimeFrame__input__div_report {
+    margin-top: 10px;
+    .label {
+      @extend .Body_4;
+      margin: 0;
+    }
+    .TimeFrame__input {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+      height: var(--height-49-px);
+      border: 2px solid #e3e3e3;
+      border-radius: 8px;
+      position: relative;
+      cursor: pointer;
+      .div_overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 0px 16px;
+        z-index: 9;
+        opacity: 0;
+      }
+      .content {
+        font-style: normal;
+        font-weight: var(--font-weight-500);
+        font-size: var(--font-14);
+        background-color: inherit;
+        line-height: var(--line-height-121-5-px);
+        color: #002229;
+        border: none;
+        width: 95% !important;
+        margin: 0 auto;
+
+        &::placeholder {
+          color: #adb5bd;
+          @extend .Body_4;
+          line-height: 24px;
+          font-family: DM Sans;
+        }
+      }
+    }
+    .disabled_input {
+      background-color: #f1f3f5 !important;
+      cursor: not-allowed;
+      .content {
+        &::placeholder {
+          color: #000000a9;
+        }
+      }
+    }
+    .timefrmae_error {
+      @extend .Caption;
+      color: #f03e3e;
+    }
+  }
+  .popover__dropdown {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+
+    overflow-x: hidden;
+    .select_period_div {
+      z-index: 99;
+      padding: 10px;
+      .year_part {
+        width: 25%;
+        border-radius: 1px solid gray;
+        .selected_year_item {
+          background: rgba(8, 105, 114, 0.1);
+          border-left: 2px solid #086972;
+        }
+        .year_item {
+          @extend .Body_4;
+          line-height: var(--line-height-100-percentage);
+          display: flex;
+          align-items: center;
+          color: #373a40;
+          padding: 1rem;
+          &:hover {
+            background: rgba(8, 105, 114, 0.1);
+            cursor: pointer;
+          }
+        }
+      }
+      .w_100 {
+        width: 100%;
+      }
+      .w_75 {
+        width: 75%;
+      }
+      .period_part {
+        .disabled_option {
+          padding: 8px;
+          color: gray;
+          cursor: not-allowed;
+          height: 100%;
+          padding: 5px;
+        }
+        .enabled_option {
+          padding: 8px;
+          cursor: pointer;
+          height: 100%;
+          padding: 5px;
+        }
+        .selected_option {
+          background: #c9dedc;
+          border-radius: 8px;
+          height: 100%;
+          padding: 5px;
+        }
+      }
+    }
+  }
+}

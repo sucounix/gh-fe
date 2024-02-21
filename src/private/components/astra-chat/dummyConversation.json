@@ -1,0 +1,41 @@
+{
+  "conversation": [
+    {
+      "message": "Hello",
+      "role": "user"
+    },
+    {
+      "message": "Hi",
+      "role": "assistant"
+    },
+    {
+      "message": "How are you?",
+      "role": "user"
+    },
+    {
+      "message": "I am good",
+      "role": "assistant"
+    },
+    {
+      "message": "How can I help you?",
+      "role": "assistant"
+    },
+    {
+      "message": "What are the financial statements?",
+      "role": "user"
+    },
+    {
+      "message": "Financial statements are written records that convey the business activities and the financial performance of a company. Financial statements are often audited by government agencies, accountants, firms, etc. to ensure accuracy and for tax, financing, or investing purposes. For-profit primary financial statements include the balance sheet, income statement, statement of cash flow, and statement of changes in equity. Nonprofit entities use a similar but different set of financial statements.",
+      "role": "assistant"
+    },
+    {
+      "status": "loading",
+      "role": "assistant"
+    },
+    {
+      "status": "failed",
+      "role": "user",
+      "message": "What are the financial statements"
+    }
+  ]
+}

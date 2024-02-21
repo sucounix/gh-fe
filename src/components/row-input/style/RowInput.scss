@@ -1,0 +1,15 @@
+@import "../../../GlobalStyle.scss";
+
+.row__input__component {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 0;
+
+  .rowName {
+    @extend .Body_4;
+    line-height: var(--line-height-150-percentage);
+    letter-spacing: -0.06em;
+  }
+}

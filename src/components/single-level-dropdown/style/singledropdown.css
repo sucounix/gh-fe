@@ -1,0 +1,124 @@
+.Headline_1 {
+  font-size: 24px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_2 {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_3 {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_4 {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+}
+
+.Subtitle_1 {
+  font-size: 20px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_2 {
+  font-size: 18px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_3,
+.mantine-Tabs-tabLabel {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_4 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.Body_1 {
+  font-size: 20px !important;
+  font-weight: 400 !important;
+}
+
+.Body_2 {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+.Body_3 {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+.Body_4,
+.popover__dropdown_single_level
+  .single__dropdown__menu
+  .single__dropdown__menu__item__option,
+.popover__dropdown_single_level
+  .single__dropdown__menu
+  .single__dropdown__menu__header {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+}
+
+.Caption {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+}
+
+.mantine-Tabs-tab:not(:first-child) {
+  margin-inline-start: 3.75rem;
+}
+
+.popover__dropdown_single_level {
+  padding: 0 !important;
+  max-height: var(--height-20-rem);
+  overflow-y: auto;
+}
+.popover__dropdown_single_level .single__dropdown__menu {
+  display: flex;
+  width: var(--width-100-percentage);
+  flex-direction: column;
+  overflow: hidden;
+}
+.popover__dropdown_single_level
+  .single__dropdown__menu
+  .single__dropdown__menu__header {
+  display: flex;
+  line-height: var(--line-height-100-percentage);
+  color: #909296;
+  padding: 1rem 2rem;
+}
+.popover__dropdown_single_level .single__dropdown__menu .disabled_item {
+  color: gray;
+  background-color: rgb(238, 238, 238);
+  cursor: not-allowed !important;
+}
+.popover__dropdown_single_level .single__dropdown__menu .disabled_item:hover {
+  background-color: rgb(238, 238, 238) !important;
+}
+.popover__dropdown_single_level
+  .single__dropdown__menu
+  .single__dropdown__menu__item__option {
+  line-height: var(--line-height-100-percentage);
+  display: flex;
+  align-items: center;
+  color: #373a40;
+  padding: 1rem;
+}
+.popover__dropdown_single_level
+  .single__dropdown__menu
+  .single__dropdown__menu__item__option:hover {
+  background: rgba(8, 105, 114, 0.1);
+  cursor: pointer;
+}
+.popover__dropdown_single_level
+  .single__dropdown__menu
+  .single__dropdown__menu__item__option__active {
+  background: rgba(8, 105, 114, 0.1);
+  border-left: 2px solid #086972;
+} /*# sourceMappingURL=singledropdown.css.map */

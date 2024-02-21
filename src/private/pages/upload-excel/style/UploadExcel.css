@@ -1,0 +1,319 @@
+.Headline_1,
+.import__excel__title {
+  font-size: 24px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_2 {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_3 {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_4 {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+}
+
+.Subtitle_1,
+.import__excel__section__title {
+  font-size: 20px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_2 {
+  font-size: 18px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_3,
+.mantine-Tabs-tabLabel {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_4 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.Body_1 {
+  font-size: 20px !important;
+  font-weight: 400 !important;
+}
+
+.Body_2 {
+  font-size: 18px !important;
+  font-weight: 400 !important;
+}
+
+.Body_3,
+.upload__section__options .mantine-Select-label,
+.upload__action__buttons a .example__button,
+.subtitle__text {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+.Body_4,
+.import__excel__section__subtitle {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+}
+
+.Caption {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+}
+
+.mantine-Tabs-tab:not(:first-child) {
+  margin-inline-start: 3.75rem;
+}
+
+.normal__upload__screen {
+  padding: 13px 70px;
+}
+.normal__upload__screen .upload__excel__art img {
+  width: 400px;
+}
+@media (max-width: 810px) {
+  .normal__upload__screen .upload__excel__art img {
+    width: 300px;
+  }
+}
+
+.import__excel__title {
+  line-height: var(--line-height-30-px);
+  align-items: center;
+  color: #086972;
+}
+
+.subtitle__text {
+  color: #2c2e33;
+}
+
+.subtitle__icon {
+  font-weight: var(--font-weight-900);
+  width: var(--width-20-px);
+  font-size: var(--font-24);
+  text-align: center;
+  color: #086972;
+}
+
+.upload__action__buttons {
+  width: 96%;
+  margin-top: 24px;
+}
+@media (max-width: 810px) {
+  .upload__action__buttons {
+    width: 100%;
+  }
+}
+.upload__action__buttons .guideline_btn {
+  font-style: normal;
+  line-height: 28px; /* 175% */
+  letter-spacing: -0.96px;
+  width: 100% !important;
+  padding: 0 !important;
+}
+.upload__action__buttons .guideline_btn .mantine-Button-label {
+  padding-right: 2px;
+}
+.upload__action__buttons a {
+  text-decoration: none;
+  color: white;
+  width: 100% !important;
+  height: 100%;
+}
+.upload__action__buttons a .example__button {
+  font-style: normal;
+  line-height: 28px;
+  letter-spacing: -0.96px;
+  width: 100% !important;
+  padding: 0 !important;
+}
+.upload__action__buttons a .example__button .mantine-Button-label {
+  padding-right: 2px;
+}
+
+.upload__section__options {
+  max-width: var(--width-50-rem);
+}
+.upload__section__options .mantine-Select-label {
+  color: black;
+}
+
+.upload__divider {
+  width: var(--width-100-percentage);
+  height: var(--height-0);
+  left: 1px;
+  top: 398px;
+  opacity: 0.4;
+  border: 1px solid #086972;
+  margin-top: 24px;
+}
+
+.upload__button .mantine-Button-inner {
+  justify-content: center;
+}
+
+.import__excel__section {
+  margin-bottom: 24px;
+}
+
+.import__excel__section__title {
+  line-height: var(--line-height-150-percentage);
+  letter-spacing: -0.01em;
+  font-feature-settings: "calt" off;
+  color: #086972;
+}
+
+.import__excel__section__subtitle {
+  line-height: var(--line-height-150-percentage);
+  letter-spacing: -0.01em;
+  font-feature-settings: "calt" off;
+  color: #086972;
+}
+
+.dropzone__container > .dropzone__container__title {
+  background: rgba(8, 105, 114, 0.1);
+  opacity: 0.45;
+  border: 2px dashed #086972;
+  border-radius: 8px;
+  font-weight: var(--font-weight-400);
+  font-size: var(--font-16);
+  line-height: var(--line-height-150-percentage);
+  text-align: center;
+  letter-spacing: -0.01em;
+  font-feature-settings: "calt" off;
+  color: rgba(8, 105, 114, 0.4);
+}
+
+.go__back__wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.go__back__text {
+  font-weight: var(--font-weight-400);
+  font-size: var(--font-16);
+  line-height: var(--line-height-155-percentage);
+  text-decoration-line: underline;
+  color: #086972;
+  text-align: center;
+  cursor: pointer;
+}
+
+.mantine-Select-label {
+  font-weight: var(--font-weight-400);
+  font-size: var(--font-14);
+  line-height: var(--line-height-16-px);
+  letter-spacing: -0.01em;
+  font-feature-settings: "calt" off;
+  color: #086972;
+}
+
+.upload__successful__message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 24px;
+  gap: 4px;
+  background: #ebfbee;
+  border: 1px solid #37b24d;
+  border-radius: 4px;
+}
+
+.upload__successfull__title {
+  font-weight: var(--font-weight-700);
+  font-size: var(--font-20);
+  line-height: var(--line-height-26-px);
+  margin: 0;
+  letter-spacing: -0.01em;
+  font-feature-settings: "calt" off;
+  color: #37b24d;
+}
+
+.upload__successful__subtitle {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-size: var(--font-14);
+  line-height: var(--line-height-150-percentage);
+  color: #37b24d;
+  margin: 0;
+}
+
+.upload__message__icon__wrapper {
+  position: relative;
+}
+.upload__message__icon__wrapper i {
+  font-weight: var(--font-weight-100);
+}
+.upload__message__icon__wrapper i:nth-child(1) {
+  font-size: var(--font-25);
+}
+.upload__message__icon__wrapper i:nth-child(2) {
+  position: absolute;
+  bottom: -2.5px;
+  right: -1em;
+  font-weight: var(--font-weight-600);
+}
+.upload__message__icon__wrapper .check__icon {
+  position: absolute;
+  bottom: 0;
+  left: 1em;
+  font-size: var(--font-13);
+  z-index: 1;
+}
+
+.upload__message__icon__wrapper > .art__work {
+  display: flex;
+  justify-content: center;
+  max-height: 300px;
+}
+
+.upload__button__inner {
+  margin-inline-start: 0.5em;
+}
+
+.guide__wrapper {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 20px;
+  align-items: center;
+  width: var(--width-90-percentage);
+}
+
+.compnay__name {
+  margin-inline-end: 0.2em;
+  margin-inline-start: 0.2em;
+}
+
+.guide__wrapper {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.compnay__name {
+  margin-inline-end: 0.2em;
+}
+
+@media (max-width: 1200px) {
+  .normal__upload__screen {
+    zoom: 0.7;
+  }
+}
+@media (max-width: 810px) {
+  .normal__upload__screen {
+    zoom: 0.4;
+  }
+  .upload__action__buttons {
+    zoom: 0.7;
+  }
+} /*# sourceMappingURL=UploadExcel.css.map */

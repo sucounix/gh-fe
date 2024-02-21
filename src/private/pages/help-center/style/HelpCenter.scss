@@ -1,0 +1,65 @@
+@import "../../../../GlobalStyle.scss";
+
+.help_center__settings__view {
+  display: flex;
+  height: var(--height-100vh-minus-75px);
+  width: 100%;
+  position: relative;
+  .help_center__settings__container {
+    height: var(--height-100vh-minus-75px);
+    max-height: var(--height-100vh-minus-75px);
+    overflow: auto;
+    position: relative;
+    transition: all 0.5s ease;
+    @include for_tablet_only {
+      zoom: 0.7;
+      height: var(--height-100-percentage);
+      max-height: var(--height-100-percentage);
+      overflow-y: auto;
+      margin-left: 50px;
+    }
+    @include for_phone_only {
+      zoom: 0.4;
+      margin-left: 0;
+    }
+    .help_center__settings__view__content {
+      display: flex;
+      @include for_tablet_only {
+        height: var(--height-136-percentage);
+      }
+      @include for_phone_only {
+        height: var(--height-99-percentage);
+      }
+    }
+    .outlet__content {
+      width: 85%;
+      @include for-tablet-only {
+        width: 80%;
+      }
+    }
+  }
+  .sidemenu_open {
+    left: 15%;
+    width: calc(100% - 15%);
+    @include for-tablet-only {
+      left: 22% !important;
+      width: calc(100% - 22%) !important;
+    }
+    @include for-phone-only {
+      left: 0 !important;
+      width: 100% !important;
+    }
+  }
+  .sidemenu_close {
+    left: 5%;
+    width: calc(100% - 5%);
+    @include for-tablet-only {
+      left: 7% !important;
+      width: calc(100% - 7%) !important;
+    }
+    @include for-phone-only {
+      left: 0 !important;
+      width: 100% !important;
+    }
+  }
+}

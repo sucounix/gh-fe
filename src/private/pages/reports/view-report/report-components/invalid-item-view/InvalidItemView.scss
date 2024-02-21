@@ -1,0 +1,31 @@
+@import "../../../../../../GlobalStyle.scss";
+.invalid_item {
+  margin-bottom: 20px;
+  position: relative;
+  padding: 8px 15px;
+  @include for_phone_only {
+    zoom: 0.4;
+  }
+  @include for_tablet_only {
+    zoom: 0.7;
+  }
+  .mantine-Alert-root {
+    border: 1px solid;
+    margin-bottom: 10px;
+    .alert_text {
+      @extend .Body_3;
+      color: $error_color;
+      line-height: 24px;
+    }
+  }
+  .item_img {
+    width: 100%;
+  }
+  &:hover {
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='12' ry='12' stroke='%23086972FF' stroke-width='2' stroke-dasharray='10' stroke-dashoffset='0' stroke-linecap='round'/%3e%3c/svg%3e");
+    border-radius: 12px;
+    .options_div {
+      opacity: 1;
+    }
+  }
+}

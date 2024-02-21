@@ -1,0 +1,71 @@
+.financials {
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: var(--width-100-percentage);
+}
+.finance__header {
+  padding: 24px 72px 8px 72px;
+  background: #fafafa;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.03);
+  width: var(--width-100-percentage);
+}
+
+.financials .tabs__style {
+  background: #fafafa;
+  padding: 0px 72px 0 72px;
+}
+
+.financials .single__tab {
+  padding: 40px 72px 0 72px;
+  margin-bottom: 100px;
+}
+
+.financials .tabs__style .active__tab__name {
+  opacity: 1;
+}
+.financials .tabs__style .single__tab__name {
+  color: #373a40;
+  opacity: 0.7;
+}
+
+button[data-active="true"] > span {
+  font-weight: 600 !important;
+}
+
+@media all and (max-width: 1000px) and (orientation: landscape) {
+  .financials .finance__header {
+    zoom: 0.5;
+  }
+}
+@media all and (max-width: 1199px) {
+  .finance__header {
+    zoom: 0.7;
+  }
+  .financials .single__tab {
+    zoom: 0.7;
+  }
+}
+@media all and (max-width: 860px) {
+  .financials .single__tab {
+    padding: 20px 20px 0 20px;
+  }
+}
+@media all and (max-width: 470px) {
+  .financials .finance__header {
+    padding: 24px 12px 8px 72px;
+  }
+  .financials .tabs__style {
+    padding: 0;
+    zoom: 0.7;
+  }
+  .financials .tabs__style .single__tab__name {
+    font-size: var(--font-12);
+    padding-bottom: 5px;
+  }
+}
+
+@media all and (max-width: 390px) {
+  .financials .finance__header {
+    padding: 24px 11px 8px 11px;
+  }
+}

@@ -1,0 +1,110 @@
+.Headline_1 {
+  font-size: 24px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_2 {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_3 {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_4 {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+}
+
+.Subtitle_1 {
+  font-size: 20px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_2 {
+  font-size: 18px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_3,
+.mantine-Tabs-tabLabel {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_4 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.Body_1 {
+  font-size: 20px !important;
+  font-weight: 400 !important;
+}
+
+.Body_2 {
+  font-size: 18px !important;
+  font-weight: 400 !important;
+}
+
+.Body_3 {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+.Body_4,
+.view__report .download__div .download__btn {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+}
+
+.Caption {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+}
+
+.mantine-Tabs-tab:not(:first-child) {
+  margin-inline-start: 3.75rem;
+}
+
+.view__report {
+  position: relative;
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  overflow-x: hidden;
+}
+@media (max-width: 1200px) {
+  .view__report {
+    zoom: 0.7;
+  }
+}
+@media (max-width: 810px) {
+  .view__report {
+    zoom: 0.5;
+  }
+}
+.view__report .download__div {
+  box-shadow: 1px 3px 10px 0px rgba(0, 0, 0, 0.2196078431);
+  width: 100%;
+  height: 70px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 100px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 61;
+}
+.view__report .download__div .download__btn {
+  background-color: rgb(240, 247, 248);
+  font-family: DM Sans;
+  line-height: 24px;
+}
+.view__report .section__container {
+  padding: 0 90px;
+} /*# sourceMappingURL=ViewReport.css.map */

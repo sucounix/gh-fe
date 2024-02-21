@@ -1,0 +1,40 @@
+@import "../../../../GlobalStyle.scss";
+
+.q_redirect_Url {
+  height: var(--height-60-vh);
+  @include for_tablet_only {
+    zoom: 0.7;
+  }
+  @include for_phone_only {
+    zoom: 0.4;
+  }
+  .main__title {
+    font-family: "DM Sans";
+    font-style: normal;
+    line-height: var(--line-height-24-px);
+    text-align: center;
+    letter-spacing: -0.01em;
+    color: #373a40;
+    @extend .Subtitle_1;
+  }
+  .sub__title {
+    font-style: normal;
+    line-height: var(--line-height-29-px);
+    text-align: center;
+    letter-spacing: -0.01em;
+    color: #909296;
+    margin-bottom: 5px;
+    margin-top: 0;
+    @extend .Body_3;
+  }
+  .sub__title2 {
+    font-style: normal;
+    line-height: var(--line-height-29-px);
+    text-align: center;
+    letter-spacing: -0.01em;
+    color: #909296;
+    margin-bottom: 5px;
+    margin-top: 0;
+    @extend .Body_3;
+  }
+}

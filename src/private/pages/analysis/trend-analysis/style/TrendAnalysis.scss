@@ -1,0 +1,286 @@
+@import "../../../../../GlobalStyle.scss";
+
+/* metrics */
+.trendAnalysis {
+  width: var(--width-100-percentage);
+  height: var(--height-100vh-minus-75px);
+  overflow-y: auto;
+  .trend__analysis__header {
+    padding: 24px 72px 8px 72px;
+    background: #fafafa;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.03);
+    width: var(--width-100-percentage);
+  }
+  .trend__analysis__content {
+    padding: 0 70px;
+    margin-bottom: 100px;
+  }
+  .select__label {
+    font-style: normal;
+    font-weight: var(--font-weight-400);
+    font-size: var(--font-14);
+    line-height: var(--line-height-16-px);
+    letter-spacing: -0.01em;
+    font-feature-settings: "calt" off;
+    color: #a0abc0;
+  }
+  .trendanalysis__filter {
+    margin: 15px 0;
+  }
+  .disabled__metric {
+    .singleMetric {
+      opacity: 0.4;
+    }
+  }
+  .alert__metric {
+    width: var(--width-100-percentage);
+    background: #fffefe;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 14px;
+    color: #f03e3e;
+    .alert__icon {
+      color: #f03e3e;
+      font-style: normal;
+      font-weight: var(--font-weight-900);
+      font-size: var(--font-16);
+      line-height: var(--line-height-100-percentage);
+      font-size: var(--font-19);
+      margin-right: 10px;
+    }
+  }
+  .metrics__div {
+    width: var(--width-100-percentage);
+    min-height: var(--height-60-px);
+    height: max-content;
+    background: #fffefe;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &::-webkit-scrollbar {
+      height: 4px !important;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: white;
+    }
+    .mantine-Menu-item {
+      width: 100%;
+      padding: 0 !important;
+      margin-top: 8px;
+    }
+  }
+  .single__metric__div {
+    height: 60px;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: normal;
+    font-weight: var(--font-weight-400);
+    font-size: var(--font-15);
+    line-height: var(--line-height-20-px);
+    letter-spacing: -0.01em;
+    color: #000;
+    padding: 0 10px;
+    position: relative;
+    .mantine-Select-input {
+      background-color: transparent;
+      border: none;
+    }
+  }
+  .select__div {
+    .css-b62m3t-container {
+      width: var(--width-220-px);
+      margin-right: 10px;
+    }
+  }
+  .css-13cymwt-control {
+    border: none !important;
+    background-color: transparent !important;
+  }
+  .css-1u9des2-indicatorSeparator {
+    display: none !important;
+  }
+  .fa-angle-down {
+    margin: 0 8px;
+  }
+  .seperator {
+    height: var(--height-34-px);
+    width: var(--width-2-px);
+    background-color: gray;
+    margin: 0 10px;
+  }
+  .remove__metric {
+    color: #e03131;
+    cursor: pointer;
+    @extend .Body_4;
+  }
+  .add__metric__div {
+    height: 60px;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: var(--font-weight-400);
+    font-size: var(--font-15);
+    line-height: var(--line-height-20-px);
+    letter-spacing: -0.01em;
+    color: #086972;
+    padding: 0 10px;
+    margin: 0 20px;
+    cursor: pointer;
+  }
+  .single__metric__flex {
+    position: relative;
+  }
+  .singleMetric {
+    @extend .Body_3;
+    cursor: pointer;
+  }
+
+  .metric__side__name {
+    @extend .Subtitle_3;
+  }
+
+  .title__menu__div {
+    padding: 15px;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
+    p {
+      font-weight: var(--font-weight-400);
+      font-size: var(--font-14);
+      line-height: var(--line-height-100-percentage);
+      color: #909296;
+      margin: 0;
+    }
+  }
+  .seperator__div {
+    width: var(--width-100-percentage);
+    border-top: 0.5px solid rgba(0, 0, 0, 0.2);
+    margin-top: 8px;
+  }
+  .chart__type {
+    padding: 10px;
+    &:hover {
+      background-color: #e7f0f1;
+    }
+  }
+  .mantine-Menu-dropdown {
+    padding: 0 !important;
+  }
+  .moving__avg__div {
+    padding: 0px 27px 11px 12px;
+    font-size: 14px;
+    &:hover {
+      background-color: #fff;
+    }
+    .mantine-Checkbox-label {
+      @extend .Body_4;
+    }
+  }
+  .active__chart__type {
+    background: rgba(8, 105, 114, 0.1);
+    border-left: 3px solid #086972;
+    padding: 10px;
+  }
+  .recharts-cartesian-axis-tick-value {
+    font-size: var(--font-12) !important;
+  }
+  .chart-tooltip {
+    background-color: white;
+    padding: 5px 10px;
+    border: 2px solid #000;
+    border-radius: 10px;
+  }
+  .recharts-cartesian-grid-vertical {
+    display: none !important;
+  }
+  .legend__div {
+    height: var(--height-100-percentage);
+  }
+  .chart__container {
+    width: var(--width-90-percentage);
+    height: var(--height-500-px);
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .recharts-cartesian-axis {
+    font-family: sans-serif;
+    color: pink !important;
+  }
+}
+
+@media all and (max-width: 1000px) and (orientation: landscape) {
+  .trendAnalysis {
+    .trend__analysis__header {
+      zoom: 0.5;
+    }
+  }
+}
+@include for_tablet_only {
+  .trendAnalysis {
+    .trend__analysis__header {
+      zoom: 0.6;
+    }
+    .metrics__div {
+      zoom: 0.6;
+    }
+    .alert__metric {
+      zoom: 0.6;
+    }
+    .chart__container {
+      zoom: 0.6;
+    }
+  }
+}
+@media all and (max-width: 1500px) {
+  .metrics__div {
+    zoom: 0.8;
+  }
+}
+@include for_tablet_only {
+  .trendAnalysis {
+    .metrics__div {
+      zoom: 0.8;
+    }
+    .alert__metric {
+      zoom: 0.8;
+    }
+  }
+}
+@media all and (max-width: 992px) {
+  .trendAnalysis {
+    .metrics__div {
+      zoom: 0.5;
+    }
+    .alert__metric {
+      zoom: 0.5;
+    }
+  }
+}
+@include for_phone_only {
+  .trendAnalysis {
+    .trend__analysis__content {
+      zoom: 0.3;
+    }
+  }
+}
+@media all and (max-width: 470px) {
+  .trendAnalysis {
+    .trend__analysis__header {
+      padding: 24px 12px 8px 72px;
+    }
+  }
+}
+@media all and (max-width: 390px) {
+  .trendAnalysis {
+    .trend__analysis__header {
+      padding: 24px 11px 8px 11px;
+    }
+  }
+}

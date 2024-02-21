@@ -1,0 +1,54 @@
+.astra__chat__input {
+  background: #f1f3f5;
+  border-radius: 2rem;
+  margin: 16px 19px 16px 19px;
+  padding: 9px 8px 8px 18px;
+
+  position: relative;
+  .astra__chat__message__input {
+    background: #f1f3f5;
+    width: 90%;
+    outline: none;
+    border: 0;
+    border-radius: 6.25rem;
+    &::-ms-input-placeholder {
+      font-family: "DM Sans";
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: -0.15px;
+      color: #373a40;
+    }
+
+    &::placeholder {
+      font-family: "DM Sans";
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: -0.15px;
+      color: #373a40;
+    }
+  }
+  .send__icon {
+    width: 10%;
+    height: 35px;
+    background-image: url("../../../../assets/images/sendIcon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 35px;
+    cursor: pointer;
+    .icon {
+      color: #fff;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 900;
+      line-height: 24px; /* 150% */
+    }
+  }
+  .disable_send__icon {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}

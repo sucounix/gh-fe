@@ -1,0 +1,120 @@
+@import "../../../GlobalStyle.scss";
+
+.femto__alert__wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  .femto__alert__main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 0 1rem;
+    justify-content: center;
+    word-break: break-word;
+
+    .femto__alert__header {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      .femto__alert__icon {
+        font-size: 1.25rem;
+        font-style: normal;
+        font-weight: 100;
+        line-height: normal;
+        letter-spacing: -0.0125rem;
+      }
+
+      .femto__alert__caption {
+        @extend .Body_3;
+      }
+      .femto__alert__link {
+        color: $primary_color;
+      }
+    }
+
+    .femto__alert__title {
+      @extend .Headline_2;
+    }
+
+    .femto__alert__content {
+      font-size: 0.875rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1.5rem;
+      letter-spacing: -0.0525rem;
+    }
+  }
+
+  .femto__alert__side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 1rem;
+  }
+}
+
+.femto__alert__success {
+  margin: 1rem 0;
+  background-color: $success_background;
+  border: 1px solid $success_color;
+
+  .femto__alert__wrapper--success {
+    background-color: $success_background;
+    border: 0 !important;
+    outline: 0;
+    color: $success_color;
+  }
+}
+
+.femto__alert__warning {
+  margin: 1rem 0;
+  background-color: $warning_background;
+  border: 1px solid $warning_color;
+
+  .femto__alert__wrapper--warning {
+    color: $warning_color;
+  }
+}
+
+.femto__alert__error {
+  margin: 1rem 0;
+  background-color: $error_background;
+  border: 1px solid $error_color;
+
+  .femto__alert__wrapper--error {
+    color: $error_color;
+  }
+}
+
+.femto__alert__notification {
+  margin: 1rem 0;
+  background-color: $notification_background;
+  border: 1px solid $notification_color;
+
+  .femto__alert__wrapper--notification {
+    border: 0 !important;
+    outline: 0;
+    color: $notification_color;
+  }
+}
+
+@include for_phone_only {
+  .femto__alert__wrapper {
+    .femto__alert__header {
+      flex-direction: column;
+      gap: 5px;
+    }
+  }
+
+  .femto__alert__side {
+    zoom: 0.5;
+  }
+
+  .mantine-Alert-root {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

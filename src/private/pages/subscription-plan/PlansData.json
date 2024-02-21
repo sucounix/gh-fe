@@ -1,0 +1,46 @@
+{
+  "is_monthly": true,
+  "plans": [
+    {
+      "plan_name": "Starter",
+      "label": "Free",
+      "currency": null,
+      "subtitle": "No payment required ",
+      "features_title": "Starter Include",
+      "features_list": [
+        "Vertical & Horizontal Analysis",
+        "Breakeven Analysis",
+        "Trend Analysis",
+        "Profit & Loss Composition",
+        "Balance Sheet Composition",
+        "Cash Flow Composition",
+        "Key Performance Indicators",
+        "Formula Builder",
+        "Alerts",
+        "Budget"
+      ]
+    },
+    {
+      "plan_name": "Reporting Kit",
+      "monthlyPrice": "999",
+      "yearlyPrice": "799",
+      "discount": "20%",
+      "currency": "EGP",
+      "subtitle": "Per month ",
+      "features_title": "Everything in Starter, plus:",
+      "features_list": ["Reports Templates", "Reports Download"]
+    },
+    {
+      "plan_name": "Astra AI",
+      "monthlyPrice": "1999",
+      "yearlyPrice": "1599",
+      "discount": "20%",
+      "currency": "EGP",
+      "subtitle": "Per month ",
+      "features_title": "Everything in starter & Reporting kit, plus:",
+      "features_list": [
+        "1,000,000 Astra tokens for Analysis & Reporting for each company"
+      ]
+    }
+  ]
+}

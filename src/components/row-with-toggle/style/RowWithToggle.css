@@ -1,0 +1,126 @@
+.Headline_1 {
+  font-size: 24px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_2 {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_3 {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_4 {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+}
+
+.Subtitle_1 {
+  font-size: 20px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_2 {
+  font-size: 18px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_3,
+.mantine-Tabs-tabLabel {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_4 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.Body_1 {
+  font-size: 20px !important;
+  font-weight: 400 !important;
+}
+
+.Body_2 {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+.Body_3 {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+.Body_4,
+.row__with__toggle .row__name__div .row__name {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+}
+
+.Caption,
+.row__with__toggle .toggle__div .edit__div .edit__text {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+}
+
+.mantine-Tabs-tab:not(:first-child) {
+  margin-inline-start: 3.75rem;
+}
+
+.row__with__toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 10px;
+  width: 100%;
+}
+.row__with__toggle .row__name__div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.row__with__toggle .row__name__div .row__icon {
+  margin-right: 10px;
+}
+.row__with__toggle .row__name__div .row__name {
+  line-height: var(--line-height-150-percentage);
+  letter-spacing: -0.06em;
+  color: #373a40;
+}
+@media (max-width: 810px) {
+  .row__with__toggle .row__name__div .row__name {
+    zoom: 0.5;
+    font-size: 1rem;
+  }
+}
+.row__with__toggle .toggle__div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.row__with__toggle .toggle__div .edit__div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.row__with__toggle .toggle__div .edit__div .editIcon {
+  cursor: pointer;
+  font-size: 0.7rem;
+  color: #086972;
+}
+.row__with__toggle .toggle__div .edit__div .edit__text {
+  cursor: pointer;
+  text-decoration: underline;
+  margin: 0 2rem 0 0.3rem;
+  color: #086972;
+}
+@media (max-width: 810px) {
+  .row__with__toggle .toggle__div .edit__div .edit__text {
+    font-size: 0.6rem;
+    margin: 0 0.7rem 0 0;
+    text-align: end;
+  }
+} /*# sourceMappingURL=RowWithToggle.css.map */

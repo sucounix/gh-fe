@@ -1,0 +1,30 @@
+@import "../../../GlobalStyle.scss";
+
+.row__toggle__input__div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  @include for_tablet_only {
+    zoom: 0.8;
+  }
+  @include for_phone_only {
+    zoom: 0.6;
+  }
+  .toggle_content_div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .content {
+      margin-left: 15px;
+      @extend .Body_4;
+    }
+  }
+  .input__div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    font-size: 0.8rem;
+  }
+}

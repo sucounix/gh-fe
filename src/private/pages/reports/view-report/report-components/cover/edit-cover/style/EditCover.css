@@ -1,0 +1,175 @@
+.Headline_1 {
+  font-size: 24px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_2 {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_3 {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_4 {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+}
+
+.Subtitle_1 {
+  font-size: 20px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_2 {
+  font-size: 18px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_3,
+.edit_cover .edit__logo .section__title,
+.edit_cover .edit_background .background_section,
+.edit_cover .page__title,
+.mantine-Tabs-tabLabel {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_4 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.Body_1 {
+  font-size: 20px !important;
+  font-weight: 400 !important;
+}
+
+.Body_2 {
+  font-size: 18px !important;
+  font-weight: 400 !important;
+}
+
+.Body_3,
+.edit_cover .btns__div .cancel_btn,
+.edit_cover .btns__div .save_btn,
+.edit_cover .edit__report__title .mantine-ColorInput-label,
+.edit_cover .edit__report__title .mantine-TextInput-label,
+.edit_cover .edit__logo .company_has_logo .title,
+.edit_cover .edit__logo .company_not_has_logo .text,
+.edit_cover .edit_background .mantine-ColorInput-label,
+.edit_cover .edit_background .mantine-Radio-label {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+.Body_4 {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+}
+
+.Caption {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+}
+
+/* 
+  Buttons
+*/
+.btn_md {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.mantine-Tabs-tab:not(:first-child) {
+  margin-inline-start: 3.75rem;
+}
+
+.edit_cover {
+  position: relative;
+  height: 100vh;
+  overflow-y: scroll;
+  width: 100%;
+  overflow-x: hidden;
+}
+.edit_cover::-webkit-scrollbar-track {
+  background: #fff;
+}
+.edit_cover .page__title {
+  line-height: 24px;
+  padding: 24px 32px;
+  margin: 0;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.05);
+}
+.edit_cover .edit_background {
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.3);
+  padding: 0 32px 20px 32px;
+  line-height: 24px;
+}
+.edit_cover .edit_background .background_section {
+  line-height: 24px;
+}
+.edit_cover .edit_background .radio_group_background {
+  margin-bottom: 10px;
+}
+.edit_cover .edit_background .mantine-Radio-radio {
+  width: 16px;
+  height: 16px;
+}
+.edit_cover .edit_background .mantine-Radio-icon {
+  width: 8px;
+  height: 8px;
+}
+.edit_cover .edit_background .mantine-ColorInput-label {
+  color: rgb(55, 58, 64);
+  line-height: 24px;
+}
+.edit_cover .edit__logo {
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.3);
+  padding: 0 32px 20px 32px;
+}
+.edit_cover .edit__logo .section__title {
+  text-align: left;
+  line-height: 24px;
+}
+.edit_cover .edit__logo .company_not_has_logo .text {
+  line-height: 24px;
+}
+.edit_cover .edit__logo .company_not_has_logo .link {
+  color: rgb(51, 154, 240);
+}
+.edit_cover .edit__logo .company_not_has_logo .link .icon {
+  padding: 0 20px;
+}
+.edit_cover .edit__logo .company_has_logo .title {
+  line-height: 24px;
+  margin-right: 16px;
+}
+.edit_cover .edit__report__title {
+  padding: 20px 32px 20px 32px;
+}
+.edit_cover .edit__report__title .title__input {
+  margin-bottom: 20px;
+}
+.edit_cover .edit__report__title .mantine-TextInput-label {
+  color: rgb(55, 58, 64);
+  line-height: 24px;
+}
+.edit_cover .edit__report__title .mantine-ColorInput-label {
+  color: rgb(55, 58, 64);
+  line-height: 24px;
+}
+.edit_cover .btns__div {
+  position: absolute;
+  width: 100%;
+  bottom: 20px;
+  height: 60px;
+}
+.edit_cover .btns__div .save_btn {
+  line-height: 28px;
+}
+.edit_cover .btns__div .cancel_btn {
+  line-height: 28px;
+} /*# sourceMappingURL=EditCover.css.map */

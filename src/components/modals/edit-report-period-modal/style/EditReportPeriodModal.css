@@ -1,0 +1,123 @@
+.Headline_1 {
+  font-size: 24px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_2 {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_3 {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_4 {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+}
+
+.Subtitle_1,
+.edit__report__period__modal .modal__header .title {
+  font-size: 20px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_2 {
+  font-size: 18px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_3,
+.mantine-Tabs-tabLabel {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_4 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.Body_1 {
+  font-size: 20px !important;
+  font-weight: 400 !important;
+}
+
+.Body_2 {
+  font-size: 18px !important;
+  font-weight: 400 !important;
+}
+
+.Body_3,
+.edit__report__period__modal .modal__body .modal__footer button {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+.Body_4 {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+}
+
+.Caption {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+}
+
+/* 
+  Buttons
+*/
+.btn_md {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.mantine-Tabs-tab:not(:first-child) {
+  margin-inline-start: 3.75rem;
+}
+
+@media (max-width: 1200px) {
+  .edit__report__period__modal {
+    zoom: 0.8;
+  }
+}
+.edit__report__period__modal .modal__header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e5e5e5;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  padding-inline-start: 63px;
+}
+@media (max-width: 810px) {
+  .edit__report__period__modal .modal__header {
+    padding-inline-start: 20px;
+  }
+}
+.edit__report__period__modal .modal__body {
+  padding: 24px 60px;
+  margin: 1rem 0;
+}
+@media (max-width: 810px) {
+  .edit__report__period__modal .modal__body {
+    padding: 24px 16px;
+  }
+}
+.edit__report__period__modal .modal__body .modal__body__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.edit__report__period__modal .modal__body .modal__footer {
+  display: flex;
+  width: 100%;
+  gap: 18px;
+  margin-top: 52px;
+}
+.edit__report__period__modal .modal__body .modal__footer button {
+  line-height: 28px;
+  letter-spacing: -0.96px;
+} /*# sourceMappingURL=EditReportPeriodModal.css.map */

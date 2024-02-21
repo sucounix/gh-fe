@@ -1,0 +1,49 @@
+@import "../../../GlobalStyle.scss";
+
+.slider__row {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #373a407b;
+
+  &::-webkit-scrollbar {
+    height: 7px !important;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #373a4030;
+  }
+  .item {
+    width: max-content;
+    padding: 10px 10px 0px 0px;
+    height: max-content;
+    margin-right: 10px;
+    display: inline-block;
+    .item__content {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      .number__input {
+        min-width: 174px;
+        .mantine-NumberInput-label {
+          @extend .Body_4;
+        }
+      }
+      .o__icon {
+        color: #086972;
+        width: 10px;
+        height: 100%;
+        margin-bottom: 4px;
+        font-size: 20px;
+        margin-left: 8px;
+        cursor: pointer;
+      }
+    }
+    .input__error {
+      color: #f03e3e;
+      @extend .Body_4;
+    }
+  }
+}

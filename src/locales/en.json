@@ -1,0 +1,17 @@
+{
+  "analysis": {
+    "settings": {
+      "updatingDataWarningTitle": "Updating data will affect current reports and breakdown",
+      "updatingDataWarningMessage": "When you update your financial data, the breakdown sheet will be deleted",
+      "updatingDataWarningFirstPart": "Your current reports will be updated with your new financial data, download",
+      "updatingDataWarningSecondPart": "to maintain current data.",
+      "updatingDataWarningConfirmation": "Would you still like to proceed?",
+      "continueUpdating": "Continue Updating",
+      "cancelUpdating": "Close"
+    }
+  },
+  "reports": {
+    "title": "Reports",
+    "coverLimitError": "You have reached the maximum number of lines allowed for this section."
+  }
+}

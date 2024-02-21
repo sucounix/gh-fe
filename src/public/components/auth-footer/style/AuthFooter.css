@@ -1,0 +1,145 @@
+.Headline_1 {
+  font-size: 24px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_2,
+.contact__modal .contact__us__title {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_3 {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_4 {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+}
+
+.Subtitle_1,
+.PP__modal .pp__modal__title,
+.tos__modal .tos__modal__title {
+  font-size: 20px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_2 {
+  font-size: 18px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_3,
+.mantine-Tabs-tabLabel {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_4 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.Body_1 {
+  font-size: 20px !important;
+  font-weight: 400 !important;
+}
+
+.Body_2 {
+  font-size: 18px !important;
+  font-weight: 400 !important;
+}
+
+.Body_3,
+.btn_auth_footer {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+.Body_4,
+.contact__modal .contact__row .contact__us__email__content,
+.contact__modal .contact__us__subtitle {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+}
+
+.Caption {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+}
+
+.mantine-Tabs-tab:not(:first-child) {
+  margin-inline-start: 3.75rem;
+}
+
+.auth__footer .auth__footer__links {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 100;
+}
+@media (max-width: 810px) {
+  .auth__footer {
+    zoom: 0.5;
+  }
+}
+@media (max-width: 1200px) {
+  .auth__footer {
+    zoom: 0.4;
+  }
+}
+
+.tos__modal {
+  padding: 30px 30px;
+}
+.tos__modal .tos__modal__content {
+  height: 300px;
+  overflow-y: scroll;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+.tos__modal .tos__modal__footer {
+  height: 50px;
+  margin-top: 30px;
+}
+
+.PP__modal {
+  padding: 30px 30px;
+}
+.PP__modal .pp__modal__content {
+  height: 300px;
+  overflow-y: scroll;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+.PP__modal .pp__modal__footer {
+  height: 50px;
+  margin-top: 30px;
+}
+
+.contact__modal .contact__row .icon {
+  color: #086972;
+}
+.contact__modal .contact__row .contact__us__email__content {
+  margin: 0 10px;
+}
+
+.btn_auth_footer {
+  text-decoration: underline;
+  color: #086972;
+}
+
+@media (max-width: 1200px) {
+  .contact__modal {
+    zoom: 0.5;
+  }
+  .tos__modal {
+    zoom: 0.5;
+  }
+  .PP__modal {
+    zoom: 0.5;
+  }
+} /*# sourceMappingURL=AuthFooter.css.map */

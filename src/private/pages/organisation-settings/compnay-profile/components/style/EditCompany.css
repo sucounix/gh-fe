@@ -1,0 +1,207 @@
+.Headline_1 {
+  font-size: 24px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_2 {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_3 {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_4 {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+}
+
+.Subtitle_1 {
+  font-size: 20px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_2 {
+  font-size: 18px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_3,
+.mantine-Tabs-tabLabel {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_4 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.Body_1 {
+  font-size: 20px !important;
+  font-weight: 400 !important;
+}
+
+.Body_2 {
+  font-size: 18px !important;
+  font-weight: 400 !important;
+}
+
+.Body_3,
+.company__profile__wrapper
+  .company__edit__wrapper
+  .company__edit__right
+  .company__edit__row
+  .form_input
+  .mantine-InputWrapper-label,
+.company__profile__wrapper
+  .company__edit__wrapper
+  .company__edit__right
+  .company__edit__row
+  .form_input,
+.company__profile__wrapper
+  .company__edit__wrapper
+  .company__edit__left
+  .avatar__controls
+  .avatar__control,
+.company__profile__wrapper
+  .company__edit__wrapper
+  .company__edit__left
+  .company__logo__title {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+.Body_4 {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+}
+
+.Caption {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+}
+
+.mantine-Tabs-tab:not(:first-child) {
+  margin-inline-start: 3.75rem;
+}
+
+.company__profile__wrapper {
+  margin-inline-start: 1.5rem;
+}
+.company__profile__wrapper .company__profile__header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 2rem 0rem 1rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1137254902);
+  margin-bottom: 1rem;
+}
+.company__profile__wrapper
+  .company__profile__header
+  .company__profile__header__title {
+  font-weight: var(--font-weight-500);
+  font-size: var(--font-20);
+  line-height: var(--line-height-150-percentage);
+  letter-spacing: -0.06em;
+  color: #373a40;
+}
+.company__profile__wrapper .company__edit__wrapper {
+  display: flex;
+  padding: 1rem 1rem 1rem 0;
+}
+@media (max-width: 810px) {
+  .company__profile__wrapper .company__edit__wrapper {
+    zoom: 0.5;
+  }
+}
+.company__profile__wrapper .company__edit__wrapper .company__edit__left {
+  width: var(--width-20-percentage);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.company__profile__wrapper
+  .company__edit__wrapper
+  .company__edit__left
+  .company__logo__title {
+  line-height: var(--line-height-21-px);
+  color: #373a40;
+}
+.company__profile__wrapper
+  .company__edit__wrapper
+  .company__edit__left
+  .avatar__controls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.company__profile__wrapper
+  .company__edit__wrapper
+  .company__edit__left
+  .avatar__controls
+  .avatar__control {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  line-height: var(--line-height-21-px);
+  cursor: pointer;
+}
+.company__profile__wrapper
+  .company__edit__wrapper
+  .company__edit__left
+  .avatar__controls
+  .reupload__control {
+  color: #086972;
+}
+.company__profile__wrapper
+  .company__edit__wrapper
+  .company__edit__left
+  .avatar__controls
+  .delete__control {
+  color: #e03131;
+}
+.company__profile__wrapper .company__edit__wrapper .company__edit__right {
+  width: var(--width-70-percentage);
+}
+.company__profile__wrapper
+  .company__edit__wrapper
+  .company__edit__right
+  .company__edit__row {
+  padding-inline-end: 3rem;
+}
+.company__profile__wrapper
+  .company__edit__wrapper
+  .company__edit__right
+  .company__edit__action__buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  justify-content: end;
+}
+@media (max-width: 810px) {
+  .company__profile__wrapper
+    .company__edit__wrapper
+    .company__edit__right
+    .company__edit__action__buttons {
+    zoom: 0.5;
+    margin-top: 5rem;
+  }
+}
+.company__profile__wrapper
+  .company__edit__wrapper
+  .company__edit__right
+  .company__edit__action__buttons
+  .company__edit__action__button {
+  font-weight: var(--font-weight-400);
+  font-size: var(--font-16);
+  line-height: var(--line-height-24-px);
+  letter-spacing: -0.01em;
+  font-feature-settings: "calt" off;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  padding: 0 2rem;
+} /*# sourceMappingURL=EditCompany.css.map */

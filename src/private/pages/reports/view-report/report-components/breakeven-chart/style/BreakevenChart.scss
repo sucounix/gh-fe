@@ -1,0 +1,223 @@
+@import "../../../../../../../GlobalStyle.scss";
+
+.breakeven__wrapper {
+  overflow: hidden;
+  padding: 1rem;
+  position: relative;
+  margin-bottom: 5rem;
+
+  @include for-tablet-only {
+    zoom: 0.8;
+  }
+
+  .breakeven__report {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    align-items: flex-end;
+
+    @include for-tablet-only {
+      zoom: 0.8;
+    }
+
+    @include for-phone-only {
+      align-items: flex-start;
+    }
+
+    .left__side__breakeven {
+      width: 65%;
+      overflow: hidden;
+
+      @include for-phone-only {
+        zoom: 0.6;
+        align-items: flex-start;
+      }
+
+      .svg__graph {
+        width: 100%;
+      }
+
+      .fixed__cost__legend {
+        content: "";
+        width: 80px;
+        border-radius: 2em;
+        border-top: 5px solid #086972;
+      }
+      .total__cost__legend {
+        content: "";
+        width: var(--width-80-px);
+        border-radius: 2em;
+        border-top: 5px solid #e03131;
+      }
+      .revenue__legend {
+        content: "";
+        width: var(--width-80-px);
+        border-radius: 2em;
+        border-top: 5px solid #37b24d;
+      }
+
+      .legend {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 2rem;
+        margin: 2rem 0;
+
+        @include for-phone-only {
+          gap: 1rem;
+        }
+      }
+      .legend__entry {
+        gap: 5rem;
+        p {
+          @extend .Subtitle_3;
+        }
+      }
+
+      .breakeven__chart__header {
+        display: flex;
+        flex-direction: column;
+        .breakeven__chart__title {
+          @extend .Headline_2;
+          color: #000;
+        }
+
+        .account__name {
+          @extend .Subtitle_3;
+          color: #086972;
+          margin-inline-start: 0.5rem;
+          padding: 0.2rem 0.5rem;
+          background: #f0f7f8;
+          border-radius: 0.5rem;
+        }
+
+        .breakeven__chart__period {
+          @extend .Subtitle_1;
+          color: #000;
+        }
+      }
+    }
+    .right__side__breakeven {
+      width: 30%;
+
+      .summary__wrapper {
+        border-radius: 0.625rem;
+        background: #fff;
+        box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.07);
+        padding: 28px;
+      }
+      .summary__entry__label {
+        letter-spacing: -0.01em;
+        font-feature-settings: "calt" off;
+        @extend .Body_3;
+      }
+      .summary__entry__value {
+        @extend .Subtitle_1;
+        line-height: var(--line-height-150-percentage);
+      }
+      .summary__revenue {
+        color: #37b24d;
+      }
+      .summary__total__cost {
+        color: #e03131;
+      }
+      .summary__breakeven {
+        color: #1971c2;
+      }
+      .summary__fixed__cost {
+        color: #086972;
+      }
+    }
+  }
+
+  .no__breakeven {
+    width: 100%;
+    height: 674px;
+    background: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    @include for-phone-only {
+      zoom: 0.3;
+    }
+
+    .no__breakeven__message {
+      @extend .Body_1;
+      color: #373a40;
+      text-align: center;
+      opacity: 0.5;
+    }
+  }
+}
+
+.mantine-Drawer-content {
+  background-color: white !important;
+  .mantine-Drawer-body {
+    padding: 0;
+  }
+}
+.edit__breakeven__drawer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  padding-bottom: 12px;
+  overflow: hidden;
+
+  .edit__breakeven__title {
+    @extend .Subtitle_3;
+    color: #000 !important;
+    padding: 24px 32px;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.05);
+  }
+
+  .chart__view__wrapper {
+    padding: 22px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .chart__view__title {
+      @extend .Subtitle_3;
+      color: #000;
+    }
+  }
+
+  .mantine-Divider-root {
+    border: 0.5px solid #000;
+    opacity: 0.3;
+  }
+
+  .chart__time__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 22px 24px;
+
+    .chart__time__title {
+      @extend .Subtitle_3;
+      color: #000;
+    }
+  }
+
+  .edit__breakeven__buttons {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 16px;
+
+    .save__changes__button {
+      @extend .btn_md;
+      line-height: 28px;
+      letter-spacing: -0.96px;
+    }
+
+    .cancel__btn {
+      @extend .Body_3;
+      ine-height: 24px;
+      letter-spacing: -0.96px;
+    }
+  }
+}

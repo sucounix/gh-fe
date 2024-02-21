@@ -1,0 +1,10 @@
+@import "../../../../GlobalStyle.scss";
+
+@include for_tablet_only {
+  .confirm__year__change__modal {
+    zoom: 0.5;
+  }
+  .budgets__modal {
+    zoom: 0.5;
+  }
+}

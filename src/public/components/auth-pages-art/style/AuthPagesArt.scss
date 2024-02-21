@@ -1,0 +1,112 @@
+@import "../../../../GlobalStyle.scss";
+
+.artwork__wrapper {
+  width: 35%;
+  height: calc(100vh - 48px);
+  margin: 24px;
+  overflow: hidden;
+  padding: 40px;
+  background: url("../../../../assets/images/svg\ mask.svg");
+  object-fit: cover;
+  background-color: #086972;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+
+  .artwork__content {
+    @include for_phone_only {
+      zoom: 0.5;
+    }
+
+    @include for_tablet_only {
+      zoom: 0.4;
+    }
+
+    .artwork__content__text {
+      .artwork__content__text__title {
+        color: #edf6f7;
+        font-size: 41px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 3rem;
+        letter-spacing: -2.46px;
+        margin: 0;
+        line-height: 2.5rem;
+      }
+      .artwork__content__text__description {
+        width: 60%;
+        color: #fff;
+        line-height: 24px;
+        letter-spacing: -0.96px;
+        @extend .Body_3;
+      }
+    }
+  }
+
+  .artwork__reviews {
+    @include for_phone_only {
+      zoom: 0.2;
+    }
+
+    @include for_tablet_only {
+      zoom: 0.4;
+    }
+  }
+
+  .artwork__review {
+    position: relative;
+    width: 100%;
+
+    img {
+      z-index: -1;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+
+    &:last-child {
+      margin-bottom: 0.25rem;
+    }
+
+    .review__body {
+      background: rgba(255, 255, 255, 0.14);
+      backdrop-filter: blur(8.356119155883789px);
+      padding: 0.2rem 1.5rem;
+      border-radius: 56px 0px 52px 0px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        inset: 0;
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0.77),
+          rgba(255, 255, 255, 0.24)
+        );
+        padding: 1px;
+        border-radius: 56px 0px 52px 0px;
+        border-radius: var(3px, 50%);
+        -webkit-mask: linear-gradient(#fff 0 0) content-box,
+          linear-gradient(#fff 0 0);
+        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+      }
+    }
+
+    .artwork__review__text {
+      word-wrap: break-word;
+      @extend .Body_4;
+      color: #fff;
+    }
+  }
+}

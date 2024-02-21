@@ -1,0 +1,52 @@
+@import "../../../../GlobalStyle.scss";
+.container {
+  display: flex;
+  overflow: hidden;
+  @include for_tablet_only {
+    zoom: 0.6;
+  }
+  @include for_phone_only {
+    zoom: 0.5;
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+
+  @include for_tablet_only {
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-top: 3rem;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    gap: 10px;
+    .title {
+      color: #373a40;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 35px; /* 145.833% */
+      letter-spacing: -1.44px;
+    }
+    .disc {
+      @extend .Body_4;
+      color: #373a40;
+      text-align: center;
+      font-style: normal;
+      line-height: 24px; /* 171.429% */
+      letter-spacing: -0.84px;
+    }
+    .go__login__btn {
+      @extend .Body_3;
+      margin-bottom: 24px;
+      line-height: 28px;
+      width: fit-content;
+      display: flex;
+      align-items: center;
+    }
+  }
+}

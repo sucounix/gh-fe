@@ -1,0 +1,77 @@
+@import "../../../GlobalStyle.scss";
+
+.view__tabs__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  width: fit-content;
+
+  .view__type__option {
+    border: 1px solid $primary-color;
+    cursor: pointer;
+    padding: 10px 58px;
+    max-width: 100% !important;
+    letter-spacing: -0.84px;
+    .view__type__title {
+      @extend .Body_4;
+    }
+    .small_text {
+      @extend .Caption;
+    }
+  }
+
+  .view__type__option:nth-child(1) {
+    border-radius: 5px 0 0 5px;
+  }
+
+  .view__type__option:nth-child(2) {
+    border-radius: 0 5px 5px 0;
+  }
+
+  .view__type__option__active {
+    background-color: $primary-color;
+    color: #fff;
+  }
+
+  .view__type__option_small {
+    border: 1px solid $primary-color;
+    cursor: pointer;
+    padding: 10px 12px;
+    max-width: 100% !important;
+    letter-spacing: -0.84px;
+    .view__type__title {
+      @extend .Body_4;
+    }
+    .small_text {
+      @extend .Caption;
+    }
+  }
+
+  .view__type__option_small:nth-child(1) {
+    border-radius: 5px 0 0 5px;
+  }
+
+  .view__type__option_small:nth-child(2) {
+    border-radius: 0 5px 5px 0;
+  }
+
+  .view__type__option__active_small {
+    background-color: $primary-color;
+    color: #fff;
+  }
+}
+
+@include for_tablet_only {
+  .view__type__option {
+    font-size: 0.2rem;
+  }
+}
+
+@include for_phone_only {
+  .view__type__option {
+    padding: 0.2rem !important;
+    font-size: 0.1rem !important;
+  }
+}

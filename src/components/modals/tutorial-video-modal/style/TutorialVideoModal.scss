@@ -1,0 +1,48 @@
+@import "../../../../GlobalStyle.scss";
+.tutorial_video_modal {
+  .mantine-Modal-body {
+    padding: 42px;
+    width: 641px;
+    min-height: 552px;
+    @include for_tablet_only {
+      zoom: 0.8;
+      margin: 0 auto;
+    }
+    @include for_phone_only {
+      zoom: 0.5;
+    }
+    .title {
+      font-family: DM Sans;
+      font-style: normal;
+      line-height: 24px;
+      letter-spacing: -1.2px;
+      margin: 0 !important;
+      padding: 0 !important;
+      @extend .Headline_2;
+    }
+    .desc {
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: -0.84px;
+    }
+    .video {
+      width: 516px;
+      height: 284px;
+      @include for_tablet_only {
+        zoom: 0.6;
+        width: 80% !important;
+      }
+    }
+    .close__btn {
+      width: 201px;
+      font-style: normal;
+      margin-top: 32px;
+      line-height: 24px;
+      letter-spacing: -0.16px;
+      outline: none;
+      @extend .Body_3;
+    }
+  }
+}

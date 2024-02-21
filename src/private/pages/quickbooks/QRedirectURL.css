@@ -1,0 +1,25 @@
+.q_redirect_Url .main__title {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: var(--font-weight-500);
+  font-size: var(--font-18);
+  line-height: var(--line-height-24-px);
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: #373a40;
+}
+.q_redirect_Url {
+  height: var(--height-60-vh);
+}
+.q_redirect_Url .sub__title,
+.q_redirect_Url .sub__title2 {
+  font-style: normal;
+  font-weight: var(--font-weight-400);
+  font-size: var(--font-18);
+  line-height: var(--line-height-29-px);
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: #909296;
+  margin-bottom: 5px;
+  margin-top: 0;
+}

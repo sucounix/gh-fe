@@ -1,0 +1,267 @@
+@import "../../../GlobalStyle.scss";
+
+.register__page {
+  display: flex;
+  overflow: hidden;
+  @include for_tablet_only {
+    zoom: 0.6;
+  }
+  .register__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+
+    @include for_phone_only {
+      zoom: 0.5;
+      padding-left: 20%;
+      padding-right: 20%;
+    }
+
+    @include for_tablet_only {
+      padding-left: 10%;
+      padding-right: 10%;
+      margin-top: 3rem;
+    }
+
+    .starter__intro {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      gap: 10px;
+    }
+
+    .background__logo {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+
+      @include for_phone_only {
+        zoom: 0.5;
+      }
+
+      @include for_tablet_only {
+        zoom: 0.4;
+      }
+    }
+    .start__for__free {
+      @extend .Subtitle_4;
+      color: #086972;
+      background: #d3eff1;
+      border-radius: 16px;
+      padding: 3px 10px;
+    }
+    .create__account__title {
+      color: #373a40;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 30px; /* 93.75% */
+      letter-spacing: -1.92px;
+      margin: 0.5rem 0;
+      word-break: break-word;
+    }
+    .stage__0 {
+      .continue__with {
+        color: #868e96;
+        @extend .Subtitle_3;
+        margin: 0.5rem 0;
+      }
+      .social__login__btns {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+      .or__text {
+        color: #868e96;
+        @extend .Subtitle_3;
+      }
+      .other__email__card {
+        z-index: 20;
+        border-radius: 8px;
+        .register__form {
+          .email__input__register {
+            .mantine-TextInput-label {
+              @extend .Body_3;
+            }
+            .mantine-TextInput-description {
+              @extend .Body_4;
+            }
+          }
+          .name__input__register {
+            .mantine-TextInput-label {
+              @extend .Body_3;
+            }
+          }
+          .password__input__register {
+            .mantine-PasswordInput-label {
+              @extend .Body_3;
+            }
+            .mantine-PasswordInput-description {
+              @extend .Body_4;
+            }
+          }
+          .already__exists__error {
+            @extend .Body_4;
+            color: #ff0000;
+
+            .login__redirect {
+              color: #086972;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 28px;
+              letter-spacing: -0.96px;
+              text-decoration-line: underline;
+            }
+          }
+          .police__title {
+            font-style: normal;
+            line-height: var(--line-height-155-percentage);
+            display: flex;
+            align-items: center;
+            color: #373a40;
+            margin-bottom: 18px;
+
+            .help__link {
+              color: #086972;
+              margin-inline-start: 0.25rem;
+              margin-inline-end: 0.25rem;
+              text-decoration: underline;
+            }
+          }
+          .continue__btn {
+            .mantine-Button-inner {
+              justify-content: space-between;
+            }
+          }
+          .input__description {
+            color: #adb5bd;
+            line-height: 20px;
+            letter-spacing: -0.72px;
+            @extend .Caption;
+          }
+        }
+      }
+      .already__using__register {
+        display: flex;
+        align-items: center;
+        .text {
+          @extend .Body_4;
+          color: #373a40;
+        }
+        .already__exist__link {
+          color: #086972;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          text-decoration-line: underline;
+          margin-inline-start: 0.5rem;
+        }
+      }
+    }
+    .waiting__confirm__mail__div {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      gap: 10px;
+      .email__verification__title {
+        color: #373a40;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 35px; /* 145.833% */
+        letter-spacing: -1.44px;
+      }
+      .disc {
+        color: #373a40;
+        text-align: center;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 171.429% */
+        letter-spacing: -0.84px;
+      }
+      .resend__btn {
+        margin-bottom: 24px;
+        font-weight: var(--font-weight-300);
+        font-size: var(--font-16);
+        line-height: var(--line-height-155-percentage);
+        width: fit-content;
+        display: flex;
+        align-items: center;
+      }
+
+      .cant__find__link__span {
+        @extend .Body_4;
+        color: #868e96;
+      }
+
+      .resend__in {
+        color: #868e96;
+        text-align: center;
+        font-feature-settings: "clig" off, "liga" off;
+        @extend .Body_4;
+      }
+
+      .counter {
+        color: var(--text-black, #373a40);
+        font-feature-settings: "clig" off, "liga" off;
+        @extend .Body_4;
+      }
+    }
+    .user__already__exist__div {
+      .email__verification__title {
+        color: #086972;
+        margin: 0;
+        font-family: var(--secondary-font);
+        font-style: normal;
+        margin: 24px 0 24px 0;
+        @extend .Subtitle_3;
+      }
+      .already__associated {
+        margin: 24px 0 24px 0;
+        @extend .Body_4;
+      }
+      .login__btns {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+        margin-top: 1em;
+        max-width: var(--width-3-rem);
+        margin-bottom: 24px;
+        font-weight: var(--font-weight-300);
+        .already__here__button__text {
+          font-weight: var(--font-weight-300);
+          font-size: var(--font-12);
+          line-height: var(--line-height-155-percentage);
+          display: flex;
+          align-items: center;
+        }
+      }
+      .forgot__password__wrapper {
+        margin-bottom: 24px;
+        font-size: var(--font-14);
+        .reset__password__btn {
+          margin-inline-start: 0.5em;
+          line-height: var(--line-height-155-percentage);
+          text-decoration-line: underline;
+          color: #086972;
+          @extend .Body_4;
+        }
+      }
+    }
+  }
+
+  .contact__us__button {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 10;
+  }
+}

@@ -1,0 +1,64 @@
+@import "../../../../GlobalStyle.scss";
+
+.headerContainer {
+  display: flex;
+  gap: 11px;
+  align-items: center;
+
+  .logo {
+    width: 49.7px;
+    height: 43.3px;
+  }
+  .title {
+    display: flex;
+    flex: 1;
+    padding: unset !important;
+    @extend .Body_4;
+    line-height: 24px;
+    letter-spacing: -0.84px;
+    color: #fff;
+    .highlighted {
+      @extend .Headline_4;
+      line-height: 24px;
+      letter-spacing: -0.84px;
+    }
+    .history {
+      @extend .Body_4;
+      line-height: 24px;
+    }
+  }
+  .action {
+    right: 0px;
+    .historyButton {
+      display: inline-flex;
+      padding: 8px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      background: var(--Color, #fff);
+      box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.08);
+      color: #8f43ff;
+      cursor: pointer;
+      span {
+        @extend .Body_4;
+        line-height: 24px;
+      }
+    }
+    .chatWithAstraButton {
+      display: flex;
+      gap: 8px;
+      flex-shrink: 0;
+      border-radius: 20px;
+      align-items: center;
+      background: var(--Color, #fff);
+      box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.08);
+      padding: 8px 14px 7px 14px;
+      color: #8f43ff;
+      cursor: pointer;
+      span {
+        @extend .Caption;
+      }
+    }
+  }
+}

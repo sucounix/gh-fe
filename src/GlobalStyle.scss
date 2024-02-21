@@ -1,0 +1,127 @@
+// you need to import this file in every scss file so you can use breakpoints and classes
+// example: @import '../../GlobalStyle.scss';
+
+// Colors
+$primary_color: #086972;
+$primary-color-hover: #07909c;
+$primary-color-disabled: #075860;
+$success_background: #ebfbee;
+$success_color: #37b24d;
+$warning_background: #fff4e6;
+$warning_color: #fd7e14;
+$error_background: #fff5f5;
+$error_color: #f03e3e;
+$notification_background: rgba(6, 84, 91, 0.2);
+$notification_color: #086972;
+$astra: #771dfc;
+
+// table variables
+$content_cell_width: 140px;
+$sticky_cell_width: 270px;
+$cell_min_height: 50px;
+$table_bold_weight: 500;
+$normal_row_background: #fff;
+$sub_total_row_background: #fafafa;
+$total_row_background: #edf4f5;
+$table_group_seperator_background: rgba(8, 105, 114, 0.4);
+$table_tablet_zoom: 0.7;
+$table_phone_zoom: 0.4;
+
+//global classes
+// exmaple to call it scss files
+// @extend .Heading_1;
+.Headline_1 {
+  font-size: 24px !important;
+  font-weight: 700 !important;
+}
+.Headline_2 {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+}
+.Headline_3 {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+}
+.Headline_4 {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+}
+.Subtitle_1 {
+  font-size: 20px !important;
+  font-weight: 500 !important;
+}
+.Subtitle_2 {
+  font-size: 18px !important;
+  font-weight: 500 !important;
+}
+.Subtitle_3 {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
+.Subtitle_4 {
+  font-size: 14px;
+  font-weight: 500;
+}
+.Body_1 {
+  font-size: 20px !important;
+  font-weight: 400 !important;
+}
+.Body_2 {
+  font-size: 18px !important;
+  font-weight: 400 !important;
+}
+.Body_3 {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+.Body_4 {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+}
+
+.Caption {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+}
+
+/* 
+  Buttons
+*/
+
+.btn_md {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+// Tabs
+.mantine-Tabs-tabLabel {
+  @extend .Subtitle_3;
+}
+
+.mantine-Tabs-tab:not(:first-child) {
+  margin-inline-start: 3.75rem;
+}
+
+// breakpoints
+// example to call it in scss files
+//    @include for_phone_only {
+//     font-size: 20px;
+//    }
+
+@mixin for_phone_only {
+  @media (max-width: 810px) {
+    @content;
+  }
+}
+
+@mixin for_tablet_only {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin for_big_desktop_up {
+  @media (min-width: 1800px) {
+    @content;
+  }
+}

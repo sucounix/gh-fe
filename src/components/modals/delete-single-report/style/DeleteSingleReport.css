@@ -1,0 +1,94 @@
+.Headline_1 {
+  font-size: 24px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_2 {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_3 {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_4,
+.single__delete__modal .title {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+}
+
+.Subtitle_1 {
+  font-size: 20px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_2 {
+  font-size: 18px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_3,
+.mantine-Tabs-tabLabel {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_4 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.Body_1 {
+  font-size: 20px !important;
+  font-weight: 400 !important;
+}
+
+.Body_2 {
+  font-size: 18px !important;
+  font-weight: 400 !important;
+}
+
+.Body_3,
+.single__delete__modal .action_btn {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+.Body_4,
+.single__delete__modal .text {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+}
+
+.Caption {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+}
+
+.mantine-Tabs-tab:not(:first-child) {
+  margin-inline-start: 3.75rem;
+}
+
+.single__delete__modal {
+  padding: 38px 58px;
+}
+.single__delete__modal .title {
+  line-height: 24px;
+  margin: 0;
+  padding: 0 !important;
+  color: rgb(240, 62, 62);
+}
+.single__delete__modal .title .icon {
+  margin-right: 5px;
+}
+.single__delete__modal .text {
+  line-height: 24px;
+  color: #373a40;
+  margin: 14px 0 0 0;
+}
+.single__delete__modal .action_btn {
+  line-height: 24px;
+  margin-top: 18px;
+} /*# sourceMappingURL=DeleteSingleReport.css.map */

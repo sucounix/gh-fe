@@ -1,0 +1,133 @@
+.Headline_1 {
+  font-size: 24px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_2 {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_3 {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_4 {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+}
+
+.Subtitle_1 {
+  font-size: 20px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_2 {
+  font-size: 18px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_3,
+.mantine-Tabs-tabLabel {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_4 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.Body_1 {
+  font-size: 20px !important;
+  font-weight: 400 !important;
+}
+
+.Body_2 {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+.Body_3 {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+.Body_4 {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+}
+
+.Caption {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+}
+
+.mantine-Tabs-tab:not(:first-child) {
+  margin-inline-start: 3.75rem;
+}
+
+.NoAuthHeader {
+  background: #086972;
+  width: var(--width-100-percentage);
+  height: var(--height-75-px);
+  position: fixed;
+  top: 0;
+  padding: 0 70px;
+  z-index: 101;
+}
+@media (max-width: 1200px) {
+  .NoAuthHeader {
+    height: var(--height-46-px);
+    padding: 3px 28px;
+  }
+}
+@media (max-width: 810px) {
+  .NoAuthHeader {
+    height: var(--height-46-px);
+    padding: 3px 28px;
+  }
+}
+.NoAuthHeader .h__100 {
+  height: 100%;
+}
+.NoAuthHeader .h__100 .logo__col {
+  height: 100%;
+  padding-bottom: 0;
+}
+.NoAuthHeader .h__100 .logo__col .logo__div .femto_logo {
+  width: var(--width-210-px);
+}
+@media (max-width: 1200px) {
+  .NoAuthHeader .h__100 .logo__col .logo__div .femto_logo {
+    width: var(--width-100-px);
+  }
+}
+@media (max-width: 810px) {
+  .NoAuthHeader .h__100 .logo__col .logo__div .femto_logo {
+    width: var(--width-100-px);
+  }
+}
+.NoAuthHeader .h__100 .content__col {
+  height: 100%;
+  padding-bottom: 0;
+}
+.NoAuthHeader .h__100 .content__col .user__icon {
+  font-style: normal;
+  font-weight: var(--font-weight-900);
+  font-size: var(--font-16);
+  line-height: var(--line-height-24-px);
+  font-feature-settings: "calt" off;
+  color: #f8f9fa;
+}
+.NoAuthHeader .h__100 .content__col .signin__div {
+  cursor: pointer;
+  font-style: normal;
+  font-weight: var(--font-weight-500);
+  font-size: var(--font-16);
+  line-height: var(--line-height-21-px);
+  letter-spacing: -0.065em;
+  color: #ffffff;
+  margin: 0 10px;
+} /*# sourceMappingURL=NoAuthHeader.css.map */

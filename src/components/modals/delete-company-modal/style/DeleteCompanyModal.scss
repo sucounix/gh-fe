@@ -1,0 +1,51 @@
+@import "../../../../GlobalStyle.scss";
+
+.delete__modal {
+  .mantine-Modal-header {
+    display: none;
+  }
+  .delete__div {
+    padding: 38px 58px 38px 58px;
+    @include for_phone_only {
+      zoom: 0.4;
+    }
+    .delete__title__modal {
+      font-style: normal;
+      line-height: var(--line-height-26-px);
+      letter-spacing: -0.01em;
+      font-feature-settings: "calt" off;
+      color: #2c2e33;
+      text-align: left;
+      margin-top: 0;
+
+      @extend .Headline_2;
+    }
+    .delete__desc__modal {
+      font-style: normal;
+      line-height: var(--line-height-150-percentage);
+      letter-spacing: -0.01em;
+      font-feature-settings: "calt" off;
+      color: #2c2e33;
+      text-align: left;
+      @extend .Body_4;
+    }
+    .confirm__btn {
+      font-style: normal;
+      font-weight: var(--font-weight-400);
+      font-size: var(--font-16);
+      line-height: var(--line-height-24-px);
+      letter-spacing: -0.01em;
+      font-feature-settings: "calt" off;
+      color: #ffffff;
+    }
+    .cancel__btn {
+      font-style: normal;
+      font-weight: var(--font-weight-400);
+      font-size: var(--font-16);
+      line-height: var(--line-height-24-px);
+      letter-spacing: -0.01em;
+      font-feature-settings: "calt" off;
+      color: #086972;
+    }
+  }
+}

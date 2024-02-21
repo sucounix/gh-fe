@@ -1,0 +1,129 @@
+.Headline_1 {
+  font-size: 24px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_2,
+.error__modal__title {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_3 {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_4 {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+}
+
+.Subtitle_1 {
+  font-size: 20px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_2 {
+  font-size: 18px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_3,
+.mantine-Tabs-tabLabel {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_4 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.Body_1 {
+  font-size: 20px !important;
+  font-weight: 400 !important;
+}
+
+.Body_2 {
+  font-size: 18px !important;
+  font-weight: 400 !important;
+}
+
+.Body_3 {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+.Body_4,
+.error__modal__error__text,
+.error__modal__subtitle {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+}
+
+.Caption {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+}
+
+.mantine-Tabs-tab:not(:first-child) {
+  margin-inline-start: 3.75rem;
+}
+
+.error__modal__title {
+  display: block;
+  line-height: var(--line-height-26-px);
+  letter-spacing: -0.01em;
+  margin-bottom: 4px;
+  font-feature-settings: "calt" off;
+  color: #2c2e33;
+}
+
+.modal__divider {
+  margin: 16px 0;
+}
+
+.error__modal__error__wrapper {
+  border: 1px solid #f03e3e;
+  color: #f03e3e;
+  border-radius: 4px;
+  padding: 8px 16px;
+}
+.error__modal__error__wrapper:first-child {
+  margin-top: 4px;
+}
+.error__modal__error__wrapper:not(:first-child) {
+  margin-top: 8px;
+}
+
+.error__modal__errors {
+  max-height: var(--height-300-px);
+  overflow-y: scroll;
+}
+
+.error__modal__error__cell {
+  font-weight: var(--font-weight-700);
+  margin-inline-end: 8px;
+}
+
+.error__modal__actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 18px;
+  margin: 38px 0;
+}
+
+@media (max-width: 1200px) {
+  .errors__modal {
+    zoom: 0.4;
+  }
+}
+@media (max-width: 810px) {
+  .errors__modal {
+    zoom: 0.2;
+  }
+} /*# sourceMappingURL=UploadErrorsModal.css.map */

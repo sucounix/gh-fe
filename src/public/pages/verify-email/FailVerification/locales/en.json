@@ -1,0 +1,8 @@
+{
+  "sendAgain": "Send again",
+  "pleaseCheckMail": "Email sent successfully; Please go check your Email.",
+  "verificationExpired": "Your email verification link has been expired",
+  "clickMessage": "Click the button to receive a new link on your e-mail",
+  "success": "Success",
+  "error": "Error"
+}

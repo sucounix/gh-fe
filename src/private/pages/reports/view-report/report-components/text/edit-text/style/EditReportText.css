@@ -1,0 +1,146 @@
+.Headline_1 {
+  font-size: 24px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_2 {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_3 {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_4 {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+}
+
+.Subtitle_1 {
+  font-size: 20px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_2 {
+  font-size: 18px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_3,
+.mantine-Tabs-tabLabel {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_4 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.Body_1 {
+  font-size: 20px !important;
+  font-weight: 400 !important;
+}
+
+.Body_2 {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+.Body_3 {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+.Body_4 {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+}
+
+.Caption {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+}
+
+.mantine-Tabs-tab:not(:first-child) {
+  margin-inline-start: 3.75rem;
+}
+
+.edit_text_container {
+  margin-bottom: 2rem;
+}
+.edit_text_container .mantine-RichTextEditor-toolbar i {
+  color: #086972 !important;
+}
+.edit_text_container
+  .mantine-RichTextEditor-toolbar
+  .mantine-RichTextEditor-controlsGroup {
+  display: flex;
+  align-items: center;
+}
+.edit_text_container
+  .mantine-RichTextEditor-toolbar
+  .mantine-RichTextEditor-controlsGroup:not(:last-child)::after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 20px;
+  background-color: #ccc;
+  margin-inline-start: 1rem;
+}
+.edit_text_container
+  .mantine-RichTextEditor-toolbar
+  .mantine-RichTextEditor-controlsGroup
+  .mantine-RichTextEditor-control
+  svg {
+  color: #086972 !important;
+}
+.edit_text_container
+  .mantine-RichTextEditor-toolbar
+  .mantine-RichTextEditor-controlsGroup
+  .mantine-RichTextEditor-control[data-active="true"]
+  svg {
+  color: white !important;
+}
+.edit_text_container
+  .mantine-RichTextEditor-toolbar
+  .mantine-RichTextEditor-controlsGroup
+  .mantine-RichTextEditor-control:hover {
+  background-color: #07909c !important;
+}
+.edit_text_container
+  .mantine-RichTextEditor-toolbar
+  .mantine-RichTextEditor-controlsGroup
+  .mantine-RichTextEditor-control:hover
+  svg {
+  color: white !important;
+}
+.edit_text_container
+  .mantine-RichTextEditor-toolbar
+  .mantine-RichTextEditor-controlsGroup
+  .color_button {
+  background-color: white;
+  border-radius: 4px;
+  border: 1px solid rgb(206, 212, 218);
+}
+.edit_text_container
+  .mantine-RichTextEditor-toolbar
+  .mantine-RichTextEditor-controlsGroup
+  .color_button:hover {
+  cursor: pointer;
+  background-color: #07909c;
+}
+.edit_text_container
+  .mantine-RichTextEditor-toolbar
+  .mantine-RichTextEditor-controlsGroup
+  .color_button:hover
+  i {
+  color: white !important;
+}
+.edit_text_container .mantine-RichTextEditor-toolbar .save_button {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+} /*# sourceMappingURL=EditReportText.css.map */

@@ -1,0 +1,102 @@
+.Headline_1 {
+  font-size: 24px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_2 {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_3 {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_4 {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+}
+
+.Subtitle_1 {
+  font-size: 20px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_2 {
+  font-size: 18px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_3,
+.mantine-Tabs-tabLabel {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_4 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.Body_1 {
+  font-size: 20px !important;
+  font-weight: 400 !important;
+}
+
+.Body_2 {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+.Body_3 {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+.Body_4,
+.row__toggle__input__div .toggle_content_div .content {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+}
+
+.Caption {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+}
+
+.mantine-Tabs-tab:not(:first-child) {
+  margin-inline-start: 3.75rem;
+}
+
+.row__toggle__input__div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+@media (max-width: 1200px) {
+  .row__toggle__input__div {
+    zoom: 0.8;
+  }
+}
+@media (max-width: 810px) {
+  .row__toggle__input__div {
+    zoom: 0.6;
+  }
+}
+.row__toggle__input__div .toggle_content_div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.row__toggle__input__div .toggle_content_div .content {
+  margin-left: 15px;
+}
+.row__toggle__input__div .input__div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  font-size: 0.8rem;
+} /*# sourceMappingURL=RowToggleInput.css.map */

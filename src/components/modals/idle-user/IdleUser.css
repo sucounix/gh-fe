@@ -1,0 +1,40 @@
+.idle__user_modal .mantine-Group-root .mantine-Button-root {
+  display: none;
+}
+
+.idle__user_modal .title {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: var(--font-weight-700);
+  font-size: var(--font-16);
+  line-height: var(--line-height-21-px);
+  letter-spacing: -0.01em;
+  color: #f28c28;
+  margin: 0;
+}
+
+.idle__user_modal .text {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: var(--font-weight-400);
+  font-size: var(--font-14);
+  line-height: var(--line-height-150-percentage);
+  letter-spacing: -0.01em;
+  color: rgba(44, 46, 51, 0.7);
+  margin-bottom: 20px;
+}
+.idle__user_modal .idle__user_content {
+  padding: 30px;
+}
+
+.idle__user_modal .confirm__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: normal;
+  font-weight: var(--font-weight-400);
+  font-size: var(--font-16);
+  line-height: var(--line-height-24-px);
+  letter-spacing: -0.01em;
+  color: #ffffff;
+}

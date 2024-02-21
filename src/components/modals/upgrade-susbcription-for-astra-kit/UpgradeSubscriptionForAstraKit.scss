@@ -1,0 +1,73 @@
+@import "../../../GlobalStyle.scss";
+
+.upgrade_subscription_for_astra_kit {
+  @include for_tablet_only {
+    zoom: 0.7;
+  }
+  @include for_phone_only {
+    zoom: 0.3;
+  }
+  .title_div {
+    padding: 30px 58px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #e5e5e5;
+
+    p {
+      margin: 0;
+      @extend .Subtitle_1;
+      line-height: 24px;
+      color: #373a40;
+    }
+  }
+  .content {
+    padding: 32px 58px;
+    .text_div {
+      padding: 12px;
+      display: flex;
+      align-items: center;
+      background-color: #fff4e6;
+      border: 1px solid var(--orange-orange-2, #ffd8a8);
+      border-radius: 6px;
+      .icon {
+        margin-right: 4px;
+        color: #fd7e14;
+      }
+      p {
+        color: #fd7e14;
+        @extend .Body_2;
+        margin: 0;
+        .bold_word {
+          @extend .Subtitle_2;
+        }
+      }
+    }
+    .kit_info {
+      border-radius: 6px;
+      border: 1px solid var(--gray-gray-4, #dee2e6);
+      background: #f0f7f8;
+      margin-top: 32px;
+      .info {
+        @extend .Body_3;
+        line-height: 24px;
+        color: $primary_color;
+        .price_plan {
+          @extend .Headline_3;
+        }
+        .discount_percentage {
+          color: #37b24d;
+          @extend .Headline_3;
+        }
+      }
+    }
+    .btns_div {
+      margin-top: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .mantine-Button-inner {
+        @extend .Body_3;
+      }
+    }
+  }
+}

@@ -1,0 +1,125 @@
+@import "../../../../../../../GlobalStyle.scss";
+
+.waterfall__chart__report {
+  padding: 1rem;
+  position: relative;
+  margin-bottom: 5rem;
+  overflow: hidden;
+
+  .waterfall__header {
+    display: flex;
+    flex-direction: column;
+
+    .waterfall__header__title {
+      @extend .Headline_2;
+      color: #000;
+    }
+
+    .waterfall__header__subtitle {
+      @extend .Subtitle_3;
+      color: #000;
+    }
+  }
+}
+
+.waterfall__empty__view {
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 4.12rem 0;
+  margin: 0.62 0 5rem 0;
+
+  span {
+    @extend .Body_1;
+    color: #373a40;
+    opacity: 0.5;
+  }
+}
+
+.mantine-Drawer-content {
+  background-color: white !important;
+  .mantine-Drawer-body {
+    padding: 0;
+  }
+}
+.edit__waterfall__drawer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  padding-bottom: 12px;
+  overflow: hidden;
+
+  .edit__waterfall__title {
+    @extend .Subtitle_3;
+    color: #000 !important;
+    padding: 24px 32px;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.05);
+  }
+
+  .chart__view__wrapper {
+    padding: 22px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .chart__view__title {
+      @extend .Subtitle_3;
+      color: #000;
+    }
+  }
+
+  .mantine-Divider-root {
+    border: 0.5px solid #000;
+    opacity: 0.3;
+  }
+
+  .chart__time__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 22px 24px;
+
+    .chart__time__title {
+      @extend .Subtitle_3;
+      color: #000;
+    }
+  }
+
+  .edit__waterfall__buttons {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 16px;
+    padding: 2rem 0;
+
+    .save__button {
+      text-align: center;
+      justify-content: center;
+      .save__changes__button {
+        @extend .btn_md;
+        line-height: 28px;
+        letter-spacing: -0.96px;
+      }
+    }
+
+    .cancel__btn {
+      @extend .Body_3;
+      line-height: 24px;
+      letter-spacing: -0.96px;
+    }
+
+    @include for-phone-only {
+      padding: 0.1rem;
+      .save__button {
+        zoom: 0.9;
+      }
+
+      .cancel__btn {
+        zoom: 0.9;
+      }
+    }
+  }
+}

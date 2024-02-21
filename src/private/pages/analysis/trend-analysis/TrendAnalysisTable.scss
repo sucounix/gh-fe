@@ -1,0 +1,39 @@
+@import "../../../../GlobalStyle.scss";
+.table__view {
+  margin-top: 20px;
+  @include for_tablet_only {
+    zoom: 0.8;
+  }
+  .first__column {
+    width: 15%;
+    @include for_tablet_only {
+      zoom: 0.8;
+    }
+    .currency__div {
+      background-color: #f1f3f5;
+      border-radius: 5px;
+      padding: 10px 8px 10px 8px;
+      @extend .Body_4;
+      line-height: 21px;
+      color: #000;
+      .currency__unit {
+        padding-left: 8px;
+      }
+    }
+  }
+  .th__style {
+    text-align: right;
+    padding: 15px;
+    @extend .Subtitle_3;
+  }
+  .first__td {
+    width: var(--width-150-px);
+    @extend .Body_3;
+  }
+  .td__style {
+    text-align: right;
+    padding: 10px;
+    font-size: var(--font-15);
+    @extend .Body_3;
+  }
+}

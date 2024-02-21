@@ -1,0 +1,50 @@
+.not__found__img {
+  width: var(--width-30-percentage);
+}
+.not__found__title {
+  font-family: var(--secondary-font);
+  font-style: normal;
+  font-weight: var(--font-weight-600);
+  font-size: var(--font-24);
+  line-height: var(--line-height-150-percentage);
+  text-align: center;
+  color: #373a40;
+}
+.not__found__text {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: var(--font-weight-400);
+  font-size: var(--font-20);
+  line-height: var(--line-height-150-percentage);
+  width: var(--width-30-percentage);
+  margin: 0 auto;
+  text-align: center;
+  color: #373a40;
+}
+
+@media all and (max-width: 1199px) {
+  .not__found__img {
+    width: var(--width-60-percentage);
+    margin-top: 15%;
+  }
+  .not__found__text {
+    width: var(--width-90-percentage);
+    font-size: var(--font-15);
+  }
+  .not__found__title {
+    font-size: var(--font-18);
+  }
+}
+@media all and (max-width: 810px) {
+  .not__found__img {
+    width: var(--width-60-percentage);
+    margin-top: 15%;
+  }
+  .not__found__text {
+    width: var(--width-90-percentage);
+    font-size: var(--font-15);
+  }
+  .not__found__title {
+    font-size: var(--font-18);
+  }
+}

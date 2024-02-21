@@ -1,0 +1,72 @@
+@import "../../../GlobalStyle.scss";
+.stepper__div {
+  width: 100%;
+
+  .stepper__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    @include for_phone_only {
+      padding: 0 5rem;
+    }
+    .stepper__step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      cursor: pointer;
+      .stepper__step__number {
+        font-weight: 600;
+        color: rgba(8, 105, 114, 0.7);
+        border: 2px solid #086972;
+        border-radius: 32px;
+        width: 34px;
+        height: 34px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-style: normal;
+        line-height: 24px;
+        @extend .Subtitle_3;
+        .fa-check {
+          color: #fff;
+        }
+      }
+      .active__step {
+        background-color: $primary_color;
+        border: none;
+      }
+    }
+    .stepper__line {
+      width: 100%;
+      height: 6px;
+    }
+    .stepper__line_second__part_active {
+      background-color: $primary_color;
+    }
+    .stepper__line_second__part_disactive {
+      background-color: #f1f3f5;
+    }
+  }
+  .stepper__legend {
+    display: flex;
+    justify-content: space-between;
+    @include for_phone_only {
+      padding: 0 5rem;
+    }
+    .stepper__legend__title {
+      margin-top: 1rem;
+      line-height: 155%;
+      color: #000;
+      @extend .Caption;
+      &:first-child {
+        padding-left: -1rem;
+      }
+      &:last-child {
+        margin-right: -1rem;
+      }
+    }
+  }
+}

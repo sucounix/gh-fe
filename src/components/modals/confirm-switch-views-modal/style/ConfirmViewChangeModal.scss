@@ -1,0 +1,47 @@
+@import "../../../../GlobalStyle.scss";
+
+.confirm__view__modal__content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.confirm__view__modal__title {
+  font-style: normal;
+  font-weight: var(--font-weight-700);
+  font-size: var(--font-16);
+  line-height: var(--line-height-21-px);
+  letter-spacing: -0.01em;
+  font-feature-settings: "calt" off;
+}
+.confirm__view__modal__subtitle {
+  font-style: normal;
+  font-weight: var(--font-weight-400);
+  font-size: var(--font-14);
+  line-height: var(--line-height-150-percentage);
+  letter-spacing: -0.01em;
+  font-feature-settings: "calt" off;
+}
+.confirm__view__modal__proceed {
+  font-style: normal;
+  font-weight: var(--font-weight-400);
+  font-size: var(--font-16);
+  line-height: var(--line-height-150-percentage);
+  letter-spacing: -0.01em;
+  font-feature-settings: "calt" off;
+}
+.confirm__view__modal__buttons {
+  width: var(--width-100-percentage);
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+}
+.confirm__view__modal__button {
+  display: flex;
+  justify-content: center;
+}
+
+@include for_tablet_only {
+  .confirm__budgets__modal {
+    zoom: 0.5;
+  }
+}

@@ -1,0 +1,31 @@
+@import "../../../../GlobalStyle.scss";
+
+.loading_div {
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  .loading_text {
+    text-align: center;
+    @extend .Body_3;
+    line-height: 24px;
+  }
+}
+.subscription__settings {
+  padding: 30px;
+  @media all and (-webkit-device-pixel-ratio: 1.5) {
+    zoom: 0.7;
+  }
+  @include for_tablet_only {
+    zoom: 0.7;
+    padding-top: 10px;
+  }
+  @include for_phone_only {
+    zoom: 0.4;
+  }
+  .repayment_iframe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+}

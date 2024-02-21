@@ -1,0 +1,519 @@
+{
+  "frequency_period": "month",
+  "period": "Jul 2020/2021",
+  "template_ref": "hij-klm-abc-bcb",
+  "title": "report with trend analysis chart",
+  "uuid": "f308478f-8331-4fad-8ed4-a64fbde7b1ac",
+  "user_uuid": "4617df43-fa0a-4643-879e-f7f703296899",
+  "company_uuid": "7b938814-3cc1-4c15-8a27-ee9837706a08",
+  "created": "2023-09-06T08:13:32.152039Z",
+  "modified": null,
+  "is_valid": true,
+  "cover": {
+    "uuid": "2f9fb0ce-da26-4119-9b18-8151f0f4f6b0",
+    "report_uuid": "f308478f-8331-4fad-8ed4-a64fbde7b1ac",
+    "logo": null,
+    "report_title": "report with trend analysis chart",
+    "company_name": "ABC Monthly 2",
+    "period": "Jul 2020/2021",
+    "background_color": "#ffffff",
+    "fore_color": "#000000",
+    "section_body": "<div><p>Report content:</p><br /><ul><li>Hello chart section.</li></ul></div>",
+    "published_on": "2023-09-06T08:13:32.152039Z",
+    "published_by": "Admin"
+  },
+  "sections": [
+    {
+      "title": "Margins & Contribution Analysis",
+      "priority": 1,
+      "items": [
+        {
+          "priority": 1,
+          "type": "chart",
+          "text_item": null,
+          "chart_item": {
+            "type": "trend_analysis",
+            "frequency_period": "month",
+            "period": "Jul 2020/2021",
+            "title": "trend_analysis chart",
+            "params": {
+              "selected_chart": "Custom",
+              "show_table": false,
+              "charts": [
+                {
+                  "uuid": "4e7c3fbc-037d-4848-b9e9-4a76e49ca061",
+                  "type": "Monetary",
+                  "name": "Total Revenues",
+                  "is_kpi": false,
+                  "show_moving_average": true,
+                  "display_type": "bar"
+                },
+                {
+                  "uuid": "3681b88f-b0d6-4f58-a0ed-9930b2173496",
+                  "type": "Percentage",
+                  "name": "Gross Profit Margin",
+                  "is_kpi": true,
+                  "show_moving_average": false,
+                  "display_type": "line"
+                },
+                {
+                  "uuid": "bb049e68-e09d-4d2d-a2f4-03b46e68ad68",
+                  "type": "Monetary",
+                  "name": "Fixed Assets",
+                  "is_kpi": false,
+                  "show_moving_average": false,
+                  "display_type": "bar"
+                }
+              ]
+            },
+            "value": {
+              "data": {
+                "headers": [
+                  "Jan 2020",
+                  "Feb 2020",
+                  "Mar 2020",
+                  "Apr 2020",
+                  "May 2020",
+                  "Jun 2020",
+                  "Jul 2020"
+                ],
+                "charts": [
+                  {
+                    "chart_uuid": "4e7c3fbc-037d-4848-b9e9-4a76e49ca061",
+                    "chart_name": "Total Revenues",
+                    "type": "Monetary",
+                    "is_kpi": false,
+                    "color": "#5a2666",
+                    "values": [
+                      { "key": "Jan 2020", "standard": 0, "moving_average": 0 },
+                      { "key": "Feb 2020", "standard": 0, "moving_average": 0 },
+                      {
+                        "key": "Mar 2020",
+                        "standard": 3438418.75,
+                        "moving_average": 1146139.5833333333
+                      },
+                      {
+                        "key": "Apr 2020",
+                        "standard": 3484933.59,
+                        "moving_average": 1730838.085
+                      },
+                      {
+                        "key": "May 2020",
+                        "standard": 3599481.6,
+                        "moving_average": 2104566.7879999997
+                      },
+                      {
+                        "key": "Jun 2020",
+                        "standard": 3670271.23,
+                        "moving_average": 2365517.5283333333
+                      },
+                      {
+                        "key": "Jul 2020",
+                        "standard": 3966772.93,
+                        "moving_average": 2594268.3000000003
+                      }
+                    ]
+                  },
+                  {
+                    "chart_uuid": "3681b88f-b0d6-4f58-a0ed-9930b2173496",
+                    "chart_name": "Gross Profit Margin",
+                    "type": "Percentage",
+                    "is_kpi": true,
+                    "color": "#870670",
+                    "values": [
+                      { "key": "Jan 2020", "standard": 0, "moving_average": 0 },
+                      { "key": "Feb 2020", "standard": 0, "moving_average": 0 },
+                      {
+                        "key": "Mar 2020",
+                        "standard": 44.41618607390389,
+                        "moving_average": 14.805395357967962
+                      },
+                      {
+                        "key": "Apr 2020",
+                        "standard": 43.5883818377153,
+                        "moving_average": 22.001141977904798
+                      },
+                      {
+                        "key": "May 2020",
+                        "standard": 43.67859166164372,
+                        "moving_average": 26.336631914652582
+                      },
+                      {
+                        "key": "Jun 2020",
+                        "standard": 43.59320523567954,
+                        "moving_average": 29.212727468157073
+                      },
+                      {
+                        "key": "Jul 2020",
+                        "standard": 43.95513105409843,
+                        "moving_average": 31.318785123291555
+                      }
+                    ]
+                  },
+                  {
+                    "chart_uuid": "bb049e68-e09d-4d2d-a2f4-03b46e68ad68",
+                    "chart_name": "Fixed Assets",
+                    "type": "Monetary",
+                    "is_kpi": false,
+                    "color": "#77db11",
+                    "values": [
+                      {
+                        "key": "Jan 2020",
+                        "standard": 5000000.0,
+                        "moving_average": 5000000.0
+                      },
+                      {
+                        "key": "Feb 2020",
+                        "standard": 5141666.67,
+                        "moving_average": 5070833.335
+                      },
+                      {
+                        "key": "Mar 2020",
+                        "standard": 5281805.56,
+                        "moving_average": 5141157.41
+                      },
+                      {
+                        "key": "Apr 2020",
+                        "standard": 5426615.74,
+                        "moving_average": 5212521.9925
+                      },
+                      {
+                        "key": "May 2020",
+                        "standard": 5576252.93,
+                        "moving_average": 5285268.18
+                      },
+                      {
+                        "key": "Jun 2020",
+                        "standard": 5730878.03,
+                        "moving_average": 5359536.488333333
+                      },
+                      {
+                        "key": "Jul 2020",
+                        "standard": 5890657.3,
+                        "moving_average": 5435410.89
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "uuid": "7fb4313e-ef7b-46e1-b52c-e8e2a7f5e967",
+            "item_uuid": "a4895866-7987-414a-b619-321c23d52b4d",
+            "created": "2023-09-06T08:13:32.152039Z",
+            "modified": null
+          },
+          "table_item": null,
+          "uuid": "a4895866-7987-414a-b619-321c23d52b4d",
+          "section_uuid": "da68d2cb-8219-41c4-8254-727eee8e1489",
+          "created": "2023-09-06T08:13:32.152039Z",
+          "modified": null
+        },
+        {
+          "priority": 2,
+          "type": "chart",
+          "text_item": null,
+          "chart_item": {
+            "type": "trend_analysis",
+            "frequency_period": "month",
+            "period": "Jul 2020/2021",
+            "title": "trend_analysis chart",
+            "params": {
+              "selected_chart": "Annualized Performance",
+              "show_table": true,
+              "charts": [
+                {
+                  "uuid": "281e5f18-1ff8-4fdd-8a36-2f02f9020e97",
+                  "type": "Monetary",
+                  "name": "Annualized Net Profit",
+                  "is_kpi": true,
+                  "show_moving_average": true,
+                  "display_type": "bar"
+                },
+                {
+                  "uuid": "b51e2f57-53a4-438f-819b-f1bf652c59c0",
+                  "type": "Monetary",
+                  "name": "Annualized Earnings Before Interest & Taxes",
+                  "is_kpi": true,
+                  "show_moving_average": false,
+                  "display_type": "line"
+                },
+                {
+                  "uuid": "8c9b4e2f-3fb8-45b4-b46d-63de7223bad9",
+                  "type": "Percentage",
+                  "name": "Annualized Return on Equity (ROE)",
+                  "is_kpi": true,
+                  "show_moving_average": false,
+                  "display_type": "line"
+                },
+                {
+                  "uuid": "9ebbad60-4b1f-4e28-9827-3cfcbe3e57f0",
+                  "type": "Percentage",
+                  "name": "Annualized Return on Assets (ROA)",
+                  "is_kpi": true,
+                  "show_moving_average": true,
+                  "display_type": "bar"
+                },
+                {
+                  "uuid": "0e9fbcfa-40fd-4a0d-9085-7448a9951cb8",
+                  "type": "Percentage",
+                  "name": "Annualized Return on Invested Capital (ROIC)",
+                  "is_kpi": true,
+                  "show_moving_average": false,
+                  "display_type": "line"
+                }
+              ]
+            },
+            "value": {
+              "data": {
+                "headers": [
+                  "Jan 2020",
+                  "Feb 2020",
+                  "Mar 2020",
+                  "Apr 2020",
+                  "May 2020",
+                  "Jun 2020",
+                  "Jul 2020"
+                ],
+                "charts": [
+                  {
+                    "chart_uuid": "281e5f18-1ff8-4fdd-8a36-2f02f9020e97",
+                    "chart_name": "Annualized Net Profit",
+                    "type": "Monetary",
+                    "is_kpi": true,
+                    "color": "#6e3cc3",
+                    "values": [
+                      {
+                        "key": "Jan 2020",
+                        "standard": 29052141.96,
+                        "moving_average": 29052141.96
+                      },
+                      {
+                        "key": "Feb 2020",
+                        "standard": -32569557.72,
+                        "moving_average": -1758707.879999999
+                      },
+                      {
+                        "key": "Mar 2020",
+                        "standard": 7127919.48,
+                        "moving_average": 1203501.240000001
+                      },
+                      {
+                        "key": "Apr 2020",
+                        "standard": 7095717.959999999,
+                        "moving_average": 2676555.4200000004
+                      },
+                      {
+                        "key": "May 2020",
+                        "standard": 7601859.12,
+                        "moving_average": 3661616.16
+                      },
+                      {
+                        "key": "Jun 2020",
+                        "standard": 7771099.800000001,
+                        "moving_average": 4346530.100000001
+                      },
+                      {
+                        "key": "Jul 2020",
+                        "standard": 9018608.64,
+                        "moving_average": 5013969.891428572
+                      }
+                    ]
+                  },
+                  {
+                    "chart_uuid": "b51e2f57-53a4-438f-819b-f1bf652c59c0",
+                    "chart_name": "Annualized Earnings Before Interest & Taxes",
+                    "type": "Monetary",
+                    "is_kpi": true,
+                    "color": "#a55a57",
+                    "values": [
+                      {
+                        "key": "Jan 2020",
+                        "standard": 49395980.04,
+                        "moving_average": 49395980.04
+                      },
+                      {
+                        "key": "Feb 2020",
+                        "standard": -28988325.959999993,
+                        "moving_average": 10203827.040000003
+                      },
+                      {
+                        "key": "Mar 2020",
+                        "standard": 10911449.28,
+                        "moving_average": 10439701.120000003
+                      },
+                      {
+                        "key": "Apr 2020",
+                        "standard": 10781433.239999998,
+                        "moving_average": 10525134.150000002
+                      },
+                      {
+                        "key": "May 2020",
+                        "standard": 11348929.920000002,
+                        "moving_average": 10689893.304000001
+                      },
+                      {
+                        "key": "Jun 2020",
+                        "standard": 11474590.439999998,
+                        "moving_average": 10820676.160000002
+                      },
+                      {
+                        "key": "Jul 2020",
+                        "standard": 13023407.760000002,
+                        "moving_average": 11135352.102857145
+                      }
+                    ]
+                  },
+                  {
+                    "chart_uuid": "8c9b4e2f-3fb8-45b4-b46d-63de7223bad9",
+                    "chart_name": "Annualized Return on Equity (ROE)",
+                    "type": "Percentage",
+                    "is_kpi": true,
+                    "color": "#40712f",
+                    "values": [
+                      {
+                        "key": "Jan 2020",
+                        "standard": 93.55116490914678,
+                        "moving_average": 93.55116490914678
+                      },
+                      {
+                        "key": "Feb 2020",
+                        "standard": -105.15328390237299,
+                        "moving_average": -5.801059496613107
+                      },
+                      {
+                        "key": "Mar 2020",
+                        "standard": 22.85440391808733,
+                        "moving_average": 3.7507616416203717
+                      },
+                      {
+                        "key": "Apr 2020",
+                        "standard": 22.296763064169397,
+                        "moving_average": 8.387261997257628
+                      },
+                      {
+                        "key": "May 2020",
+                        "standard": 23.37240254446005,
+                        "moving_average": 11.384290106698113
+                      },
+                      {
+                        "key": "Jun 2020",
+                        "standard": 23.367267162047956,
+                        "moving_average": 13.38145294925642
+                      },
+                      {
+                        "key": "Jul 2020",
+                        "standard": 26.48529347385356,
+                        "moving_average": 15.253430167056012
+                      }
+                    ]
+                  },
+                  {
+                    "chart_uuid": "9ebbad60-4b1f-4e28-9827-3cfcbe3e57f0",
+                    "chart_name": "Annualized Return on Assets (ROA)",
+                    "type": "Percentage",
+                    "is_kpi": true,
+                    "color": "#850685",
+                    "values": [
+                      {
+                        "key": "Jan 2020",
+                        "standard": 58.10947095732797,
+                        "moving_average": 58.10947095732797
+                      },
+                      {
+                        "key": "Feb 2020",
+                        "standard": -69.59920143582677,
+                        "moving_average": -5.7448652392494
+                      },
+                      {
+                        "key": "Mar 2020",
+                        "standard": 16.231319543624966,
+                        "moving_average": 1.580529688375389
+                      },
+                      {
+                        "key": "Apr 2020",
+                        "standard": 15.93913806855984,
+                        "moving_average": 5.170181783421501
+                      },
+                      {
+                        "key": "May 2020",
+                        "standard": 16.839375677530363,
+                        "moving_average": 7.504020562243274
+                      },
+                      {
+                        "key": "Jun 2020",
+                        "standard": 16.965117517572477,
+                        "moving_average": 9.08087005479814
+                      },
+                      {
+                        "key": "Jul 2020",
+                        "standard": 19.343551398890263,
+                        "moving_average": 10.546967389668444
+                      }
+                    ]
+                  },
+                  {
+                    "chart_uuid": "0e9fbcfa-40fd-4a0d-9085-7448a9951cb8",
+                    "chart_name": "Annualized Return on Invested Capital (ROIC)",
+                    "type": "Percentage",
+                    "is_kpi": true,
+                    "color": "#8411ba",
+                    "values": [
+                      {
+                        "key": "Jan 2020",
+                        "standard": 117.3696626228309,
+                        "moving_average": 117.3696626228309
+                      },
+                      {
+                        "key": "Feb 2020",
+                        "standard": -69.05799402422605,
+                        "moving_average": 24.155834299302427
+                      },
+                      {
+                        "key": "Mar 2020",
+                        "standard": 25.720503942433076,
+                        "moving_average": 24.677390847012646
+                      },
+                      {
+                        "key": "Apr 2020",
+                        "standard": 25.116279057415213,
+                        "moving_average": 24.787112899613287
+                      },
+                      {
+                        "key": "May 2020",
+                        "standard": 26.102670499013165,
+                        "moving_average": 25.050224419493265
+                      },
+                      {
+                        "key": "Jun 2020",
+                        "standard": 26.05797033373432,
+                        "moving_average": 25.218182071866774
+                      },
+                      {
+                        "key": "Jul 2020",
+                        "standard": 29.090249221666042,
+                        "moving_average": 25.771334521838096
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "uuid": "35699ca3-0a55-4fda-9c81-0c93d2d66651",
+            "item_uuid": "946a211e-cdc1-4baf-94ef-2b57eef649b7",
+            "created": "2023-09-06T08:13:32.192669Z",
+            "modified": null
+          },
+          "table_item": null,
+          "uuid": "946a211e-cdc1-4baf-94ef-2b57eef649b7",
+          "section_uuid": "da68d2cb-8219-41c4-8254-727eee8e1489",
+          "created": "2023-09-06T08:13:32.192669Z",
+          "modified": null
+        }
+      ],
+      "uuid": "da68d2cb-8219-41c4-8254-727eee8e1489",
+      "report_uuid": "f308478f-8331-4fad-8ed4-a64fbde7b1ac",
+      "created": "2023-09-06T08:13:32.152039Z",
+      "modified": null
+    }
+  ]
+}

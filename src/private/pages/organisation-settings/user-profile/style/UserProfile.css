@@ -1,0 +1,325 @@
+.Headline_1 {
+  font-size: 24px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_2 {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_3 {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_4,
+.change__pass__div .title__modal {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+}
+
+.Subtitle_1,
+.user__profile .div__start .title1 {
+  font-size: 20px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_2 {
+  font-size: 18px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_3,
+.mantine-Tabs-tabLabel {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_4 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.Body_1 {
+  font-size: 20px !important;
+  font-weight: 400 !important;
+}
+
+.Body_2 {
+  font-size: 18px !important;
+  font-weight: 400 !important;
+}
+
+.Body_3,
+.change__pass__div .change__pass__form .mantine-PasswordInput-label,
+.user__profile
+  .user__form
+  .form__container
+  .single__col
+  .col__content
+  .form__input
+  .mantine-InputWrapper-label,
+.user__profile
+  .user__form
+  .form__container
+  .single__col
+  .col__content
+  .form__input,
+.user__profile .user__form .mantine-TextInput-label,
+.user__profile .div__start .title2 {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+.Body_4,
+.change__pass__div .text {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+}
+
+.Caption {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+}
+
+.mantine-Tabs-tab:not(:first-child) {
+  margin-inline-start: 3.75rem;
+}
+
+.user__profile {
+  padding: 30px;
+  overflow-y: auto;
+}
+@media (max-width: 1200px) {
+  .user__profile {
+    zoom: 0.7;
+    padding-top: 10px;
+  }
+}
+@media (max-width: 810px) {
+  .user__profile {
+    zoom: 0.4;
+  }
+}
+.user__profile .div__start {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 35px;
+}
+.user__profile .div__start .title1 {
+  font-style: normal;
+  line-height: var(--line-height-150-percentage);
+  letter-spacing: -0.06em;
+}
+.user__profile .div__start .title2 {
+  font-style: normal;
+  line-height: var(--line-height-150-percentage);
+  letter-spacing: -0.06em;
+}
+.user__profile .user__form {
+  position: relative;
+  height: var(--height-60-vh);
+}
+.user__profile .user__form .mantine-TextInput-label {
+  font-style: normal;
+  font-weight: var(--font-weight-400);
+  font-size: var(--font-16);
+  line-height: var(--line-height-21-px);
+  color: #373a40;
+}
+.user__profile .user__form .form__container {
+  width: 80%;
+}
+.user__profile .user__form .form__container .single__col {
+  width: 50%;
+  margin-bottom: 10px;
+}
+.user__profile .user__form .form__container .single__col .col__content {
+  width: var(--width-85-percentage);
+}
+.user__profile
+  .user__form
+  .form__container
+  .single__col
+  .col__content
+  .phone__div {
+  margin-top: 18px;
+}
+.user__profile
+  .user__form
+  .form__container
+  .single__col
+  .col__content
+  .phone__div
+  .phone__input {
+  border: 2px solid #cbd2e0;
+  border-radius: 8px;
+  padding: 10px !important;
+}
+.user__profile
+  .user__form
+  .form__container
+  .single__col
+  .col__content
+  .phone__div
+  .phone__input
+  .PhoneInputInput {
+  border: none;
+  outline: none;
+}
+.user__profile
+  .user__form
+  .form__container
+  .single__col
+  .col__content
+  .phone__div
+  .phone__input
+  .PhoneInputInput:focus,
+.user__profile
+  .user__form
+  .form__container
+  .single__col
+  .col__content
+  .phone__div
+  .phone__input
+  .PhoneInputInput:active,
+.user__profile
+  .user__form
+  .form__container
+  .single__col
+  .col__content
+  .phone__div
+  .phone__input
+  .PhoneInputInput:target {
+  border: none;
+  outline: none;
+}
+.user__profile
+  .user__form
+  .form__container
+  .single__col
+  .col__content
+  .phone__div
+  .label__style {
+  font-style: normal;
+  font-weight: var(--font-weight-400);
+  font-size: var(--font-16);
+  line-height: var(--line-height-21-px);
+  color: #373a40;
+}
+.user__profile
+  .user__form
+  .form__container
+  .single__col
+  .col__content
+  .span__err {
+  height: var(--height-5-px);
+  width: var(--width-100-percentage);
+  color: #fa5252;
+  font-size: 0.75rem;
+}
+.user__profile
+  .user__form
+  .form__container
+  .single__col
+  .change__password__div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.user__profile
+  .user__form
+  .form__container
+  .single__col
+  .change__password__div
+  p {
+  margin: 0;
+}
+.user__profile
+  .user__form
+  .form__container
+  .single__col
+  .change__password__div
+  .change__pass {
+  font-style: normal;
+  font-weight: var(--font-weight-400);
+  font-size: var(--font-16);
+  line-height: var(--line-height-21-px);
+  text-decoration-line: underline;
+  color: #086972;
+  cursor: pointer;
+}
+.user__profile .user__form .submit__btn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-style: normal;
+  font-weight: var(--font-weight-400);
+  font-size: var(--font-16);
+  line-height: var(--line-height-24-px);
+  letter-spacing: -0.01em;
+  color: #f8f9fa;
+  padding: 0px 51px;
+}
+
+.change__pass__div {
+  padding: 30px;
+}
+@media (max-width: 1200px) {
+  .change__pass__div {
+    zoom: 0.7;
+  }
+}
+@media (max-width: 810px) {
+  .change__pass__div {
+    zoom: 0.4;
+  }
+}
+.change__pass__div .title__modal {
+  font-style: normal;
+  line-height: var(--line-height-21-px);
+  letter-spacing: -0.01em;
+  color: #2c2e33;
+  display: inline-block;
+  margin-bottom: 0;
+}
+.change__pass__div .text {
+  font-style: normal;
+  line-height: var(--line-height-150-percentage);
+  letter-spacing: -0.01em;
+  color: rgba(44, 46, 51, 0.7);
+  display: inline-block;
+}
+.change__pass__div .change__pass__form .mantine-PasswordInput-label {
+  font-style: normal;
+  line-height: var(--line-height-155-percentage);
+  color: #212529;
+}
+.change__pass__div .change__pass__form .btn__group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.change__pass__div .change__pass__form .btn__group .cancel__btn {
+  font-style: normal;
+  font-weight: var(--font-weight-400);
+  font-size: var(--font-16);
+  line-height: var(--line-height-24-px);
+  letter-spacing: -0.01em;
+  color: #086972;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+.change__pass__div .change__pass__form .btn__group .save__btn {
+  font-style: normal;
+  font-weight: var(--font-weight-400);
+  font-size: var(--font-16);
+  line-height: var(--line-height-24-px);
+  letter-spacing: -0.01em;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} /*# sourceMappingURL=UserProfile.css.map */

@@ -1,0 +1,39 @@
+@import "../../../GlobalStyle.scss";
+
+.row_edit_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  .rowName {
+    @extend .Body_4;
+    line-height: var(--line-height-150-percentage);
+    letter-spacing: -0.06em;
+    @include for_tablet_only {
+      zoom: 0.5;
+    }
+  }
+  .edit__row__icon {
+    cursor: pointer;
+    font-size: 0.7rem;
+    color: #086972;
+    margin: 0 6px;
+  }
+  .span__edit {
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: var(--font-weight-400);
+    font-size: var(--font-13);
+    margin: 0 2rem 0 0.3rem;
+    color: $primary_color;
+    text-decoration: none;
+    @include for_phone_only {
+      zoom: 0.5;
+      font-size: 0.6rem;
+      margin: 0 0.7rem 0 0;
+      display: flex;
+      text-align: end;
+    }
+  }
+}

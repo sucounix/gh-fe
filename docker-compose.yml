@@ -1,0 +1,30 @@
+# version: "3.8"
+
+# services:
+#   fe:
+#     container_name: femto_fe_dev
+#     build:
+#       context: ./
+#       dockerfile: DockerfileDev
+#       args:
+#         - REACT_APP_API_URLhttps://dev-api.femtofpa.com/
+#     # environment:
+#     # - REACT_APP_API_URL=https://dev-api.femtofpa.com/
+
+#     ports:
+#       - "3000:3000"
+
+version: "3.8"
+
+services:
+  fe:
+    container_name: femto_fe_prod
+    build:
+      context: ./
+      dockerfile: DockerfileLA
+      args:
+        - API_URL=https://dev-api.femtofpa.com/
+    # environment:
+    # - REACT_APP_API_URL=http://dev-e-publi-1dnypg9fjag3c-1835176073.eu-central-1.elb.amazonaws.com
+    ports:
+      - "80:80"

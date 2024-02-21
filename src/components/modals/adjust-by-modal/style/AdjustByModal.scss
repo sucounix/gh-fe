@@ -1,0 +1,49 @@
+@import "../../../../GlobalStyle.scss";
+
+.adjust__value__modal {
+  padding: 38px 54px 38px 58px;
+  @include for_tablet_only {
+    zoom: 0.6;
+  }
+  .flex__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .adjust_title {
+      @extend .Body_4;
+      line-height: 24px;
+    }
+  }
+  .btn__div {
+    margin: 30px auto auto auto;
+
+    .confirm__Btn_change {
+      font-style: normal;
+      font-weight: var(--font-weight-400);
+      font-size: var(--font-16);
+      line-height: var(--line-height-24-px);
+      letter-spacing: -0.01em;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 10px;
+    }
+    .cancel__Btn_change {
+      font-style: normal;
+      font-weight: var(--font-weight-400);
+      font-size: var(--font-16);
+      line-height: var(--line-height-24-px);
+      letter-spacing: -0.01em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+@include for_tablet_only {
+  .adjust__value__modal {
+    zoom: 0.5;
+  }
+}

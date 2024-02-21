@@ -1,0 +1,103 @@
+.Headline_1 {
+  font-size: 24px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_2 {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_3 {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+}
+
+.Subtitle_1 {
+  font-size: 20px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_2 {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_3 {
+  font-size: 14px !important;
+  font-weight: 500 !important;
+}
+
+.Body_1 {
+  font-size: 20px !important;
+  font-weight: 400 !important;
+}
+
+.Body_2 {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+.Body_3,
+.kpi__content__input__date,
+.kpi__type__title {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+}
+
+.Caption {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+}
+
+.kpi__subheader {
+  margin: 8px 0 18px 0;
+  font-weight: var(--font-weight-400);
+  font-size: var(--font-15);
+  line-height: var(--line-height-150-percentage);
+  letter-spacing: -0.06em;
+  color: #373a40;
+}
+
+.kpi__type__wrappper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.kpi__content__wrapper__variable {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+
+.kpi__type__title {
+  padding: 10px 58px;
+}
+
+.kpi__btn__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.kpi__type__option {
+  border: 2px solid #086972;
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+.kpi__type__option:nth-child(1) {
+  border-radius: 5px 0 0 5px;
+}
+.kpi__type__option:nth-child(2) {
+  border-radius: 0 5px 5px 0;
+}
+
+.kpi__type__option__active {
+  background-color: #086972;
+  color: #fff;
+} /*# sourceMappingURL=NewNonFinancialKPI.css.map */

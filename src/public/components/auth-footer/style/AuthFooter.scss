@@ -1,0 +1,92 @@
+@import "../../../../GlobalStyle.scss";
+
+.auth__footer {
+  .auth__footer__links {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 100;
+  }
+
+  @include for_phone_only {
+    zoom: 0.5;
+  }
+
+  @include for_tablet_only {
+    zoom: 0.4;
+  }
+}
+.tos__modal {
+  padding: 30px 30px;
+  .tos__modal__title {
+    @extend .Subtitle_1;
+  }
+  .tos__modal__content {
+    height: 300px;
+    overflow-y: scroll;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+  }
+  .tos__modal__footer {
+    height: 50px;
+    margin-top: 30px;
+    .done {
+      padding: 12px 34px;
+    }
+  }
+}
+
+.PP__modal {
+  padding: 30px 30px;
+  .pp__modal__title {
+    @extend .Subtitle_1;
+  }
+  .pp__modal__content {
+    height: 300px;
+    overflow-y: scroll;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+  }
+  .pp__modal__footer {
+    height: 50px;
+    margin-top: 30px;
+  }
+}
+.contact__modal {
+  .contact__us__title {
+    @extend .Headline_2;
+  }
+  .contact__us__subtitle {
+    @extend .Body_4;
+  }
+  .contact__row {
+    .icon {
+      color: #086972;
+    }
+    .contact__us__email__content {
+      @extend .Body_4;
+      margin: 0 10px;
+    }
+  }
+}
+
+.btn_auth_footer {
+  text-decoration: underline;
+  color: #086972;
+  @extend .Body_3;
+}
+
+@include for_tablet_only {
+  .contact__modal {
+    zoom: 0.5;
+  }
+
+  .tos__modal {
+    zoom: 0.5;
+  }
+
+  .PP__modal {
+    zoom: 0.5;
+  }
+}

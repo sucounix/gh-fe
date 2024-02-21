@@ -1,0 +1,44 @@
+@import "../../../../GlobalStyle.scss";
+.CompanyView {
+  display: flex;
+  position: relative;
+  height: calc(100vh - 75px);
+  overflow-y: auto;
+  width: var(--width-100-percentage);
+  @include for_tablet_only {
+    height: var(--height-100vh-minus-75px);
+    margin-top: 0;
+  }
+  @include for_phone_only {
+    height: var(--height-100vh-minus-75px);
+  }
+  .company_content {
+    position: relative;
+    min-height: calc(100vh - 75px);
+    transition: all 0.5s ease;
+  }
+  .sidemenu_open {
+    left: 15%;
+    width: calc(100% - 15%);
+    @include for-tablet-only {
+      left: 22%;
+      width: calc(100% - 22%);
+    }
+    @include for-phone-only {
+      left: 0 !important;
+      width: 100% !important;
+    }
+  }
+  .sidemenu_close {
+    left: 5%;
+    width: calc(100% - 5%);
+    @include for-tablet-only {
+      left: 7%;
+      width: calc(100% - 7%);
+    }
+    @include for-phone-only {
+      left: 0 !important;
+      width: 100% !important;
+    }
+  }
+}

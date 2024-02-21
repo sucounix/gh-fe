@@ -1,0 +1,65 @@
+@import "../../../../../../../GlobalStyle.scss";
+
+.trend__report__wrapper {
+  overflow: hidden;
+  padding: 1rem;
+  position: relative;
+  margin-bottom: 5rem;
+
+  .xAxis {
+    .recharts-cartesian-axis-line {
+      stroke: rgb(8, 105, 114) !important;
+      stroke-width: 2px !important;
+    }
+  }
+
+  .yAxis {
+    .recharts-cartesian-axis-line {
+      stroke-width: 0.0625rem !important;
+    }
+  }
+
+  .recharts-cartesian-grid-vertical {
+    display: none !important;
+  }
+  .trend__chart__header {
+    margin-bottom: 18px;
+
+    .trend__chart__title {
+      @extend .Headline_2;
+      color: #000;
+    }
+
+    .trend__chart__period {
+      @extend .Subtitle_1;
+      color: #000;
+    }
+  }
+
+  .chart__wrapper {
+    @include for-phone-only {
+      zoom: 0.5;
+    }
+  }
+
+  .trend__report__table {
+    margin-top: 1.12rem;
+
+    .table__view {
+      @include for-tablet-only {
+        table-layout: fixed;
+        th {
+          .th__style {
+            font-size: 0.5rem !important;
+          }
+        }
+        td {
+          font-size: 0.5rem !important;
+        }
+      }
+      .th__style {
+        @extend .Subtitle_3;
+      }
+    }
+  }
+}

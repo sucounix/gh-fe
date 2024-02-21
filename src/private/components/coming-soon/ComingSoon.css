@@ -1,0 +1,45 @@
+.coming__soon__wrapper {
+  display: flex;
+  height: var(--height-90-vh);
+  width: var(--width-100-percentage);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.coming__soon__title {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: var(--font-weight-500);
+  font-size: var(--font-36);
+  line-height: var(--line-height-69-px);
+  text-align: center;
+  letter-spacing: 0.005em;
+  color: #086972;
+}
+
+.coming__soon__subtitle {
+  font-weight: var(--font-weight-400);
+  font-size: var(--font-18);
+  line-height: var(--line-height-23-px);
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #a7a7a7;
+}
+
+.rocket__gif {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  width: var(--width-20-rem);
+  height: var(--height-20-rem);
+}
+
+@media all and (max-width: 768px) {
+  .rocket__gif {
+    width: var(--width-10-rem);
+    height: var(--height-10-rem);
+  }
+}

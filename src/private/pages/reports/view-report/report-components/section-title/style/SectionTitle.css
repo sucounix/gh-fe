@@ -1,0 +1,194 @@
+.Headline_1 {
+  font-size: 24px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_2 {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_3 {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_4,
+.delete__section__modal
+  .delete__section__modal__header
+  .delete__section__modal__title,
+.edit_section_title_div .title {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+}
+
+.Subtitle_1 {
+  font-size: 20px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_2 {
+  font-size: 18px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_3,
+.mantine-Tabs-tabLabel {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_4 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.Body_1 {
+  font-size: 20px !important;
+  font-weight: 400 !important;
+}
+
+.Body_2 {
+  font-size: 18px !important;
+  font-weight: 400 !important;
+}
+
+.Body_3,
+.edit_section_title_div .action_btn {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+.Body_4,
+.delete__section__modal .proceed__consent,
+.delete__section__modal .delete__section__modal__header .consent__warning,
+.section__div .sectio_title_delete_option,
+.section__div .sectio_title_edit_option {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+}
+
+.Caption {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+}
+
+/* 
+  Buttons
+*/
+.btn_md {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.mantine-Tabs-tab:not(:first-child) {
+  margin-inline-start: 3.75rem;
+}
+
+.section__div {
+  margin: 10px 0px 10px 0px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgb(55, 58, 64);
+  border-bottom: 1.5px solid rgb(173, 181, 189);
+  font-size: 26px;
+  font-weight: 700;
+}
+.section__div .dot__icon {
+  color: #086972;
+  font-size: 17px;
+  font-weight: 900;
+  cursor: pointer;
+}
+.section__div .sectio_title_edit_option {
+  color: #086972;
+  cursor: pointer;
+}
+.section__div .sectio_title_edit_option .icon {
+  margin-right: 10px;
+}
+.section__div .sectio_title_delete_option {
+  color: #f03e3e;
+  cursor: pointer;
+}
+.section__div .sectio_title_delete_option .icon {
+  margin-right: 10px;
+}
+
+.edit_section_title_div {
+  padding: 20px;
+}
+@media (max-width: 1200px) {
+  .edit_section_title_div {
+    zoom: 0.7;
+  }
+}
+@media (max-width: 810px) {
+  .edit_section_title_div {
+    zoom: 0.5;
+  }
+}
+.edit_section_title_div .title {
+  line-height: 24px;
+  color: rgb(55, 58, 64);
+  margin: 0;
+  padding: 0 !important;
+  margin-bottom: 15px;
+}
+.edit_section_title_div .action_btn {
+  line-height: 24px;
+}
+
+.delete__section__modal {
+  display: flex;
+  flex-direction: column;
+  padding: 38px 58px;
+  min-width: 533px;
+  gap: 14px;
+  border-radius: 20px;
+}
+@media (max-width: 810px) {
+  .delete__section__modal {
+    zoom: 0.4;
+  }
+}
+.delete__section__modal .delete__section__modal__header {
+  display: flex;
+  flex-direction: column;
+}
+.delete__section__modal
+  .delete__section__modal__header
+  .delete__section__modal__title {
+  color: #f03e3e;
+  margin: 0;
+  padding: 0 !important;
+  margin-bottom: 15px;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+.delete__section__modal .delete__section__modal__header .consent__warning {
+  color: #373a40;
+}
+.delete__section__modal .proceed__consent {
+  color: #373a40;
+}
+.delete__section__modal .delete__btns {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
+}
+.delete__section__modal .delete__btns .delete__btn {
+  width: 50%;
+  font-size: 16px;
+  font-weight: 400;
+}
+.delete__section__modal .delete__btns .cancel__btn {
+  width: 50%;
+  font-size: 16px;
+  font-weight: 400;
+} /*# sourceMappingURL=SectionTitle.css.map */

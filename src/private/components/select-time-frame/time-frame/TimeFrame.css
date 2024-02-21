@@ -1,0 +1,198 @@
+.TimeFrame__input__div {
+  margin-left: 15px;
+}
+.TimeFrame__input__div .label {
+  margin-bottom: 8px;
+  margin-top: 0;
+  font-style: normal;
+  font-weight: var(--font-weight-400);
+  font-size: var(--font-14);
+  line-height: var(--line-height-16-px);
+  letter-spacing: -0.01em;
+  font-feature-settings: "calt" off;
+  color: #a0abc0;
+}
+.TimeFrame__input {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 16px;
+  gap: 10px;
+  width: 100%;
+  height: var(--height-49-px);
+  border: 2px solid #e3e3e3;
+  border-radius: 8px;
+  position: relative;
+  cursor: pointer;
+}
+.TimeFrame__input .disabled__item {
+  color: gray;
+  padding: 8px;
+}
+.TimeFrame__input .disabled__item2 {
+  padding: 8px;
+  color: gray;
+}
+.TimeFrame__input .content {
+  @extend .Body_3;
+  font-style: normal;
+  background-color: inherit;
+  line-height: var(--line-height-121-5-px);
+  color: #002229;
+  border: none;
+  width: 80% !important;
+}
+
+.TimeFrame__input .calender {
+  position: absolute;
+  top: 62px;
+  right: 0;
+  height: var(--height-235-px);
+  background: #ffffff;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.09);
+  border-radius: 10px;
+  z-index: 98;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.TimeFrame__input .calender::-webkit-scrollbar {
+  display: none;
+}
+
+.TimeFrame__input .calender:after {
+  content: "";
+  position: absolute;
+  right: 24px;
+  top: -10px;
+  width: var(--width-0);
+  height: var(--height-0);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #fff;
+  clear: both;
+}
+
+.TimeFrame__input .calender .year__section {
+  background-color: #fff;
+  height: var(--height-100-percentageF);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  overflow: scroll;
+  height: 100%;
+}
+.TimeFrame__input .calender .year__section::-webkit-scrollbar {
+  display: none;
+}
+.TimeFrame__input .calender .year__title {
+  font-style: normal;
+  font-weight: var(--font-weight-400);
+  font-size: var(--font-14);
+  line-height: var(--line-height-100-percentage);
+  text-align: center;
+  color: #909296;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
+}
+.TimeFrame__input .calender .date__title {
+  font-style: normal;
+  font-weight: var(--font-weight-400);
+  font-size: var(--font-14);
+  line-height: var(--line-height-100-percentage);
+  text-align: center;
+  color: #909296;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
+}
+.TimeFrame__input .calender .data__section {
+  background-color: #fff;
+  width: var(--width-65-percentage);
+  height: var(--height-100-percentage);
+  border-left: 0.5px solid rgba(0, 0, 0, 0.2);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.TimeFrame__input .calender .year__range {
+  font-style: normal;
+  font-weight: var(--font-weight-400);
+  font-size: var(--font-14);
+  line-height: var(--line-height-121-5-percentage);
+  color: #002229;
+  cursor: pointer;
+  padding: 0 24px;
+  height: var(--height-33-px);
+}
+.TimeFrame__input .calender .selected__year__range {
+  background: #c9dedc;
+  color: #002229;
+  border-left: 3px solid #086972;
+}
+
+.TimeFrame__input .calender .item {
+  padding: 8px;
+  cursor: pointer;
+  text-align: center;
+}
+.TimeFrame__input .calender .item2 {
+  padding: 8px;
+  cursor: pointer;
+  text-align: center;
+}
+.TimeFrame__input .calender .selected__item {
+  background: #c9dedc;
+  border-radius: 8px;
+}
+.TimeFrame__input .calender .selected__item2 {
+  background: #c9dedc;
+  padding: 8px;
+  border-left: 3px solid #086972;
+  width: var(--width-100-percentage);
+  text-align: left;
+}
+
+.w__100 {
+  width: var(--width-100-percentage);
+}
+@media all and (max-width: 1000px) and (orientation: landscape) {
+  .dropdowns__div__timeframe > div {
+    margin: 0 8px;
+    zoom: 0.6;
+    font-size: var(--font-10);
+  }
+}
+/*  mobile view  */
+@media all and (max-width: 810px) {
+  .dropdowns__div__timeframe > div {
+    margin: 0 8px;
+    zoom: 0.5;
+    font-size: var(--font-10);
+  }
+  .TimeFrame__input__div {
+    margin-left: 0px;
+  }
+  .TimeFrame__input {
+    width: var(--width-100-percentage);
+  }
+}
+
+@media all and (max-width: 400px) {
+  .TimeFrame__input .calender .year__title {
+    padding: 20px 12px;
+    width: max-content;
+  }
+}
+
+@media all and (max-width: 390px) {
+  .option {
+    overflow: scroll;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    height: var(--height-154-px);
+  }
+  .option::-webkit-scrollbar {
+    display: none;
+  }
+}

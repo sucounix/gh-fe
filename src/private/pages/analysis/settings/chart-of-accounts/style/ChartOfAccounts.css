@@ -1,0 +1,201 @@
+.Headline_1 {
+  font-size: 24px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_2 {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_3 {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_4 {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+}
+
+.Subtitle_1,
+.tab__content__title,
+.Chart__Of__Accounts__page .tab__content__title,
+.Chart__Of__Accounts__page .title__page {
+  font-size: 20px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_2 {
+  font-size: 18px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_3,
+.section__title__accounts,
+.Chart__Of__Accounts__page .section__title__accounts,
+.mantine-Tabs-tabLabel {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_4 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.Body_1 {
+  font-size: 20px !important;
+  font-weight: 400 !important;
+}
+
+.Body_2 {
+  font-size: 18px !important;
+  font-weight: 400 !important;
+}
+
+.Body_3,
+.Chart__Of__Accounts__page .text__page {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+.Body_4,
+.account__text__div,
+.Chart__Of__Accounts__page .classification,
+.Chart__Of__Accounts__page .text {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+}
+
+.Caption {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+}
+
+.mantine-Tabs-tab:not(:first-child) {
+  margin-inline-start: 3.75rem;
+}
+
+/* Profit & loss content  */
+.Chart__Of__Accounts__page {
+  padding: 20px 30px;
+}
+.Chart__Of__Accounts__page .scroll__area__accounts {
+  height: var(--height-53-vh);
+  width: var(--width-100-percentage);
+  padding-bottom: 100px;
+}
+.Chart__Of__Accounts__page .title__page {
+  line-height: var(--line-height-150-percentage);
+  letter-spacing: -0.06em;
+  color: #373a40;
+}
+.Chart__Of__Accounts__page .text__page {
+  line-height: var(--line-height-150-percentage);
+  letter-spacing: -0.06em;
+  color: #373a40;
+}
+.Chart__Of__Accounts__page .guidelines__span {
+  color: #086972;
+  margin-left: 5px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.Chart__Of__Accounts__page .active__tab__account {
+  color: #086972;
+  font-weight: var(--font-weight-600);
+}
+.Chart__Of__Accounts__page .tab__content {
+  padding: 0 20px;
+}
+.Chart__Of__Accounts__page .tab__content__title {
+  line-height: var(--line-height-150-percentage);
+  letter-spacing: -0.06em;
+  color: #373a40;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: -10px;
+}
+.Chart__Of__Accounts__page .section__title__accounts {
+  line-height: var(--line-height-150-percentage);
+  letter-spacing: -0.06em;
+  color: #373a40;
+  border-top: 1.5px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1.5px solid rgba(0, 0, 0, 0.2);
+  padding: 20px 20px;
+  margin-bottom: 0;
+}
+.Chart__Of__Accounts__page .section {
+  margin-bottom: 50px;
+}
+.Chart__Of__Accounts__page .buttonReclasifiy {
+  display: none;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 10px;
+  width: var(--width-20-percentage);
+}
+.Chart__Of__Accounts__page .account__text__div {
+  display: flex;
+  align-items: center;
+}
+.Chart__Of__Accounts__page .account__text__div .icon__alert {
+  margin-left: 15px;
+  cursor: pointer;
+  color: #f28c28;
+}
+.Chart__Of__Accounts__page .single__item__account {
+  border-top: 0.0625rem solid #e9ecef;
+  border-bottom: 0.0625rem solid #e9ecef;
+  border-left: none;
+  border-right: none;
+}
+.Chart__Of__Accounts__page .single__item__account:hover .buttonReclasifiy {
+  display: flex;
+}
+.Chart__Of__Accounts__page .disabled {
+  opacity: 0.4;
+}
+.Chart__Of__Accounts__page .card {
+  width: var(--width-70-percentage);
+  display: flex;
+  justify-content: space-between;
+}
+.Chart__Of__Accounts__page .text {
+  display: flex;
+  align-items: center;
+}
+.Chart__Of__Accounts__page .classification {
+  background: rgba(221, 230, 231, 0.5);
+  border-radius: 20px;
+  padding: 9px 16px;
+  line-height: var(--line-height-150-percentage);
+  letter-spacing: -0.06em;
+}
+.Chart__Of__Accounts__page .disabled__section {
+  opacity: 0.5;
+  height: var(--height-100-percentage);
+  width: var(--width-100-percentage);
+}
+
+.mantine-Modal-header {
+  display: none;
+}
+
+@media (max-width: 810px) {
+  .Chart__Of__Accounts__page {
+    zoom: 0.5;
+  }
+  .Chart__Of__Accounts__page .scroll__area__accounts {
+    height: var(--height-145-vh);
+  }
+}
+@media (max-width: 1200px) {
+  .Chart__Of__Accounts__page {
+    zoom: 0.7;
+  }
+  .Chart__Of__Accounts__page .scroll__area__accounts {
+    height: var(--height-80-vh);
+  }
+} /*# sourceMappingURL=ChartOfAccounts.css.map */

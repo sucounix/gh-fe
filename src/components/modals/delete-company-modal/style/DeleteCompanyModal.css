@@ -1,0 +1,117 @@
+.Headline_1 {
+  font-size: 24px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_2,
+.delete__modal .delete__div .delete__title__modal {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_3 {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_4 {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+}
+
+.Subtitle_1 {
+  font-size: 20px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_2 {
+  font-size: 18px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_3,
+.mantine-Tabs-tabLabel {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_4 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.Body_1 {
+  font-size: 20px !important;
+  font-weight: 400 !important;
+}
+
+.Body_2 {
+  font-size: 18px !important;
+  font-weight: 400 !important;
+}
+
+.Body_3 {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+.Body_4,
+.delete__modal .delete__div .delete__desc__modal {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+}
+
+.Caption {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+}
+
+.mantine-Tabs-tab:not(:first-child) {
+  margin-inline-start: 3.75rem;
+}
+
+.delete__modal .mantine-Modal-header {
+  display: none;
+}
+.delete__modal .delete__div {
+  padding: 28px 50px 28px 50px;
+}
+@media (max-width: 810px) {
+  .delete__modal .delete__div {
+    zoom: 0.4;
+  }
+}
+.delete__modal .delete__div .delete__title__modal {
+  font-style: normal;
+  line-height: var(--line-height-26-px);
+  letter-spacing: -0.01em;
+  font-feature-settings: "calt" off;
+  color: #2c2e33;
+  text-align: left;
+}
+.delete__modal .delete__div .delete__desc__modal {
+  font-style: normal;
+  line-height: var(--line-height-150-percentage);
+  letter-spacing: -0.01em;
+  font-feature-settings: "calt" off;
+  color: #2c2e33;
+  text-align: left;
+}
+.delete__modal .delete__div .confirm__btn {
+  font-style: normal;
+  font-weight: var(--font-weight-400);
+  font-size: var(--font-16);
+  line-height: var(--line-height-24-px);
+  letter-spacing: -0.01em;
+  font-feature-settings: "calt" off;
+  color: #ffffff;
+}
+.delete__modal .delete__div .cancel__btn {
+  font-style: normal;
+  font-weight: var(--font-weight-400);
+  font-size: var(--font-16);
+  line-height: var(--line-height-24-px);
+  letter-spacing: -0.01em;
+  font-feature-settings: "calt" off;
+  color: #086972;
+} /*# sourceMappingURL=DeleteCompanyModal.css.map */

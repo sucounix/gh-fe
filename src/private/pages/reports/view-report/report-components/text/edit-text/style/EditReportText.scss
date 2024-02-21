@@ -1,0 +1,202 @@
+@import "../../../../../../../../GlobalStyle.scss";
+
+.edit_text_container {
+  margin-bottom: 2rem;
+  .ProseMirror {
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  .mantine-RichTextEditor-root {
+    .mantine-RichTextEditor-toolbar {
+      .mantine-RichTextEditor-controlsGroup {
+        i {
+          color: $primary-color !important;
+        }
+      }
+    }
+
+    .mantine-RichTextEditor-controlsGroup {
+      display: flex;
+      align-items: center;
+      &:not(:last-child) {
+        &::after {
+          content: "";
+          display: inline-block;
+          width: 1px;
+          height: 20px;
+          background-color: #ccc;
+          margin-inline-start: 1rem;
+        }
+      }
+
+      .mantine-RichTextEditor-control {
+        svg {
+          color: $primary-color !important;
+        }
+        &[data-active="true"] {
+          svg {
+            color: white !important;
+          }
+        }
+        &:hover {
+          background-color: #07909c !important;
+          svg {
+            color: white !important;
+          }
+        }
+      }
+
+      .color_button {
+        background-color: white;
+        border-radius: 4px;
+        border: 1px solid rgb(206, 212, 218);
+
+        &:hover {
+          cursor: pointer;
+          background-color: #07909c;
+          i {
+            color: white !important;
+          }
+        }
+      }
+    }
+
+    .astra {
+      .astra__button {
+        background-color: #771dfc;
+        border: 0;
+        i {
+          color: white !important;
+        }
+
+        border-radius: 4px;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .save__container {
+      flex-grow: 1;
+      display: flex;
+      justify-content: flex-end;
+      .save_button {
+        display: flex;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+      }
+    }
+  }
+
+  .overlay__wrapper {
+    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.54);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 30%;
+      height: 30%;
+      object-fit: cover;
+    }
+  }
+}
+
+.error__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  span {
+    @extend .Body_2;
+    line-height: 26px;
+    letter-spacing: -1.08px;
+    color: #f03e3e;
+  }
+}
+.astra__popover {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: $astra;
+
+  .astra__action {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    gap: 5px;
+  }
+  .astra__message {
+    display: flex;
+    gap: 8px;
+
+    span {
+      @extend .Body_4;
+      letter-spacing: -0.84px;
+    }
+    i {
+      color: $astra !important;
+    }
+  }
+
+  .upgrade__button {
+    display: flex;
+    width: fit-content;
+    background-color: $astra;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.84px;
+    border: 0;
+    color: white;
+    border-radius: 5px;
+    margin-left: 30%;
+    cursor: pointer;
+  }
+}
+
+.astra__button {
+  background-color: #771dfc;
+  border-radius: 0.4rem;
+  padding: 0.1rem;
+  margin: 0;
+  cursor: pointer;
+  img {
+    width: 27px;
+    height: 24px;
+    padding: 0.1rem;
+  }
+}
+
+.optionsTop {
+  @extend .astra__popover;
+  @extend .astra__button;
+  .mantine-HoverCard-arrow {
+    background-color: $astra !important;
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+    transform: rotate(135deg) !important;
+    border: 0;
+  }
+}
+.optionsBottom {
+  @extend .astra__popover;
+  @extend .astra__button;
+  .mantine-HoverCard-arrow {
+    background-color: $astra !important;
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+    transform: rotate(315deg) !important;
+    border: 0;
+  }
+}

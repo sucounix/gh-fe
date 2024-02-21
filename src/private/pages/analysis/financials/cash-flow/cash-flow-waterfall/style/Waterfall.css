@@ -1,0 +1,140 @@
+.Headline_1,
+.top__card__value {
+  font-size: 24px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_2 {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_3 {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_4 {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+}
+
+.Subtitle_1,
+.empty__waterfall__section .empty__waterfall__text span:first-child {
+  font-size: 20px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_2 {
+  font-size: 18px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_3,
+.interval__label,
+g .table__header,
+g .cash__title,
+.mantine-Tabs-tabLabel {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_4 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.Body_1 {
+  font-size: 20px !important;
+  font-weight: 400 !important;
+}
+
+.Body_2 {
+  font-size: 18px !important;
+  font-weight: 400 !important;
+}
+
+.Body_3,
+g .table__entry__value,
+.top__card__title,
+.empty__waterfall__section .empty__waterfall__text span:last-child {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+.Body_4 {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+}
+
+.Caption {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+}
+
+.mantine-Tabs-tab:not(:first-child) {
+  margin-inline-start: 3.75rem;
+}
+
+.top__cards {
+  display: flex;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.top__card {
+  background: #ffffff;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.07);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 18px;
+  width: 100%;
+  text-align: start;
+  gap: 8px;
+}
+
+.empty__waterfall__section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 2rem;
+}
+.empty__waterfall__section .empty__waterfall__text {
+  display: flex;
+  flex-direction: column;
+}
+.top__card__title {
+  color: #086972;
+}
+
+.top__card__value {
+  line-height: var(--line-height-150-percentage);
+}
+
+g .cash__title {
+  font-size: 12px !important;
+}
+g .table__entry__name {
+  font-size: 14px !important;
+}
+.opened + .financials .svg_waterfall {
+  zoom: 0.8;
+}
+
+@media all and (max-width: 1098px) {
+  .empty__waterfall__section {
+    zoom: 1.2;
+  }
+}
+@media (max-width: 810px) {
+  .empty__waterfall__section {
+    zoom: 1.6;
+  }
+}
+@media all and (max-width: 600px) {
+  .waterfall__content {
+    zoom: 0.25;
+  }
+} /*# sourceMappingURL=Waterfall.css.map */

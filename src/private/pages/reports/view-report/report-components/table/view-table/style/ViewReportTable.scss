@@ -1,0 +1,21 @@
+@import "../../../../../../../../GlobalStyle.scss";
+.table__container {
+  padding: 10px 0px;
+  .table__container__content {
+    padding: 15px 15px;
+    position: relative;
+  }
+}
+.report__edit_form {
+  .mantine-Overlay-root {
+    .edit_form_loader {
+      width: 300px;
+      height: 300px;
+    }
+  }
+  .mantine-Drawer-inner {
+    .mantine-Drawer-content {
+      overflow: hidden;
+    }
+  }
+}

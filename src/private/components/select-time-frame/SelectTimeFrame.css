@@ -1,0 +1,19 @@
+.mantine-Select-label {
+  margin-bottom: 8px;
+  margin-top: 0;
+  font-style: normal;
+  font-weight: var(--font-weight-400);
+  font-size: var(--font-14);
+  line-height: var(--line-height-16-px);
+  letter-spacing: -0.01em;
+  font-feature-settings: "calt" off;
+  color: #a0abc0;
+}
+
+@media all and (max-width: 810px) {
+  .dropdowns__div__timeframe {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}

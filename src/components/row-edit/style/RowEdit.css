@@ -1,0 +1,111 @@
+.Headline_1 {
+  font-size: 24px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_2 {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_3 {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+}
+
+.Headline_4 {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+}
+
+.Subtitle_1 {
+  font-size: 20px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_2 {
+  font-size: 18px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_3,
+.mantine-Tabs-tabLabel {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
+
+.Subtitle_4 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.Body_1 {
+  font-size: 20px !important;
+  font-weight: 400 !important;
+}
+
+.Body_2 {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+.Body_3 {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+.Body_4,
+.row_edit_wrapper .rowName {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+}
+
+.Caption {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+}
+
+.mantine-Tabs-tab:not(:first-child) {
+  margin-inline-start: 3.75rem;
+}
+
+.row_edit_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.row_edit_wrapper .rowName {
+  line-height: var(--line-height-150-percentage);
+  letter-spacing: -0.06em;
+}
+@media (max-width: 1200px) {
+  .row_edit_wrapper .rowName {
+    zoom: 0.5;
+  }
+}
+.row_edit_wrapper .edit__row__icon {
+  cursor: pointer;
+  font-size: 0.7rem;
+  color: #086972;
+  margin: 0 6px;
+}
+.row_edit_wrapper .span__edit {
+  cursor: pointer;
+  text-decoration: underline;
+  font-weight: var(--font-weight-400);
+  font-size: var(--font-13);
+  margin: 0 2rem 0 0.3rem;
+  color: #086972;
+  text-decoration: none;
+}
+@media (max-width: 810px) {
+  .row_edit_wrapper .span__edit {
+    zoom: 0.5;
+    font-size: 0.6rem;
+    margin: 0 0.7rem 0 0;
+    display: flex;
+    text-align: end;
+  }
+} /*# sourceMappingURL=RowEdit.css.map */

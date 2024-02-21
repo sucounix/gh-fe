@@ -1,0 +1,60 @@
+@import "../../../GlobalStyle.scss";
+.NoAuthHeader {
+  background: #086972;
+  width: var(--width-100-percentage);
+  height: var(--height-75-px);
+  position: fixed;
+  top: 0;
+  padding: 0 70px;
+  z-index: 101;
+  @include for_tablet_only {
+    height: var(--height-46-px);
+    padding: 3px 28px;
+  }
+  @include for_phone_only {
+    height: var(--height-46-px);
+    padding: 3px 28px;
+  }
+  .h__100 {
+    height: 100%;
+    .logo__col {
+      height: 100%;
+      padding-bottom: 0;
+      .logo__div {
+        //   height: max-content;
+        .femto_logo {
+          width: var(--width-210-px);
+          @include for_tablet_only {
+            width: var(--width-100-px);
+          }
+          @include for_phone_only {
+            width: var(--width-100-px);
+          }
+        }
+      }
+    }
+    .content__col {
+      height: 100%;
+      padding-bottom: 0;
+
+      .user__icon {
+        font-style: normal;
+        font-weight: var(--font-weight-900);
+        font-size: var(--font-16);
+        line-height: var(--line-height-24-px);
+        font-feature-settings: "calt" off;
+        color: #f8f9fa;
+      }
+      .signin__div {
+        cursor: pointer;
+        font-style: normal;
+        font-weight: var(--font-weight-500);
+        font-size: var(--font-16);
+        line-height: var(--line-height-21-px);
+        letter-spacing: -0.065em;
+        color: #ffffff;
+        margin: 0 10px;
+      }
+    }
+  }
+}
