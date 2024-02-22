@@ -8,11 +8,11 @@ name: fe_svc_workflow
 on:
   push:
     branches:
-      - "ahmed"
-      - "dev"
+      # - "ahmed"
+      # - "dev"
       # - "stg"
-      # - "main" #prod
-      # - "hotfix"
+      - "main" #prod
+      - "hotfix"
     # paths:
     #   - '02-flask-app/**'
     #   - '.github/workflows/app*.yml'

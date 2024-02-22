@@ -8,9 +8,9 @@ name: fe_svc_workflow
 on:
   push:
     branches:
-      - "ahmed"
-      - "dev"
-      # - "stg"
+      # - "ahmed"
+      # - "dev"
+      - "stg"
       # - "main" #prod
       # - "hotfix"
     # paths:
