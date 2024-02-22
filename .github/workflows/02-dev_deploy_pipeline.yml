@@ -3,14 +3,14 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: charts_svc_workflow
+name: fe_svc_workflow
 
 on:
   push:
     branches:
       - "ahmed"
       - "dev"
-      - "stg"
+      # - "stg"
       # - "main" #prod
       # - "hotfix"
     # paths:
@@ -20,7 +20,10 @@ on:
 defaults:
   run:
     shell: bash
-permissions: {}
+permissions:
+  contents: read
+  actions: read
+  security-events: write
 
 jobs:
   prepare:
@@ -77,16 +80,34 @@ jobs:
         id: build-image
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-          ECR_REPOSITORY: ${{ env.environment }}-charts-repo
+          ECR_REPOSITORY: ${{ env.environment }}-fe-repo
           IMAGE_TAG: ${{ github.sha }}
         run: |
           echo "Building image $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
-          docker build \
-              -t $ECR_REPOSITORY:latest \
-              -t $ECR_REGISTRY/$ECR_REPOSITORY:latest \
-              -t $ECR_REPOSITORY:$IMAGE_TAG \
-              -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
-          docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+          docker build --target dev \
+            -t $BITBUCKET_BRANCH-femto-fe-repo . \
+            -t $ECR_REPOSITORY:latest \
+            -t $ECR_REGISTRY/$ECR_REPOSITORY:latest \
+            -t $ECR_REPOSITORY:$IMAGE_TAG \
+            -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG \
+            -f Dockerfile \
+            --build-arg API_URL=${{ vars.REACT_APP_API_URL_DEV }} \
+            --build-arg GOOGLE_CLIENT_ID=${{ vars.REACT_APP_GOOGLE_CLIENT_ID }} \
+            --build-arg MICROSOFT_CLIENT_ID=${{ vars.REACT_APP_MICROSOFT_CLIENT_ID }} \
+            --build-arg QUICKBOOKS_CLIENT_ID=${{ vars.REACT_APP_QUICKBOOKS_CLIENT_ID_DEV }} \
+            --build-arg QUICKBOOKS_REDIRECT_URI=${{ vars.REACT_APP_QUICKBOOKS_REDIRECT_URI_DEV }} \
+            --build-arg TAG_MANAGER_ID=${{ vars.REACT_APP_TAG_MANAGER_ID_DEV }} \
+            --build-arg REACT_APP_NEW_RELIC_APPLICATION_ID=${{ vars.REACT_APP_NEW_RELIC_APPLICATION_ID_DEV }} \
+            --build-arg REACT_APP_NEW_RELIC_LICENSE_KEY=${{ vars.REACT_APP_NEW_RELIC_LICENSE_KEY_DEV }} \
+            --build-arg REACT_APP_NEW_RELIC_AGENT_ID=${{ vars.REACT_APP_NEW_RELIC_AGENT_ID_DEV }} \
+            --build-arg SUBSBASE_REDIRECT_URI=${{ vars.REACT_APP_SUBSBASE_REDIRECT_URI_DEV }} \
+            --build-arg REACT_APP_AWS_USER_POOL_ID=${{ vars.REACT_APP_AWS_USER_POOL_ID_DEV }} \
+            --build-arg REACT_APP_AWS_USER_POOLS_CLIENT_ID=${{ vars.REACT_APP_AWS_USER_POOLS_CLIENT_ID_DEV }} \
+            --build-arg REACT_APP_AWS_DOMAIN=${{ vars.REACT_APP_AWS_DOMAIN_DEV }} \
+            --build-arg REACT_APP_AWS_REDIRECT=${{ vars.REACT_APP_AWS_REDIRECT_DEV }} \
+            --build-arg REACT_APP_AWS_REGION=${{ vars.AWS_REGION }} \
+            --build-arg REACT_APP_SUBSBASE_CUSTOM_PORTAL_URL=${{ vars.REACT_APP_SUBSBASE_CUSTOM_PORTAL_URL_DEV }} \
+            --build-arg REACT_APP_SUBSBASE_SITE_ID=${{ vars.REACT_APP_SUBSBASE_SITE_ID_DEV }}
           docker tag $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG $ECR_REGISTRY/$ECR_REPOSITORY:latest
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:latest
           echo "Pushed image $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
@@ -122,12 +143,12 @@ jobs:
         #   with:
         #     task-definition: ${{ steps.task-def.outputs.task-definition }}
         #     force-new-deployment: true
-        #     service: ${{ env.environment }}-charts
+        #     service: ${{ env.environment }}-fe
         #     cluster: ${{ env.environment }}-be
         #     wait-for-service-stability: true
 
         uses: donaldpiret/ecs-deploy@master
         with:
           cluster: ${{ env.environment }}-be
-          target: ${{ env.environment }}-charts
+          target: ${{ env.environment }}-fe
           # tag: latest
