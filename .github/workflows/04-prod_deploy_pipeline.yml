@@ -3,16 +3,16 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: prod_fe_svc_workflow
+name: fe_svc_workflow
 
 on:
   push:
     branches:
-      # - "ahmed"
-      # - "dev"
+      - "ahmed"
+      - "dev"
       # - "stg"
-      - "main" #prod
-      - "hotfix"
+      # - "main" #prod
+      # - "hotfix"
     # paths:
     #   - '02-flask-app/**'
     #   - '.github/workflows/app*.yml'
@@ -20,7 +20,10 @@ on:
 defaults:
   run:
     shell: bash
-permissions: {}
+permissions:
+  contents: read
+  actions: read
+  security-events: write
 
 jobs:
   prepare:
@@ -50,14 +53,14 @@ jobs:
     needs: prepare
     runs-on: ubuntu-latest
     steps:
-      # - name: Set environment for ${{ needs.prepare.outputs.branch_name }}
-      #   run: |
-      #     echo "environment=${{ needs.prepare.outputs.branch_name }}" >> $GITHUB_ENV
-
-      - name: Set environment for PROD
-        # if: ${{ (github.event_name == 'push' && github.ref == 'refs/heads/main') }}
+      - name: Set environment for ${{ needs.prepare.outputs.branch_name }}
         run: |
-          echo "environment=prod" >> $GITHUB_ENV
+          echo "environment=${{ needs.prepare.outputs.branch_name }}" >> $GITHUB_ENV
+
+      # - name: Set environment for PROD
+      #   if: ${{ (github.event_name == 'push' && github.ref == 'refs/heads/main') }}
+      #   run: |
+      #     echo "environment=prod" >> $GITHUB_ENV
 
       - name: Checkout
         uses: actions/checkout@v4
@@ -77,17 +80,33 @@ jobs:
         id: build-image
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-          ECR_REPOSITORY: ${{ env.environment }}-fe-repo
+          ECR_REPOSITORY: ${{ env.environment }}-femto-fe-repo
           IMAGE_TAG: ${{ github.sha }}
         run: |
           echo "Building image $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
-          docker build \
-              -t $ECR_REPOSITORY:latest \
-              -t $ECR_REGISTRY/$ECR_REPOSITORY:latest \
-              -t $ECR_REPOSITORY:$IMAGE_TAG \
-              -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
-          docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
-          docker tag $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG $ECR_REGISTRY/$ECR_REPOSITORY:latest
+          docker build --target prod \
+            -t $ECR_REPOSITORY:latest \
+            -t $ECR_REGISTRY/$ECR_REPOSITORY:latest \
+            -t $ECR_REPOSITORY:$IMAGE_TAG \
+            -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .\
+            -f Dockerfile \
+            --build-arg API_URL=${{ vars.REACT_APP_API_URL_PROD }} \
+            --build-arg GOOGLE_CLIENT_ID=${{ vars.REACT_APP_GOOGLE_CLIENT_ID }} \
+            --build-arg MICROSOFT_CLIENT_ID=${{ vars.REACT_APP_MICROSOFT_CLIENT_ID }} \
+            --build-arg QUICKBOOKS_CLIENT_ID=${{ vars.REACT_APP_QUICKBOOKS_CLIENT_ID }} \
+            --build-arg QUICKBOOKS_REDIRECT_URI=${{ vars.REACT_APP_QUICKBOOKS_REDIRECT_URI_PROD }} \
+            --build-arg TAG_MANAGER_ID=${{ vars.REACT_APP_TAG_MANAGER_ID_PROD }} \
+            --build-arg REACT_APP_NEW_RELIC_APPLICATION_ID=${{ vars.REACT_APP_NEW_RELIC_APPLICATION_ID_PROD }} \
+            --build-arg REACT_APP_NEW_RELIC_LICENSE_KEY=${{ vars.REACT_APP_NEW_RELIC_LICENSE_KEY_PROD }} \
+            --build-arg REACT_APP_NEW_RELIC_AGENT_ID=${{ vars.REACT_APP_NEW_RELIC_AGENT_ID_PROD }} \
+            --build-arg SUBSBASE_REDIRECT_URI=${{ vars.REACT_APP_SUBSBASE_REDIRECT_URI_PROD }} \
+            --build-arg REACT_APP_AWS_USER_POOL_ID=${{ vars.REACT_APP_AWS_USER_POOL_ID_PROD }} \
+            --build-arg REACT_APP_AWS_USER_POOLS_CLIENT_ID=${{ vars.REACT_APP_AWS_USER_POOLS_CLIENT_ID_PROD }} \
+            --build-arg REACT_APP_AWS_DOMAIN=${{ vars.REACT_APP_AWS_DOMAIN_PROD }} \
+            --build-arg REACT_APP_AWS_REDIRECT=${{ vars.REACT_APP_AWS_REDIRECT_PROD }} \
+            --build-arg REACT_APP_AWS_REGION=${{ vars.AWS_DEFAULT_REGION }} \
+            --build-arg REACT_APP_SUBSBASE_CUSTOM_PORTAL_URL=${{ vars.REACT_APP_SUBSBASE_CUSTOM_PORTAL_URL_PROD }} \
+            --build-arg REACT_APP_SUBSBASE_SITE_ID=${{ vars.REACT_APP_SUBSBASE_SITE_ID_PROD }}          docker tag $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG $ECR_REGISTRY/$ECR_REPOSITORY:latest
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:latest
           echo "Pushed image $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
 
@@ -98,14 +117,14 @@ jobs:
       - build_and_push_to_ecr
     runs-on: ubuntu-latest
     steps:
-      # - name: Set environment for ${{ needs.prepare.outputs.branch_name }}
-      #   run: |
-      #     echo "environment=${{ needs.prepare.outputs.branch_name }}" >> $GITHUB_ENV
-
-      - name: Set environment for PROD
-        if: ${{ (github.event_name == 'push' && github.ref == 'refs/heads/main') }}
+      - name: Set environment for ${{ needs.prepare.outputs.branch_name }}
         run: |
-          echo "environment=prod" >> $GITHUB_ENV
+          echo "environment=${{ needs.prepare.outputs.branch_name }}" >> $GITHUB_ENV
+
+      # - name: Set environment for PROD
+      #   if: ${{ (github.event_name == 'push' && github.ref == 'refs/heads/main') }}
+      #   run: |
+      #     echo "environment=prod" >> $GITHUB_ENV
 
       - name: Checkout
         uses: actions/checkout@v4
@@ -128,6 +147,6 @@ jobs:
 
         uses: donaldpiret/ecs-deploy@master
         with:
-          cluster: ${{ env.environment }}-be
-          target: ${{ env.environment }}-fe
+          cluster: ${{ env.environment }}-fe
+          target: ${{ env.environment }}-femto-fe
           # tag: latest
