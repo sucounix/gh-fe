@@ -148,6 +148,6 @@ jobs:
 
         uses: donaldpiret/ecs-deploy@master
         with:
-          cluster: ${{ env.environment }}-be
-          target: ${{ env.environment }}-fe
+          cluster: ${{ env.environment }}-fe
+          target: ${{ env.environment }}-femto-fe
           # tag: latest
