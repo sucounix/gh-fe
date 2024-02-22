@@ -3,7 +3,7 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: prod_charts_svc_workflow
+name: prod_fe_svc_workflow
 
 on:
   push:
@@ -77,7 +77,7 @@ jobs:
         id: build-image
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-          ECR_REPOSITORY: ${{ env.environment }}-charts-repo
+          ECR_REPOSITORY: ${{ env.environment }}-fe-repo
           IMAGE_TAG: ${{ github.sha }}
         run: |
           echo "Building image $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
@@ -122,12 +122,12 @@ jobs:
         #   with:
         #     task-definition: ${{ steps.task-def.outputs.task-definition }}
         #     force-new-deployment: true
-        #     service: ${{ env.environment }}-charts
+        #     service: ${{ env.environment }}-fe
         #     cluster: ${{ env.environment }}-be
         #     wait-for-service-stability: true
 
         uses: donaldpiret/ecs-deploy@master
         with:
           cluster: ${{ env.environment }}-be
-          target: ${{ env.environment }}-charts
+          target: ${{ env.environment }}-fe
           # tag: latest
