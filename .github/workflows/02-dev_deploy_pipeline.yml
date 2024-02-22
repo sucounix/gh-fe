@@ -80,7 +80,7 @@ jobs:
         id: build-image
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-          ECR_REPOSITORY: ${{ env.environment }}-fe-repo
+          ECR_REPOSITORY: ${{ env.environment }}-femto-fe-repo
           IMAGE_TAG: ${{ github.sha }}
         run: |
           echo "Building image $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
