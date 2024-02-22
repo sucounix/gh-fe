@@ -85,11 +85,10 @@ jobs:
         run: |
           echo "Building image $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
           docker build --target dev \
-            -t $BITBUCKET_BRANCH-femto-fe-repo . \
             -t $ECR_REPOSITORY:latest \
             -t $ECR_REGISTRY/$ECR_REPOSITORY:latest \
             -t $ECR_REPOSITORY:$IMAGE_TAG \
-            -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG \
+            -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .\
             -f Dockerfile \
             --build-arg API_URL=${{ vars.REACT_APP_API_URL_DEV }} \
             --build-arg GOOGLE_CLIENT_ID=${{ vars.REACT_APP_GOOGLE_CLIENT_ID }} \
